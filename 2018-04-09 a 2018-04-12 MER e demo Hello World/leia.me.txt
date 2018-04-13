@@ -1,1 +1,13 @@
+Para rodar o HelloWorld:
+
+1. Instalar Cuba Studio v.6.8.2, disponível em https://www.cuba-platform.com/download/studio/previous-se
+
+2. Baixar e descompactar o projeto HelloWorld.
+
+3. Importar o projeto para o Cuba Studio.
+
+4. Dentro do Studio, clicar em Run -> Start application server.
+
+5. Esperar o servidor inicializar e depois acessar a aplicação no navegador web no endereço "localhost:8080/app".
+
  
