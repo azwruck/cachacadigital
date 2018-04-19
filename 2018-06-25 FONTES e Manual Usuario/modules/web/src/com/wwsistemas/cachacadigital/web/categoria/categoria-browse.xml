@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="com.wwsistemas.cachacadigital.web.categoria.CategoriaBrowse"
+        focusComponent="categoriasTable"
+        lookupComponent="categoriasTable"
+        messagesPack="com.wwsistemas.cachacadigital.web.categoria">
+    <dsContext>
+        <groupDatasource id="categoriasDs"
+                         class="com.wwsistemas.cachacadigital.entity.Categoria"
+                         view="_local">
+            <query>
+                <![CDATA[select e from cachaca$Categoria e]]>
+            </query>
+        </groupDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="categoriasTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="categoriasTable"
+                datasource="categoriasDs">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="categoriasTable"
+                    width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+            </actions>
+            <columns>
+                <column id="nome"/>
+            </columns>
+            <rows datasource="categoriasDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn"
+                        action="categoriasTable.create"/>
+                <button id="editBtn"
+                        action="categoriasTable.edit"/>
+                <button id="removeBtn"
+                        action="categoriasTable.remove"/>
+            </buttonsPanel>
+        </groupTable>
+    </layout>
+</window>

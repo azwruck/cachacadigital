@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <screen-config xmlns="http://schemas.haulmont.com/cuba/screens.xsd">
-
     <include file="com/wwsistemas/cachacadigital/screens.xml"/>
-
+    <screen id="cachaca$Categoria.browse"
+            template="com/wwsistemas/cachacadigital/web/categoria/categoria-browse.xml"/>
+    <screen id="cachaca$Categoria.edit"
+            template="com/wwsistemas/cachacadigital/web/categoria/categoria-edit.xml"/>
 </screen-config>

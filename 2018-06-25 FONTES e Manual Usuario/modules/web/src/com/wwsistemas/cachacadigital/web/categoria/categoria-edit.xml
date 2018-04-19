@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="com.wwsistemas.cachacadigital.web.categoria.CategoriaEdit"
+        datasource="categoriaDs"
+        focusComponent="fieldGroup"
+        messagesPack="com.wwsistemas.cachacadigital.web.categoria">
+    <dsContext>
+        <datasource id="categoriaDs"
+                    class="com.wwsistemas.cachacadigital.entity.Categoria"
+                    view="_local"/>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="windowActions"
+            spacing="true">
+        <fieldGroup id="fieldGroup"
+                    datasource="categoriaDs">
+            <column width="250px">
+                <field property="nome"/>
+            </column>
+        </fieldGroup>
+        <frame id="windowActions"
+               screen="editWindowActions"/>
+    </layout>
+</window>

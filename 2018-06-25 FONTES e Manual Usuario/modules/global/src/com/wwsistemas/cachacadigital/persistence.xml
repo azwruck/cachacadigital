@@ -5,5 +5,7 @@
                       transaction-type="RESOURCE_LOCAL">
         <class>com.wwsistemas.cachacadigital.entity.Categoria</class>
         <class>com.wwsistemas.cachacadigital.entity.Produto</class>
+        <class>com.wwsistemas.cachacadigital.entity.Estado</class>
+        <class>com.wwsistemas.cachacadigital.entity.Cliente</class>
     </persistence-unit>
 </persistence>
