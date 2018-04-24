@@ -5,4 +5,8 @@
             template="com/wwsistemas/cachacadigital/web/categoria/categoria-browse.xml"/>
     <screen id="cachaca$Categoria.edit"
             template="com/wwsistemas/cachacadigital/web/categoria/categoria-edit.xml"/>
+    <screen id="cachaca$Produto.browse"
+            template="com/wwsistemas/cachacadigital/web/produto/produto-browse.xml"/>
+    <screen id="cachaca$Produto.edit"
+            template="com/wwsistemas/cachacadigital/web/produto/produto-edit.xml"/>
 </screen-config>

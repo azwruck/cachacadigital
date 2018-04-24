@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="com.wwsistemas.cachacadigital.web.produto.ProdutoBrowse"
+        focusComponent="produtoesTable"
+        lookupComponent="produtoesTable"
+        messagesPack="com.wwsistemas.cachacadigital.web.produto">
+    <dsContext>
+        <groupDatasource id="produtoesDs"
+                         class="com.wwsistemas.cachacadigital.entity.Produto"
+                         view="produto-com-categoria">
+            <query>
+                <![CDATA[select e from cachaca$Produto e]]>
+            </query>
+        </groupDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="produtoesTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="produtoesTable"
+                datasource="produtoesDs">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="produtoesTable"
+                    width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+            </actions>
+            <columns>
+                <column id="nome"/>
+                <column id="idCategoria"/>
+                <column id="preco"/>
+                <column id="quantidade"/>
+            </columns>
+            <rows datasource="produtoesDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn"
+                        action="produtoesTable.create"/>
+                <button id="editBtn"
+                        action="produtoesTable.edit"/>
+                <button id="removeBtn"
+                        action="produtoesTable.remove"/>
+            </buttonsPanel>
+        </groupTable>
+    </layout>
+</window>

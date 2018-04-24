@@ -7,5 +7,8 @@
         <class>com.wwsistemas.cachacadigital.entity.Produto</class>
         <class>com.wwsistemas.cachacadigital.entity.Estado</class>
         <class>com.wwsistemas.cachacadigital.entity.Cliente</class>
+        <class>com.wwsistemas.cachacadigital.entity.Venda</class>
+        <class>com.wwsistemas.cachacadigital.entity.Produto_venda</class>
+        <class>com.wwsistemas.cachacadigital.entity.Producao</class>
     </persistence-unit>
 </persistence>

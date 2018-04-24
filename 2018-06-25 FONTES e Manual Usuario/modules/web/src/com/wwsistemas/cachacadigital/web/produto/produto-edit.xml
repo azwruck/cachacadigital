@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="com.wwsistemas.cachacadigital.web.produto.ProdutoEdit"
+        datasource="produtoDs"
+        focusComponent="fieldGroup"
+        messagesPack="com.wwsistemas.cachacadigital.web.produto">
+    <dsContext>
+        <datasource id="produtoDs"
+                    class="com.wwsistemas.cachacadigital.entity.Produto"
+                    view="produto-com-categoria"/>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="windowActions"
+            spacing="true">
+        <fieldGroup id="fieldGroup"
+                    datasource="produtoDs">
+            <column width="250px">
+                <field property="nome"/>
+                <field property="idCategoria"/>
+                <field property="preco"/>
+                <field property="quantidade"/>
+            </column>
+        </fieldGroup>
+        <frame id="windowActions"
+               screen="editWindowActions"/>
+    </layout>
+</window>

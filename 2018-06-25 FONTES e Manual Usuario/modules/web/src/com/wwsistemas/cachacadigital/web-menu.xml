@@ -3,5 +3,6 @@
     <menu id="application-cachaca"
           insertBefore="administration">
         <item screen="cachaca$Categoria.browse"/>
+        <item screen="cachaca$Produto.browse"/>
     </menu>
 </menu-config>

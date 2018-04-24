@@ -45,8 +45,17 @@ public class Cliente extends BaseIntegerIdEntity implements HasUuid {
 
     @NotNull
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "ESTADO_ID")
-    protected Estado estado;
+    @JoinColumn(name = "ID_ESTADO_ID")
+    protected Estado idEstado;
+
+    public void setIdEstado(Estado idEstado) {
+        this.idEstado = idEstado;
+    }
+
+    public Estado getIdEstado() {
+        return idEstado;
+    }
+
 
     public void setUuid(UUID uuid) {
         this.uuid = uuid;
@@ -102,14 +111,6 @@ public class Cliente extends BaseIntegerIdEntity implements HasUuid {
 
     public String getCep() {
         return cep;
-    }
-
-    public void setEstado(Estado estado) {
-        this.estado = estado;
-    }
-
-    public Estado getEstado() {
-        return estado;
     }
 
 

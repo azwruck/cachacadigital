@@ -27,8 +27,8 @@ public class Produto extends BaseIntegerIdEntity implements HasUuid {
 
     @NotNull
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "CATEGORIA_ID")
-    protected Categoria categoria;
+    @JoinColumn(name = "ID_CATEGORIA_ID")
+    protected Categoria idCategoria;
 
     @NotNull
     @Column(name = "PRECO", nullable = false)
@@ -36,6 +36,15 @@ public class Produto extends BaseIntegerIdEntity implements HasUuid {
 
     @Column(name = "QUANTIDADE")
     protected Integer quantidade;
+
+    public void setIdCategoria(Categoria idCategoria) {
+        this.idCategoria = idCategoria;
+    }
+
+    public Categoria getIdCategoria() {
+        return idCategoria;
+    }
+
 
     public void setUuid(UUID uuid) {
         this.uuid = uuid;
@@ -51,14 +60,6 @@ public class Produto extends BaseIntegerIdEntity implements HasUuid {
 
     public String getNome() {
         return nome;
-    }
-
-    public void setCategoria(Categoria categoria) {
-        this.categoria = categoria;
-    }
-
-    public Categoria getCategoria() {
-        return categoria;
     }
 
     public void setPreco(Double preco) {
