@@ -2,7 +2,9 @@
 <menu-config xmlns="http://schemas.haulmont.com/cuba/menu.xsd">
     <menu id="application-cachaca"
           insertBefore="administration">
-        <item screen="cachaca$Categoria.browse"/>
-        <item screen="cachaca$Produto.browse"/>
+        <item openType="NEW_TAB"
+              screen="cachaca$Categoria.browse"/>
+        <item openType="NEW_TAB"
+              screen="cachaca$Produto.browse"/>
     </menu>
 </menu-config>

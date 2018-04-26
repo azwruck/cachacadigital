@@ -31,6 +31,7 @@
                 <action id="remove"/>
             </actions>
             <columns>
+                <column id="id"/>
                 <column id="nome"/>
             </columns>
             <rows datasource="categoriasDs"/>
@@ -38,11 +39,14 @@
             <buttonsPanel id="buttonsPanel"
                           alwaysVisible="true">
                 <button id="createBtn"
-                        action="categoriasTable.create"/>
+                        action="categoriasTable.create"
+                        caption="mainMsg://cadastros.Adicionar"/>
                 <button id="editBtn"
-                        action="categoriasTable.edit"/>
+                        action="categoriasTable.edit"
+                        caption="mainMsg://cadastros.Editar"/>
                 <button id="removeBtn"
-                        action="categoriasTable.remove"/>
+                        action="categoriasTable.remove"
+                        caption="mainMsg://cadastros.Excluir"/>
             </buttonsPanel>
         </groupTable>
     </layout>

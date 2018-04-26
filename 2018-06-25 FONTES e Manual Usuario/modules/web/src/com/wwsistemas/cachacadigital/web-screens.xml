@@ -9,4 +9,8 @@
             template="com/wwsistemas/cachacadigital/web/produto/produto-browse.xml"/>
     <screen id="cachaca$Produto.edit"
             template="com/wwsistemas/cachacadigital/web/produto/produto-edit.xml"/>
+    <screen id="mainWindow"
+            template="com/wwsistemas/cachacadigital/web/screens/ext-mainwindow.xml"/>
+    <screen id="loginWindow"
+            template="com/wwsistemas/cachacadigital/web/screens/ext-loginWindow.xml"/>
 </screen-config>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.wwsistemas.cachacadigital.web.screens.ExtAppLoginWindow"
+        extends="/com/haulmont/cuba/web/app/loginwindow/loginwindow.xml"
+        messagesPack="com.wwsistemas.cachacadigital.web.screens">
+    <dialogMode height="600"
+                width="800"/>
+    <layout>
+        <vbox id="loginWrapper">
+            <vbox id="loginMainBox">
+                <hbox id="loginTitleBox">
+                    <label id="welcomeLabel"
+                           align="MIDDLE_CENTER"/>
+                </hbox>
+                <grid id="loginFormLayout">
+                    <rows>
+                        <row id="submitRow">
+                            <button id="loginButton"
+                                    caption="msg://loginWindow.submit"/>
+                        </row>
+                    </rows>
+                </grid>
+            </vbox>
+        </vbox>
+    </layout>
+</window>

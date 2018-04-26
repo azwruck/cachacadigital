@@ -21,6 +21,7 @@
             </column>
         </fieldGroup>
         <frame id="windowActions"
+               caption="mainMsg://null"
                screen="editWindowActions"/>
     </layout>
 </window>
