@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="com.wwsistemas.cachacadigital.web.cliente.ClienteBrowse"
+        focusComponent="clientesTable"
+        lookupComponent="clientesTable"
+        messagesPack="com.wwsistemas.cachacadigital.web.cliente">
+    <dsContext>
+        <groupDatasource id="clientesDs"
+                         class="com.wwsistemas.cachacadigital.entity.Cliente"
+                         view="_local">
+            <query>
+                <![CDATA[select e from cachaca$Cliente e]]>
+            </query>
+        </groupDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="clientesTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="clientesTable"
+                datasource="clientesDs">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="clientesTable"
+                    width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+            </actions>
+            <columns>
+                <column id="id"/>
+                <column id="nome"/>
+                <column id="email"/>
+                <column id="cidade"/>
+            </columns>
+            <rows datasource="clientesDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn"
+                        action="clientesTable.create"
+                        caption="mainMsg://cadastros.Adicionar"/>
+                <button id="editBtn"
+                        action="clientesTable.edit"
+                        caption="mainMsg://cadastros.Editar"/>
+                <button id="removeBtn"
+                        action="clientesTable.remove"
+                        caption="mainMsg://cadastros.Excluir"/>
+            </buttonsPanel>
+        </groupTable>
+    </layout>
+</window>

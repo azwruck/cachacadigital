@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
         caption="msg://editorCaption"
-        class="com.wwsistemas.cachacadigital.web.categoria.CategoriaEdit"
-        datasource="categoriaDs"
+        class="com.wwsistemas.cachacadigital.web.cliente.ClienteEdit"
+        datasource="clienteDs"
         focusComponent="fieldGroup"
-        messagesPack="com.wwsistemas.cachacadigital.web.categoria">
+        messagesPack="com.wwsistemas.cachacadigital.web.cliente">
     <dsContext>
-        <datasource id="categoriaDs"
-                    class="com.wwsistemas.cachacadigital.entity.Categoria"
+        <datasource id="clienteDs"
+                    class="com.wwsistemas.cachacadigital.entity.Cliente"
                     view="_local"/>
     </dsContext>
     <dialogMode height="600"
@@ -15,9 +15,17 @@
     <layout expand="windowActions"
             spacing="true">
         <fieldGroup id="fieldGroup"
-                    datasource="categoriaDs">
+                    datasource="clienteDs">
             <column width="250px">
                 <field property="nome"/>
+                <field property="telefone"/>
+                <field property="endereco"/>
+                <field property="cidade"/>
+            </column>
+            <column>
+                <field property="email"/>
+                <field caption="CEP"
+                       property="cep"/>
             </column>
         </fieldGroup>
         <frame id="windowActions"

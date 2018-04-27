@@ -13,4 +13,8 @@
             template="com/wwsistemas/cachacadigital/web/screens/ext-mainwindow.xml"/>
     <screen id="loginWindow"
             template="com/wwsistemas/cachacadigital/web/screens/ext-loginWindow.xml"/>
+    <screen id="cachaca$Cliente.browse"
+            template="com/wwsistemas/cachacadigital/web/cliente/cliente-browse.xml"/>
+    <screen id="cachaca$Cliente.edit"
+            template="com/wwsistemas/cachacadigital/web/cliente/cliente-edit.xml"/>
 </screen-config>

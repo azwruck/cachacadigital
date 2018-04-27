@@ -6,5 +6,6 @@
               screen="cachaca$Categoria.browse"/>
         <item openType="NEW_TAB"
               screen="cachaca$Produto.browse"/>
+        <item screen="cachaca$Cliente.browse"/>
     </menu>
 </menu-config>
