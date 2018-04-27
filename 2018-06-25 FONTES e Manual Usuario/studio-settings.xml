@@ -4,4 +4,6 @@
         <functionality id="oneToOneIndex"
                        state="ENABLE"/>
     </functionalitySettings>
+    <screenDesigner>
+    </screenDesigner>
 </studio>

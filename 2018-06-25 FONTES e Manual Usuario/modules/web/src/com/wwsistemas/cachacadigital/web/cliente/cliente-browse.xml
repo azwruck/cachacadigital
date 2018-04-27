@@ -35,6 +35,7 @@
                 <column id="nome"/>
                 <column id="email"/>
                 <column id="cidade"/>
+                <column id="idEstado"/>
             </columns>
             <rows datasource="clientesDs"/>
             <rowsCount/>
