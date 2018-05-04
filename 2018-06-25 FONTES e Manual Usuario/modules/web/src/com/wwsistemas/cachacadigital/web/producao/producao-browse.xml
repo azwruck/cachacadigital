@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
         caption="msg://browseCaption"
-        class="com.wwsistemas.cachacadigital.web.categoria.CategoriaBrowse"
-        focusComponent="categoriasTable"
-        lookupComponent="categoriasTable"
-        messagesPack="com.wwsistemas.cachacadigital.web.categoria">
+        class="com.wwsistemas.cachacadigital.web.producao.ProducaoBrowse"
+        focusComponent="producaosTable"
+        lookupComponent="producaosTable"
+        messagesPack="com.wwsistemas.cachacadigital.web.producao">
     <dsContext>
-        <groupDatasource id="categoriasDs"
-                         class="com.wwsistemas.cachacadigital.entity.Categoria"
+        <groupDatasource id="producaosDs"
+                         class="com.wwsistemas.cachacadigital.entity.Producao"
                          view="_local">
             <query>
-                <![CDATA[select e from cachaca$Categoria e]]>
+                <![CDATA[select e from cachaca$Producao e]]>
             </query>
         </groupDatasource>
     </dsContext>
     <dialogMode height="600"
                 width="800"/>
-    <layout expand="categoriasTable"
+    <layout expand="producaosTable"
             spacing="true">
         <filter id="filter"
-                applyTo="categoriasTable"
-                datasource="categoriasDs">
+                applyTo="producaosTable"
+                datasource="producaosDs">
             <properties include=".*"/>
         </filter>
-        <groupTable id="categoriasTable"
+        <groupTable id="producaosTable"
                     width="100%">
             <actions>
                 <action id="create"/>
@@ -33,21 +33,20 @@
             <columns>
                 <column id="id"
                         caption="Código"/>
-                <column id="nome"/>
+                <column id="lote"/>
+                <column id="quantidade"/>
+                <column id="data_producao"/>
             </columns>
-            <rows datasource="categoriasDs"/>
+            <rows datasource="producaosDs"/>
             <rowsCount/>
             <buttonsPanel id="buttonsPanel"
                           alwaysVisible="true">
                 <button id="createBtn"
-                        action="categoriasTable.create"
-                        caption="mainMsg://cadastros.Adicionar"/>
+                        action="producaosTable.create"/>
                 <button id="editBtn"
-                        action="categoriasTable.edit"
-                        caption="mainMsg://cadastros.Editar"/>
+                        action="producaosTable.edit"/>
                 <button id="removeBtn"
-                        action="categoriasTable.remove"
-                        caption="mainMsg://cadastros.Excluir"/>
+                        action="producaosTable.remove"/>
             </buttonsPanel>
         </groupTable>
     </layout>

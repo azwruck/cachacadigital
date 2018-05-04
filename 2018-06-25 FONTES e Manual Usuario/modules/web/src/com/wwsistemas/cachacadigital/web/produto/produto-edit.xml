@@ -17,9 +17,13 @@
         <fieldGroup id="fieldGroup"
                     datasource="produtoDs">
             <column width="250px">
+                <field caption="Código"
+                       editable="false"
+                       property="id"/>
                 <field property="nome"/>
                 <field property="idCategoria"/>
-                <field property="preco"/>
+                <field caption="Preço"
+                       property="preco"/>
                 <field property="quantidade"/>
             </column>
         </fieldGroup>

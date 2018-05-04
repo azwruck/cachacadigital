@@ -17,4 +17,8 @@
             template="com/wwsistemas/cachacadigital/web/cliente/cliente-browse.xml"/>
     <screen id="cachaca$Cliente.edit"
             template="com/wwsistemas/cachacadigital/web/cliente/cliente-edit.xml"/>
+    <screen id="cachaca$Producao.browse"
+            template="com/wwsistemas/cachacadigital/web/producao/producao-browse.xml"/>
+    <screen id="cachaca$Producao.edit"
+            template="com/wwsistemas/cachacadigital/web/producao/producao-edit.xml"/>
 </screen-config>

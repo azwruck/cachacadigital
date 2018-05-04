@@ -3,9 +3,10 @@
     <menu id="application-cachaca"
           insertBefore="administration">
         <item openType="NEW_TAB"
-              screen="cachaca$Categoria.browse"/>
-        <item openType="NEW_TAB"
               screen="cachaca$Produto.browse"/>
+        <item openType="NEW_TAB"
+              screen="cachaca$Categoria.browse"/>
         <item screen="cachaca$Cliente.browse"/>
+        <item screen="cachaca$Producao.browse"/>
     </menu>
 </menu-config>

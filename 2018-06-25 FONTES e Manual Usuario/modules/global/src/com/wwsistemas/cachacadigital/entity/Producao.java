@@ -15,7 +15,7 @@ import com.haulmont.cuba.core.entity.BaseIntegerIdEntity;
 import com.haulmont.cuba.core.entity.HasUuid;
 import com.haulmont.chile.core.annotations.NamePattern;
 
-@NamePattern("%s %s|idProduto,lote")
+@NamePattern(" %s|lote")
 @Table(name = "CACHACA_PRODUCAO")
 @Entity(name = "cachaca$Producao")
 public class Producao extends BaseIntegerIdEntity implements HasUuid {
@@ -23,11 +23,6 @@ public class Producao extends BaseIntegerIdEntity implements HasUuid {
 
     @Column(name = "UUID")
     protected UUID uuid;
-
-    @NotNull
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "ID_PRODUTO_ID")
-    protected Produto idProduto;
 
     @NotNull
     @Column(name = "LOTE", nullable = false)
@@ -42,20 +37,13 @@ public class Producao extends BaseIntegerIdEntity implements HasUuid {
     @Column(name = "DATA_PRODUCAO", nullable = false)
     protected Date data_producao;
 
+
     public void setUuid(UUID uuid) {
         this.uuid = uuid;
     }
 
     public UUID getUuid() {
         return uuid;
-    }
-
-    public void setIdProduto(Produto idProduto) {
-        this.idProduto = idProduto;
-    }
-
-    public Produto getIdProduto() {
-        return idProduto;
     }
 
     public void setLote(Integer lote) {

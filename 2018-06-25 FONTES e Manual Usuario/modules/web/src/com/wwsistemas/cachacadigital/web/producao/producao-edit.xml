@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
         caption="msg://editorCaption"
-        class="com.wwsistemas.cachacadigital.web.categoria.CategoriaEdit"
-        datasource="categoriaDs"
+        class="com.wwsistemas.cachacadigital.web.producao.ProducaoEdit"
+        datasource="producaoDs"
         focusComponent="fieldGroup"
-        messagesPack="com.wwsistemas.cachacadigital.web.categoria">
+        messagesPack="com.wwsistemas.cachacadigital.web.producao">
     <dsContext>
-        <datasource id="categoriaDs"
-                    class="com.wwsistemas.cachacadigital.entity.Categoria"
+        <datasource id="producaoDs"
+                    class="com.wwsistemas.cachacadigital.entity.Producao"
                     view="_local"/>
     </dsContext>
     <dialogMode height="600"
@@ -15,12 +15,13 @@
     <layout expand="windowActions"
             spacing="true">
         <fieldGroup id="fieldGroup"
-                    datasource="categoriaDs">
+                    datasource="producaoDs">
             <column width="250px">
-                <field caption="Código"
-                       editable="false"
-                       property="id"/>
-                <field property="nome"/>
+                <field property="lote"/>
+                <field property="quantidade"/>
+            </column>
+            <column>
+                <field property="data_producao"/>
             </column>
         </fieldGroup>
         <frame id="windowActions"
