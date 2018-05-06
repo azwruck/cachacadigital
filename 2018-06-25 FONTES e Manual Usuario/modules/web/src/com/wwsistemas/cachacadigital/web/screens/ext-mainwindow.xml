@@ -53,6 +53,7 @@
                     <main:timeZoneIndicator id="timeZoneIndicator"
                                             width="100%"/>
                     <main:sideMenu id="sideMenu"
+                                   selectOnClick="true"
                                    sidePanel="sideMenuPanel"
                                    sidePanelToggleButton="mobileMenuButton"/>
                     <main:ftsField id="ftsField"

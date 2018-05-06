@@ -21,7 +21,7 @@
                 <field property="telefone"/>
                 <field property="endereco"/>
                 <field property="cidade"/>
-                <field property="idEstado"/>
+                <field property="estado2"/>
             </column>
             <column>
                 <field property="email"/>

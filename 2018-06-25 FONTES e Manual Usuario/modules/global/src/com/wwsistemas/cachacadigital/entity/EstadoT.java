@@ -5,24 +5,47 @@ import com.haulmont.chile.core.datatypes.impl.EnumClass;
 import javax.annotation.Nullable;
 
 
-public enum EstadoT implements EnumClass<Integer> {
+public enum EstadoT implements EnumClass<String> {
+    AC("AC"),
+    AL("AL"),
+    AP("AP"),
+    AM("AM"),
+    BA("BA"),
+    CE("CE"),
+    DF("DF"),
+    ES("ES"),
+    GO("GO"),
+    MA("MA"),
+    MT("MT"),
+    MS("MS"),
+    MG("MG"),
+    PA("PA"),
+    PB("PB"),
+    PR("PR"),
+    PE("PE"),
+    PI("PI"),
+    RJ("RJ"),
+    RN("RN"),
+    RS("RS"),
+    RO("RO"),
+    RR("RR"),
+    SC("SC"),
+    SP("SP"),
+    SE("SE"),
+    TO("TO");
 
-    AC(10),
-    AL(20),
-    AP(30);
+    private String id;
 
-    private Integer id;
-
-    EstadoT(Integer value) {
+    EstadoT(String value) {
         this.id = value;
     }
 
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
     @Nullable
-    public static EstadoT fromId(Integer id) {
+    public static EstadoT fromId(String id) {
         for (EstadoT at : EstadoT.values()) {
             if (at.getId().equals(id)) {
                 return at;

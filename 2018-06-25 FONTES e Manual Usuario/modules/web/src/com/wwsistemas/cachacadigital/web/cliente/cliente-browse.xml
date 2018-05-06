@@ -31,11 +31,12 @@
                 <action id="remove"/>
             </actions>
             <columns>
-                <column id="id"/>
+                <column id="id"
+                        caption="Código"/>
                 <column id="nome"/>
                 <column id="email"/>
                 <column id="cidade"/>
-                <column id="idEstado"/>
+                <column id="estado2"/>
             </columns>
             <rows datasource="clientesDs"/>
             <rowsCount/>

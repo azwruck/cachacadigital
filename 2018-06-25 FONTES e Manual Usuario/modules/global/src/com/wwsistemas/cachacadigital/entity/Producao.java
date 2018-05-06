@@ -29,6 +29,11 @@ public class Producao extends BaseIntegerIdEntity implements HasUuid {
     protected Integer lote;
 
     @NotNull
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "PRODUTO_ID")
+    protected Produto produto;
+
+    @NotNull
     @Column(name = "QUANTIDADE", nullable = false)
     protected Integer quantidade;
 
@@ -36,6 +41,15 @@ public class Producao extends BaseIntegerIdEntity implements HasUuid {
     @NotNull
     @Column(name = "DATA_PRODUCAO", nullable = false)
     protected Date data_producao;
+
+
+    public void setProduto(Produto produto) {
+        this.produto = produto;
+    }
+
+    public Produto getProduto() {
+        return produto;
+    }
 
 
     public void setUuid(UUID uuid) {

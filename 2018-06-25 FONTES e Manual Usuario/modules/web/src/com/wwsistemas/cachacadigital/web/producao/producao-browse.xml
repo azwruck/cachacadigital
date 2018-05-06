@@ -8,7 +8,7 @@
     <dsContext>
         <groupDatasource id="producaosDs"
                          class="com.wwsistemas.cachacadigital.entity.Producao"
-                         view="_local">
+                         view="producao-com-produto">
             <query>
                 <![CDATA[select e from cachaca$Producao e]]>
             </query>
@@ -33,9 +33,13 @@
             <columns>
                 <column id="id"
                         caption="Código"/>
+                <column id="produto"/>
+                <column id="produto.idCategoria.nome"
+                        caption="Categoria"/>
                 <column id="lote"/>
                 <column id="quantidade"/>
-                <column id="data_producao"/>
+                <column id="data_producao"
+                        caption="Data Produção"/>
             </columns>
             <rows datasource="producaosDs"/>
             <rowsCount/>

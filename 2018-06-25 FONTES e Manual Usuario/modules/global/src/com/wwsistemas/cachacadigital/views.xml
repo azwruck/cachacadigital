@@ -6,4 +6,13 @@
         <property name="idCategoria"
                   view="_minimal"/>
     </view>
+    <view class="com.wwsistemas.cachacadigital.entity.Producao"
+          extends="_local"
+          name="producao-com-produto">
+        <property name="produto"
+                  view="_minimal">
+            <property name="idCategoria"
+                      view="_minimal"/>
+        </property>
+    </view>
 </views>

@@ -37,13 +37,14 @@ create table CACHACA_CLIENTE (
     ID integer,
     UUID varchar(32),
     --
+    ESTADO2 varchar(50),
     NOME varchar(128) not null,
     EMAIL varchar(128),
     TELEFONE varchar(16),
     ENDERECO varchar(255) not null,
     CIDADE varchar(128) not null,
     CEP varchar(16) not null,
-    ID_ESTADO_ID integer not null,
+    ID_ESTADO_ID integer,
     --
     primary key (ID)
 )^
@@ -78,8 +79,8 @@ create table CACHACA_PRODUCAO (
     ID integer,
     UUID varchar(32),
     --
-    NOME_PRODUTO_ID integer,
     LOTE integer not null,
+    PRODUTO_ID integer not null,
     QUANTIDADE integer not null,
     DATA_PRODUCAO date not null,
     --
