@@ -25,7 +25,8 @@
                 <field property="quantidade"/>
             </column>
             <column>
-                <field property="data_producao"/>
+                <field caption="Data Produção"
+                       property="data_producao"/>
             </column>
         </fieldGroup>
         <frame id="windowActions"
