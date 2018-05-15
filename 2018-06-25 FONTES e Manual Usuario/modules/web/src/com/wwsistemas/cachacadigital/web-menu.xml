@@ -8,5 +8,6 @@
               screen="cachaca$Categoria.browse"/>
         <item screen="cachaca$Cliente.browse"/>
         <item screen="cachaca$Producao.browse"/>
+        <item screen="cachaca$Frame"/>
     </menu>
 </menu-config>

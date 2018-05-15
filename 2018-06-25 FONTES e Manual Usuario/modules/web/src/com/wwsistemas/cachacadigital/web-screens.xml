@@ -21,4 +21,6 @@
             template="com/wwsistemas/cachacadigital/web/producao/producao-browse.xml"/>
     <screen id="cachaca$Producao.edit"
             template="com/wwsistemas/cachacadigital/web/producao/producao-edit.xml"/>
+    <screen id="cachaca$Frame"
+            template="com/wwsistemas/cachacadigital/web/venda/frame.xml"/>
 </screen-config>

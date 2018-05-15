@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.wwsistemas.cachacadigital.web.venda.Frame"
+        messagesPack="com.wwsistemas.cachacadigital.web.venda">
+    <dsContext>
+        <collectionDatasource id="produtoDs"
+                              class="com.wwsistemas.cachacadigital.entity.Produto"
+                              view="produto-com-categoria">
+            <query>
+                <![CDATA[select o from cachaca$Produto o]]>
+            </query>
+        </collectionDatasource>
+        <collectionDatasource id="clientesDs"
+                              class="com.wwsistemas.cachacadigital.entity.Cliente"
+                              view="_local">
+            <query>
+                <![CDATA[select e from cachaca$Cliente e]]>
+            </query>
+        </collectionDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout>
+        <searchPickerField datasource="clientesDs"
+                           property="cliente"/>
+        <table id="produtoTable"
+               width="300px">
+            <columns>
+                <column id="nome"/>
+                <column id="idCategoria.nome"/>
+                <column id="preco"/>
+            </columns>
+            <rows datasource="produtoDs"/>
+        </table>
+    </layout>
+</window>
