@@ -9,5 +9,6 @@
         <item screen="cachaca$Cliente.browse"/>
         <item screen="cachaca$Producao.browse"/>
         <item screen="cachaca$Frame"/>
+        <item screen="cachaca$Venda.browse"/>
     </menu>
 </menu-config>

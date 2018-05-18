@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="com.wwsistemas.cachacadigital.web.venda.VendaEdit"
+        datasource="vendaDs"
+        focusComponent="fieldGroup"
+        messagesPack="com.wwsistemas.cachacadigital.web.venda">
+    <dsContext>
+        <datasource id="vendaDs"
+                    class="com.wwsistemas.cachacadigital.entity.Venda"
+                    view="_local"/>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="windowActions"
+            spacing="true">
+        <fieldGroup id="fieldGroup"
+                    datasource="vendaDs">
+            <column width="250px">
+                <field property="data_venda"/>
+                <field property="total"/>
+            </column>
+        </fieldGroup>
+        <frame id="windowActions"
+               screen="editWindowActions"/>
+    </layout>
+</window>

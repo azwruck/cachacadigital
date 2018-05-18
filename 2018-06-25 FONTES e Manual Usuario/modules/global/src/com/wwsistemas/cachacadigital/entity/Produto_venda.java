@@ -12,7 +12,7 @@ import com.haulmont.cuba.core.entity.BaseIntegerIdEntity;
 import com.haulmont.cuba.core.entity.HasUuid;
 import com.haulmont.chile.core.annotations.NamePattern;
 
-@NamePattern("%s %s|idProduto,idVenda")
+@NamePattern("%s |idProduto")
 @Table(name = "CACHACA_PRODUTO_VENDA")
 @Entity(name = "cachaca$Produto_venda")
 public class Produto_venda extends BaseIntegerIdEntity implements HasUuid {
@@ -20,11 +20,6 @@ public class Produto_venda extends BaseIntegerIdEntity implements HasUuid {
 
     @Column(name = "UUID")
     protected UUID uuid;
-
-    @NotNull
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "ID_VENDA_ID")
-    protected Venda idVenda;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ID_PRODUTO_ID")
@@ -38,6 +33,19 @@ public class Produto_venda extends BaseIntegerIdEntity implements HasUuid {
     @Column(name = "TOTAL", nullable = false)
     protected Double total;
 
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "VENDA_ID")
+    protected Venda venda;
+
+    public void setVenda(Venda venda) {
+        this.venda = venda;
+    }
+
+    public Venda getVenda() {
+        return venda;
+    }
+
+
     public void setIdProduto(Produto idProduto) {
         this.idProduto = idProduto;
     }
@@ -46,14 +54,6 @@ public class Produto_venda extends BaseIntegerIdEntity implements HasUuid {
         return idProduto;
     }
 
-
-    public void setIdVenda(Venda idVenda) {
-        this.idVenda = idVenda;
-    }
-
-    public Venda getIdVenda() {
-        return idVenda;
-    }
 
 
     public void setUuid(UUID uuid) {
