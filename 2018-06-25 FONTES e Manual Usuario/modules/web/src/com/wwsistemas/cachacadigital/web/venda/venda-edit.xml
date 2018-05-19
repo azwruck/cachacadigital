@@ -17,8 +17,12 @@
         <fieldGroup id="fieldGroup"
                     datasource="vendaDs">
             <column width="250px">
+                <field property="idCliente"/>
+                <field property="idProdutoVenda.idProduto"/>
+            </column>
+            <column>
                 <field property="data_venda"/>
-                <field property="total"/>
+                <field property="idProdutoVenda.quantidade"/>
             </column>
         </fieldGroup>
         <frame id="windowActions"

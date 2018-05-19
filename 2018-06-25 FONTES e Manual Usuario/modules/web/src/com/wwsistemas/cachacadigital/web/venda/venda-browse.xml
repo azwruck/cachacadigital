@@ -31,8 +31,9 @@
                 <action id="remove"/>
             </actions>
             <columns>
-                <column id="data_venda"/>
+                <column id="idCliente"/>
                 <column id="total"/>
+                <column id="data_venda"/>
             </columns>
             <rows datasource="vendasDs"/>
             <rowsCount/>

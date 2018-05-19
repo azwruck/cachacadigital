@@ -41,8 +41,7 @@ public class Venda extends BaseIntegerIdEntity implements HasUuid {
     @Column(name = "DATA_VENDA", nullable = false)
     protected Date data_venda;
 
-    @NotNull
-    @Column(name = "TOTAL", nullable = false)
+    @Column(name = "TOTAL")
     protected Double total;
 
     public void setIdProdutoVenda(List<Produto_venda> idProdutoVenda) {

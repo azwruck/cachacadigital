@@ -56,7 +56,7 @@ create table CACHACA_VENDA (
     --
     ID_CLIENTE_ID integer not null,
     DATA_VENDA date not null,
-    TOTAL double precision not null,
+    TOTAL double precision,
     --
     primary key (ID)
 )^
