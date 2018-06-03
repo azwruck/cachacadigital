@@ -25,9 +25,8 @@ def guiModule = project(":${modulePrefix}-gui")
 def webModule = project(":${modulePrefix}-web")
 
 def servletApi = 'org.apache.tomcat:tomcat-servlet-api:8.0.26'
-
-
-apply(plugin: 'idea')
+apply(plugin: 'eclipse')
+apply(plugin: 'java')
 apply(plugin: 'cuba')
 
 cuba {
@@ -51,8 +50,8 @@ def mysql = 'mysql:mysql-connector-java:5.1.38'
 configure([globalModule, coreModule, guiModule, webModule]) {
     apply(plugin: 'java')
     apply(plugin: 'maven')
-    apply(plugin: 'idea')
-    apply(plugin: 'cuba')
+    apply(plugin: 'eclipse')
+apply(plugin: 'cuba')
 
     dependencies {
         testCompile('junit:junit:4.12')

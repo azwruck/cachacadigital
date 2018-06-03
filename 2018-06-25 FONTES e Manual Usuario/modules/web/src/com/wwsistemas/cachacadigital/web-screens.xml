@@ -21,8 +21,10 @@
             template="com/wwsistemas/cachacadigital/web/producao/producao-browse.xml"/>
     <screen id="cachaca$Producao.edit"
             template="com/wwsistemas/cachacadigital/web/producao/producao-edit.xml"/>
-    <screen id="cachaca$Frame"
-            template="com/wwsistemas/cachacadigital/web/venda/frame.xml"/>
+    <screen id="cachaca$Produto_venda.browse"
+            template="com/wwsistemas/cachacadigital/web/produto_venda/produto_venda-browse.xml"/>
+    <screen id="cachaca$Produto_venda.edit"
+            template="com/wwsistemas/cachacadigital/web/produto_venda/produto_venda-edit.xml"/>
     <screen id="cachaca$Venda.browse"
             template="com/wwsistemas/cachacadigital/web/venda/venda-browse.xml"/>
     <screen id="cachaca$Venda.edit"

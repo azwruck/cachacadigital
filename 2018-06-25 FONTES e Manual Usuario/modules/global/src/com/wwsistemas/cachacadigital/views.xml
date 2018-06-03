@@ -15,4 +15,43 @@
                       view="_minimal"/>
         </property>
     </view>
+    <view class="com.wwsistemas.cachacadigital.entity.Venda"
+          extends="_local"
+          name="venda">
+        <property name="idProdutoVenda"
+                  view="_minimal">
+            <property name="idProduto"
+                      view="_minimal">
+                <property name="preco"/>
+                <property name="idCategoria"
+                          view="_minimal"/>
+            </property>
+            <property name="quantidade"/>
+        </property>
+        <property name="idCliente"
+                  view="_minimal"/>
+        <property name="total2"/>
+    </view>
+    <view class="com.wwsistemas.cachacadigital.entity.Produto_venda"
+          extends="_local"
+          name="produto_venda_view">
+        <property name="idProduto"
+                  view="_minimal">
+            <property name="preco"/>
+            <property name="idCategoria"
+                      view="_minimal"/>
+            <property name="quantidade"/>
+        </property>
+        <property name="venda"
+                  view="_minimal">
+            <property name="idProdutoVenda"
+                      view="_minimal">
+                <property name="idProduto"
+                          view="_minimal">
+                    <property name="preco"/>
+                </property>
+            </property>
+        </property>
+        <property name="custo"/>
+    </view>
 </views>

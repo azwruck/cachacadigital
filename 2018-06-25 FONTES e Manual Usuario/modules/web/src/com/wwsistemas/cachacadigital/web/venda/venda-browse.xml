@@ -8,7 +8,7 @@
     <dsContext>
         <groupDatasource id="vendasDs"
                          class="com.wwsistemas.cachacadigital.entity.Venda"
-                         view="_local">
+                         view="venda">
             <query>
                 <![CDATA[select e from cachaca$Venda e]]>
             </query>
@@ -31,9 +31,9 @@
                 <action id="remove"/>
             </actions>
             <columns>
-                <column id="idCliente"/>
-                <column id="total"/>
+                <column id="id"/>
                 <column id="data_venda"/>
+                <column id="total2"/>
             </columns>
             <rows datasource="vendasDs"/>
             <rowsCount/>

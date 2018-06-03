@@ -66,9 +66,9 @@ create table CACHACA_PRODUTO_VENDA (
     ID integer,
     UUID varchar(32),
     --
-    ID_PRODUTO_ID integer,
+    ID_PRODUTO_ID integer not null,
     QUANTIDADE integer not null,
-    TOTAL double precision not null,
+    TOTAL double precision,
     VENDA_ID integer not null,
     --
     primary key (ID)

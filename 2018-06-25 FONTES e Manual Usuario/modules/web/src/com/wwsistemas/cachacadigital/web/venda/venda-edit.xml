@@ -8,24 +8,63 @@
     <dsContext>
         <datasource id="vendaDs"
                     class="com.wwsistemas.cachacadigital.entity.Venda"
-                    view="_local"/>
+                    view="venda">
+            <collectionDatasource id="idProdutoVendaDs"
+                                  property="idProdutoVenda"/>
+        </datasource>
     </dsContext>
     <dialogMode height="600"
                 width="800"/>
-    <layout expand="windowActions"
+    <layout expand="fieldGroup"
             spacing="true">
         <fieldGroup id="fieldGroup"
                     datasource="vendaDs">
             <column width="250px">
                 <field property="idCliente"/>
-                <field property="idProdutoVenda.idProduto"/>
             </column>
             <column>
                 <field property="data_venda"/>
-                <field property="idProdutoVenda.quantidade"/>
+            </column>
+        </fieldGroup>
+        <groupBox height="171px"
+                  spacing="true">
+            <table id="idProdutoVendaTable"
+                   height="128px"
+                   width="659px">
+                <actions>
+                    <action id="create"/>
+                    <action id="edit"/>
+                    <action id="remove"/>
+                </actions>
+                <columns>
+                    <column id="idProduto"/>
+                    <column id="idProduto.idCategoria"/>
+                    <column id="quantidade"/>
+                    <column id="idProduto.preco"
+                            caption="Preço"/>
+                    <column id="custo"
+                            caption="Total"/>
+                </columns>
+                <rows datasource="idProdutoVendaDs"/>
+                <buttonsPanel>
+                    <button id="add"
+                            action="idProdutoVendaTable.create"
+                            invoke="onAddClick"/>
+                    <button id="edit"
+                            action="idProdutoVendaTable.edit"/>
+                    <button action="idProdutoVendaTable.remove"/>
+                </buttonsPanel>
+            </table>
+        </groupBox>
+        <fieldGroup datasource="vendaDs">
+            <column width="250px">
+                <field caption="Total"
+                       editable="false"
+                       property="total2"/>
             </column>
         </fieldGroup>
         <frame id="windowActions"
+               height="37px"
                screen="editWindowActions"/>
     </layout>
 </window>

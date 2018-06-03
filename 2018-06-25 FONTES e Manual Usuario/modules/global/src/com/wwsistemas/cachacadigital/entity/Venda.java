@@ -10,13 +10,17 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Transient;
 import javax.validation.constraints.NotNull;
 import com.haulmont.cuba.core.entity.BaseIntegerIdEntity;
 import com.haulmont.cuba.core.entity.HasUuid;
 import com.haulmont.chile.core.annotations.NamePattern;
 import com.haulmont.chile.core.annotations.Composition;
+import com.haulmont.chile.core.annotations.MetaProperty;
+
 import java.util.List;
 import javax.persistence.OneToMany;
+import java.util.Collection;
 
 @NamePattern("%s %s|idCliente,data_venda")
 @Table(name = "CACHACA_VENDA")
@@ -43,15 +47,37 @@ public class Venda extends BaseIntegerIdEntity implements HasUuid {
 
     @Column(name = "TOTAL")
     protected Double total;
+    
 
-    public void setIdProdutoVenda(List<Produto_venda> idProdutoVenda) {
-        this.idProdutoVenda = idProdutoVenda;
-    }
 
     public List<Produto_venda> getIdProdutoVenda() {
         return idProdutoVenda;
     }
 
+    public void setIdProdutoVenda(List<Produto_venda> idProdutoVenda) {
+        this.idProdutoVenda = idProdutoVenda;
+    }
+
+
+
+    @Transient
+    @MetaProperty(related = "idProdutoVenda")
+    protected Double total2;
+    
+    public Double getTotal2() {
+    	
+    	total2 = 0.0;
+    	
+    	if(idProdutoVenda == null){
+    		return total2;
+    	} else 
+        for (Produto_venda pv: idProdutoVenda) {
+        	total2 += pv.getCusto();
+        }
+    	
+
+        return total2;
+    }
 
     public void setIdCliente(Cliente idCliente) {
         this.idCliente = idCliente;
