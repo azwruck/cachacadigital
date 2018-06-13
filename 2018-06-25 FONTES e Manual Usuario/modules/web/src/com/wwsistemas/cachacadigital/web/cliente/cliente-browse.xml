@@ -24,6 +24,7 @@
             <properties include=".*"/>
         </filter>
         <groupTable id="clientesTable"
+                    multiselect="true"
                     width="100%">
             <actions>
                 <action id="create"/>

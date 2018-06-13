@@ -24,6 +24,7 @@
             <properties include=".*"/>
         </filter>
         <groupTable id="vendasTable"
+                    multiselect="true"
                     width="100%">
             <actions>
                 <action id="create"/>
@@ -32,8 +33,9 @@
             </actions>
             <columns>
                 <column id="id"/>
+                <column id="idCliente"/>
+                <column id="total"/>
                 <column id="data_venda"/>
-                <column id="total2"/>
             </columns>
             <rows datasource="vendasDs"/>
             <rowsCount/>

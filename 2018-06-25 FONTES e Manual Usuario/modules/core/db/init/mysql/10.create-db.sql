@@ -81,7 +81,7 @@ create table CACHACA_PRODUCAO (
     --
     LOTE integer not null,
     PRODUTO_ID integer not null,
-    QUANTIDADE integer not null,
+    QUANT integer not null,
     DATA_PRODUCAO date not null,
     --
     primary key (ID)

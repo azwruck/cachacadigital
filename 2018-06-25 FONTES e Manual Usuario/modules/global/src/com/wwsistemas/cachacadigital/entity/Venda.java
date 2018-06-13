@@ -75,7 +75,7 @@ public class Venda extends BaseIntegerIdEntity implements HasUuid {
         	total2 += pv.getCusto();
         }
     	
-
+    	setTotal(total2);
         return total2;
     }
 

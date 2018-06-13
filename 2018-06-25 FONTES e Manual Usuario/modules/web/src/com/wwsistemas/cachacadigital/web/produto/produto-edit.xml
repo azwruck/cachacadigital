@@ -24,7 +24,6 @@
                 <field property="idCategoria"/>
                 <field caption="Preço"
                        property="preco"/>
-                <field property="quantidade"/>
             </column>
         </fieldGroup>
         <frame id="windowActions"

@@ -13,7 +13,9 @@ import com.haulmont.cuba.core.entity.HasUuid;
 import com.haulmont.chile.core.annotations.MetaProperty;
 import com.haulmont.chile.core.annotations.NamePattern;
 import com.wwsistemas.cachacadigital.entity.Produto;
+import com.haulmont.cuba.core.entity.annotation.Listeners;
 
+@Listeners("cachaca_Produto_vendaListener")
 @NamePattern("%s |idProduto")
 @Table(name = "CACHACA_PRODUTO_VENDA")
 @Entity(name = "cachaca$Produto_venda")
@@ -40,8 +42,9 @@ public class Produto_venda extends BaseIntegerIdEntity implements HasUuid {
     
     @MetaProperty(related = {"idProduto", "quantidade"})
     public Double getCusto() {
-    	//Produto p;
-        return getQuantidade() * idProduto.getPreco();
+    	Double custo = getQuantidade() * idProduto.getPreco();
+    	setTotal(custo);
+        return custo;
     }
 
     public void setTotal(Double total) {

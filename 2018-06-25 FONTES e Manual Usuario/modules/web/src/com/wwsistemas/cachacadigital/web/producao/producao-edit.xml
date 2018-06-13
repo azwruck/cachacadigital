@@ -12,8 +12,7 @@
     </dsContext>
     <dialogMode height="600"
                 width="800"/>
-    <layout expand="windowActions"
-            spacing="true">
+    <layout spacing="true">
         <fieldGroup id="fieldGroup"
                     datasource="producaoDs">
             <column width="250px">
@@ -22,14 +21,13 @@
                        property="id"/>
                 <field property="produto"/>
                 <field property="lote"/>
-                <field property="quantidade"/>
+                <field property="quant"/>
             </column>
             <column>
                 <field caption="Data Produção"
                        property="data_producao"/>
             </column>
         </fieldGroup>
-        <frame id="windowActions"
-               screen="editWindowActions"/>
+        <frame screen="editWindowActions"/>
     </layout>
 </window>

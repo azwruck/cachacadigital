@@ -24,6 +24,7 @@
             <properties include=".*"/>
         </filter>
         <groupTable id="producaosTable"
+                    multiselect="true"
                     width="100%">
             <actions>
                 <action id="create"/>
@@ -37,7 +38,8 @@
                 <column id="produto.idCategoria.nome"
                         caption="Categoria"/>
                 <column id="lote"/>
-                <column id="quantidade"/>
+                <column id="quant"
+                        caption="Quantidade"/>
                 <column id="data_producao"
                         caption="Data Produção"/>
             </columns>

@@ -24,6 +24,7 @@
             <properties include=".*"/>
         </filter>
         <groupTable id="produtoesTable"
+                    multiselect="true"
                     width="100%">
             <actions>
                 <action id="create"/>
@@ -35,10 +36,9 @@
                         caption="Código"/>
                 <column id="nome"/>
                 <column id="idCategoria"/>
+                <column id="preco"/>
                 <column id="quantidade"
                         caption="Estoque"/>
-                <column id="preco"
-                        caption="Preço"/>
             </columns>
             <rows datasource="produtoesDs"/>
             <rowsCount/>

@@ -13,8 +13,11 @@ import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 import com.haulmont.cuba.core.entity.BaseIntegerIdEntity;
 import com.haulmont.cuba.core.entity.HasUuid;
+import com.haulmont.chile.core.annotations.MetaProperty;
 import com.haulmont.chile.core.annotations.NamePattern;
+import com.haulmont.cuba.core.entity.annotation.Listeners;
 
+@Listeners("cachaca_ProducaoListener")
 @NamePattern(" %s|lote")
 @Table(name = "CACHACA_PRODUCAO")
 @Entity(name = "cachaca$Producao")
@@ -34,13 +37,22 @@ public class Producao extends BaseIntegerIdEntity implements HasUuid {
     protected Produto produto;
 
     @NotNull
-    @Column(name = "QUANTIDADE", nullable = false)
-    protected Integer quantidade;
+    @Column(name = "QUANT", nullable = false)
+    protected Integer quant;
 
     @Temporal(TemporalType.DATE)
     @NotNull
     @Column(name = "DATA_PRODUCAO", nullable = false)
     protected Date data_producao;
+
+    
+    public void setQuant(Integer quant) {
+        this.quant = quant;  
+    }
+
+    public Integer getQuant() {
+        return quant;
+    }
 
 
     public void setProduto(Produto produto) {
@@ -68,14 +80,6 @@ public class Producao extends BaseIntegerIdEntity implements HasUuid {
         return lote;
     }
 
-    public void setQuantidade(Integer quantidade) {
-        this.quantidade = quantidade;
-    }
-
-    public Integer getQuantidade() {
-        return quantidade;
-    }
-
     public void setData_producao(Date data_producao) {
         this.data_producao = data_producao;
     }
@@ -85,4 +89,11 @@ public class Producao extends BaseIntegerIdEntity implements HasUuid {
     }
 
 
+//    @MetaProperty(related = {"produto", "quant"})
+//    public Integer getEstoque() {
+//     
+//    	Integer estoque = getQuant();
+//    	produto.setQuantidade(getQuant());  
+//    	return estoque;
+//    }
 }
