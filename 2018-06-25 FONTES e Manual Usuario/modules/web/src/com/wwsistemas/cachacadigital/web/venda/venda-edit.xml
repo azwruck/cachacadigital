@@ -18,7 +18,8 @@
     <layout expand="fieldGroup"
             spacing="true">
         <fieldGroup id="fieldGroup"
-                    datasource="vendaDs">
+                    datasource="vendaDs"
+                    height="33px">
             <column width="250px">
                 <field property="idCliente"/>
             </column>
@@ -26,36 +27,33 @@
                 <field property="data_venda"/>
             </column>
         </fieldGroup>
-        <groupBox height="171px"
-                  spacing="true">
-            <table id="idProdutoVendaTable"
-                   height="128px"
-                   width="659px">
-                <actions>
-                    <action id="create"/>
-                    <action id="edit"/>
-                    <action id="remove"/>
-                </actions>
-                <columns>
-                    <column id="idProduto"/>
-                    <column id="idProduto.idCategoria"/>
-                    <column id="quantidade"/>
-                    <column id="idProduto.preco"
-                            caption="Preço"/>
-                    <column id="custo"
-                            caption="Total"/>
-                </columns>
-                <rows datasource="idProdutoVendaDs"/>
-                <buttonsPanel>
-                    <button id="add"
-                            action="idProdutoVendaTable.create"
-                            invoke="onAddClick"/>
-                    <button id="edit"
-                            action="idProdutoVendaTable.edit"/>
-                    <button action="idProdutoVendaTable.remove"/>
-                </buttonsPanel>
-            </table>
-        </groupBox>
+        <table id="idProdutoVendaTable"
+               height="305px"
+               width="659px">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+            </actions>
+            <columns>
+                <column id="idProduto"/>
+                <column id="idProduto.idCategoria"/>
+                <column id="quantidade"/>
+                <column id="idProduto.preco"
+                        caption="Preço"/>
+                <column id="custo"
+                        caption="Total"/>
+            </columns>
+            <rows datasource="idProdutoVendaDs"/>
+            <buttonsPanel>
+                <button id="add"
+                        action="idProdutoVendaTable.create"
+                        invoke="onAddClick"/>
+                <button id="edit"
+                        action="idProdutoVendaTable.edit"/>
+                <button action="idProdutoVendaTable.remove"/>
+            </buttonsPanel>
+        </table>
         <fieldGroup datasource="vendaDs">
             <column width="250px">
                 <field caption="Total"

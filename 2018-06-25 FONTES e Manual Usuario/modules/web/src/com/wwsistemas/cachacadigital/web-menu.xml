@@ -10,5 +10,6 @@
         <item screen="cachaca$Producao.browse"/>
         <item screen="cachaca$Produto_venda.browse"/>
         <item screen="cachaca$Venda.browse"/>
+        <item screen="relatorio"/>
     </menu>
 </menu-config>
