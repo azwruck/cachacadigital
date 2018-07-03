@@ -29,6 +29,6 @@
             template="com/wwsistemas/cachacadigital/web/venda/venda-browse.xml"/>
     <screen id="cachaca$Venda.edit"
             template="com/wwsistemas/cachacadigital/web/venda/venda-edit.xml"/>
-    <screen id="relatorio"
-            template="com/wwsistemas/cachacadigital/web/screens/relatorio.xml"/>
+    <screen id="cachaca$Venda.browse3"
+            template="com/wwsistemas/cachacadigital/web/screens/venda-browse3.xml"/>
 </screen-config>

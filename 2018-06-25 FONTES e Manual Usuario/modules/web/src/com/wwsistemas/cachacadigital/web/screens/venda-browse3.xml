@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="com.wwsistemas.cachacadigital.web.screens.VendaBrowse3"
+        focusComponent="vendasTable"
+        lookupComponent="vendasTable"
+        messagesPack="com.wwsistemas.cachacadigital.web.screens">
+    <dsContext>
+        <groupDatasource id="vendasDs"
+                         class="com.wwsistemas.cachacadigital.entity.Venda"
+                         view="venda">
+            <query>
+                <![CDATA[select e from cachaca$Venda e]]>
+            </query>
+        </groupDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="vendasTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="vendasTable"
+                datasource="vendasDs">
+            <custom name="Cliente"
+                    paramClass="java.lang.String">select e from cachaca$venda e where e.idCliente = :session$idCliente</custom>
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="vendasTable"
+                    aggregatable="true"
+                    width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+                <action id="excel"/>
+            </actions>
+            <columns>
+                <column id="id"/>
+                <column id="idCliente"/>
+                <column id="total">
+                <aggregation type="SUM"/>
+                </column>
+                <column id="data_venda"/>
+            </columns>
+            <rows datasource="vendasDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="excelButton"
+                        action="vendasTable.excel"/>
+            </buttonsPanel>
+        </groupTable>
+    </layout>
+</window>
