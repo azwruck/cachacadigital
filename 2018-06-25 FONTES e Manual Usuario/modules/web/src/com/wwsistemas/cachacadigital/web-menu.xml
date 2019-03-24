@@ -2,6 +2,7 @@
 <menu-config xmlns="http://schemas.haulmont.com/cuba/menu.xsd">
     <menu id="application-cachaca"
           insertBefore="administration">
+        <item screen="cachaca$Insumos.browse"/>
     </menu>
     <item insertBefore="administration"
           openType="NEW_TAB"

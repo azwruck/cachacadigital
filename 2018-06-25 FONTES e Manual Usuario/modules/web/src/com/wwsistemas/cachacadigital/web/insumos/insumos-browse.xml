@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="com.wwsistemas.cachacadigital.web.insumos.InsumosBrowse"
+        focusComponent="insumosesTable"
+        lookupComponent="insumosesTable"
+        messagesPack="com.wwsistemas.cachacadigital.web.insumos">
+    <dsContext>
+        <groupDatasource id="insumosesDs"
+                         class="com.wwsistemas.cachacadigital.entity.Insumos"
+                         view="_local">
+            <query>
+                <![CDATA[select e from cachaca$Insumos e]]>
+            </query>
+        </groupDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="insumosesTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="insumosesTable"
+                datasource="insumosesDs">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="insumosesTable"
+                    width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+            </actions>
+            <columns>
+                <column id="nome"/>
+                <column id="quantidade"/>
+            </columns>
+            <rows datasource="insumosesDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn"
+                        action="insumosesTable.create"
+                        caption="mainMsg://cadastros.Adicionar"/>
+                <button id="editBtn"
+                        action="insumosesTable.edit"
+                        caption="mainMsg://cadastros.Editar"/>
+                <button id="removeBtn"
+                        action="insumosesTable.remove"
+                        caption="mainMsg://cadastros.Excluir"/>
+            </buttonsPanel>
+        </groupTable>
+    </layout>
+</window>
