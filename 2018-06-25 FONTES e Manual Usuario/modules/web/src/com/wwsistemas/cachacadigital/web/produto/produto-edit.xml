@@ -8,7 +8,10 @@
     <dsContext>
         <datasource id="produtoDs"
                     class="com.wwsistemas.cachacadigital.entity.Produto"
-                    view="produto-com-categoria"/>
+                    view="produto-com-categoria">
+            <collectionDatasource id="insumoProdutoDs"
+                                  property="insumoProduto"/>
+        </datasource>
     </dsContext>
     <dialogMode height="600"
                 width="800"/>
@@ -26,6 +29,29 @@
                        property="preco"/>
             </column>
         </fieldGroup>
+        <table id="insumoProdutoTable"
+               height="239px"
+               width="392px">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+            </actions>
+            <columns>
+                <column id="insumo"/>
+                <column id="quantidade"/>
+            </columns>
+            <rows datasource="insumoProdutoDs"/>
+            <buttonsPanel width="296px">
+                <button action="insumoProdutoTable.create"
+                        width="67px"/>
+                <button action="insumoProdutoTable.edit"
+                        width="56px"/>
+                <button id="removeButton"
+                        action="insumoProdutoTable.remove"
+                        width="80px"/>
+            </buttonsPanel>
+        </table>
         <frame id="windowActions"
                screen="editWindowActions"/>
     </layout>

@@ -22,9 +22,21 @@ public class Insumos extends BaseIntegerIdEntity implements HasUuid {
     @Column(name = "QUANTIDADE", nullable = false)
     protected Integer quantidade;
 
+    @Column(name = "QUANT_PRODUCAO")
+    protected Integer quantProducao;
+
     @NotNull
     @Column(name = "NOME", nullable = false, length = 64)
     protected String nome;
+
+    public void setQuantProducao(Integer quantProducao) {
+        this.quantProducao = quantProducao;
+    }
+
+    public Integer getQuantProducao() {
+        return quantProducao;
+    }
+
 
     public void setQuantidade(Integer quantidade) {
         this.quantidade = quantidade;

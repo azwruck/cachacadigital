@@ -87,3 +87,27 @@ create table CACHACA_PRODUCAO (
     primary key (ID)
 )^
 -- end CACHACA_PRODUCAO
+-- begin CACHACA_INSUMOS
+create table CACHACA_INSUMOS (
+    ID integer,
+    UUID varchar(32),
+    --
+    QUANTIDADE integer not null,
+    QUANT_PRODUCAO integer,
+    NOME varchar(64) not null,
+    --
+    primary key (ID)
+)^
+-- end CACHACA_INSUMOS
+-- begin CACHACA_INSUMO_PRODUTO
+create table CACHACA_INSUMO_PRODUTO (
+    ID integer,
+    UUID varchar(32),
+    --
+    QUANTIDADE integer not null,
+    PRODUTO_ID integer,
+    INSUMO_ID integer not null,
+    --
+    primary key (ID)
+)^
+-- end CACHACA_INSUMO_PRODUTO

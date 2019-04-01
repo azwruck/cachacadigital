@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="com.wwsistemas.cachacadigital.web.insumo_produto.Insumo_produtoBrowse"
+        focusComponent="insumo_produtoesTable"
+        lookupComponent="insumo_produtoesTable"
+        messagesPack="com.wwsistemas.cachacadigital.web.insumo_produto">
+    <dsContext>
+        <groupDatasource id="insumo_produtoesDs"
+                         class="com.wwsistemas.cachacadigital.entity.Insumo_produto"
+                         view="_local">
+            <query>
+                <![CDATA[select e from cachaca$Insumo_produto e]]>
+            </query>
+        </groupDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="insumo_produtoesTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="insumo_produtoesTable"
+                datasource="insumo_produtoesDs">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="insumo_produtoesTable"
+                    width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+            </actions>
+            <columns>
+                <column id="quantidade"/>
+            </columns>
+            <rows datasource="insumo_produtoesDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn"
+                        action="insumo_produtoesTable.create"/>
+                <button id="editBtn"
+                        action="insumo_produtoesTable.edit"/>
+                <button id="removeBtn"
+                        action="insumo_produtoesTable.remove"/>
+            </buttonsPanel>
+        </groupTable>
+    </layout>
+</window>

@@ -32,7 +32,10 @@
             </actions>
             <columns>
                 <column id="nome"/>
-                <column id="quantidade"/>
+                <column id="quantidade"
+                        caption="Estoque"/>
+                <column id="quantProducao"
+                        caption="Quantidade para Produção"/>
             </columns>
             <rows datasource="insumosesDs"/>
             <rowsCount/>

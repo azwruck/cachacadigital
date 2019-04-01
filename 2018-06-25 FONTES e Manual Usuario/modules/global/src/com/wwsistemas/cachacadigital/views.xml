@@ -5,6 +5,12 @@
           name="produto-com-categoria">
         <property name="idCategoria"
                   view="_minimal"/>
+        <property name="insumoProduto"
+                  view="_minimal">
+            <property name="quantidade"/>
+            <property name="insumo"
+                      view="_minimal"/>
+        </property>
     </view>
     <view class="com.wwsistemas.cachacadigital.entity.Producao"
           extends="_local"
@@ -53,5 +59,11 @@
             </property>
         </property>
         <property name="custo"/>
+    </view>
+    <view class="com.wwsistemas.cachacadigital.entity.Insumo_produto"
+          extends="_local"
+          name="insumo_produto_view">
+        <property name="insumo"
+                  view="_minimal"/>
     </view>
 </views>

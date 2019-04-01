@@ -46,6 +46,7 @@ public class Producao extends BaseIntegerIdEntity implements HasUuid {
     protected Date data_producao;
 
     
+
     public void setQuant(Integer quant) {
         this.quant = quant;  
     }

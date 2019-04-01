@@ -35,4 +35,8 @@
             template="com/wwsistemas/cachacadigital/web/insumos/insumos-browse.xml"/>
     <screen id="cachaca$Insumos.edit"
             template="com/wwsistemas/cachacadigital/web/insumos/insumos-edit.xml"/>
+    <screen id="cachaca$Insumo_produto.browse"
+            template="com/wwsistemas/cachacadigital/web/insumo_produto/insumo_produto-browse.xml"/>
+    <screen id="cachaca$Insumo_produto.edit"
+            template="com/wwsistemas/cachacadigital/web/insumo_produto/insumo_produto-edit.xml"/>
 </screen-config>

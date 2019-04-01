@@ -11,5 +11,6 @@
         <class>com.wwsistemas.cachacadigital.entity.Produto_venda</class>
         <class>com.wwsistemas.cachacadigital.entity.Producao</class>
         <class>com.wwsistemas.cachacadigital.entity.Insumos</class>
+        <class>com.wwsistemas.cachacadigital.entity.Insumo_produto</class>
     </persistence-unit>
 </persistence>

@@ -11,6 +11,9 @@ import javax.validation.constraints.NotNull;
 import com.haulmont.cuba.core.entity.BaseIntegerIdEntity;
 import com.haulmont.cuba.core.entity.HasUuid;
 import com.haulmont.chile.core.annotations.NamePattern;
+import com.haulmont.chile.core.annotations.Composition;
+import java.util.List;
+import javax.persistence.OneToMany;
 
 @NamePattern("%s|nome")
 @Table(name = "CACHACA_PRODUTO")
@@ -20,6 +23,10 @@ public class Produto extends BaseIntegerIdEntity implements HasUuid {
 
     @Column(name = "UUID")
     protected UUID uuid;
+
+    @Composition
+    @OneToMany(mappedBy = "produto")
+    protected List<Insumo_produto> insumoProduto;
 
     @NotNull
     @Column(name = "NOME", nullable = false)
@@ -36,6 +43,15 @@ public class Produto extends BaseIntegerIdEntity implements HasUuid {
 
     @Column(name = "QUANTIDADE")
     protected Integer quantidade;
+
+    public void setInsumoProduto(List<Insumo_produto> insumoProduto) {
+        this.insumoProduto = insumoProduto;
+    }
+
+    public List<Insumo_produto> getInsumoProduto() {
+        return insumoProduto;
+    }
+
 
     public void setIdCategoria(Categoria idCategoria) {
         this.idCategoria = idCategoria;
