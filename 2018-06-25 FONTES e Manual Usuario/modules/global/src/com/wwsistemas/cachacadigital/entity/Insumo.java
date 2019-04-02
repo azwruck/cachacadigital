@@ -8,15 +8,22 @@ import javax.validation.constraints.NotNull;
 import com.haulmont.cuba.core.entity.BaseIntegerIdEntity;
 import com.haulmont.cuba.core.entity.HasUuid;
 import com.haulmont.chile.core.annotations.NamePattern;
+import com.haulmont.chile.core.annotations.Composition;
+import java.util.List;
+import javax.persistence.OneToMany;
 
 @NamePattern("%s|nome")
-@Table(name = "CACHACA_INSUMOS")
-@Entity(name = "cachaca$Insumos")
-public class Insumos extends BaseIntegerIdEntity implements HasUuid {
+@Table(name = "CACHACA_INSUMO")
+@Entity(name = "cachaca$Insumo")
+public class Insumo extends BaseIntegerIdEntity implements HasUuid {
     private static final long serialVersionUID = 3451459289325836937L;
 
     @Column(name = "UUID")
     protected UUID uuid;
+
+    @Composition
+    @OneToMany(mappedBy = "insumo")
+    protected List<Insumo_produto> insumoProduto;
 
     @NotNull
     @Column(name = "QUANTIDADE", nullable = false)
@@ -28,6 +35,15 @@ public class Insumos extends BaseIntegerIdEntity implements HasUuid {
     @NotNull
     @Column(name = "NOME", nullable = false, length = 64)
     protected String nome;
+
+    public void setInsumoProduto(List<Insumo_produto> insumoProduto) {
+        this.insumoProduto = insumoProduto;
+    }
+
+    public List<Insumo_produto> getInsumoProduto() {
+        return insumoProduto;
+    }
+
 
     public void setQuantProducao(Integer quantProducao) {
         this.quantProducao = quantProducao;

@@ -29,15 +29,15 @@ public class Produto_vendaListener
 		}
 	}
 
-	private void recalculaEstoque(Produto_venda pv, Produto p, EntityManager em) {
+	private void recalculaEstoque(Produto_venda produto_venda, Produto produto, EntityManager entity) {
 
-			if (pv.getQuantidade() > p.getQuantidade()) {
+			if (produto_venda.getQuantidade() > produto.getQuantidade()) {
 				throw new IllegalArgumentException("Saldo insuficiente");
 			} else {
 
-			Integer quantidade = (p.getQuantidade() - pv.getQuantidade());
+			Integer quantidade = (produto.getQuantidade() - produto_venda.getQuantidade());
 
-			Produto pro = em.merge(p);
+			Produto pro = entity.merge(produto);
 
 			pro.setQuantidade(quantidade);
 			}

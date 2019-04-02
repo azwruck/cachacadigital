@@ -7,7 +7,7 @@
         messagesPack="com.wwsistemas.cachacadigital.web.insumos">
     <dsContext>
         <datasource id="insumosDs"
-                    class="com.wwsistemas.cachacadigital.entity.Insumos"
+                    class="com.wwsistemas.cachacadigital.entity.Insumo"
                     view="_local"/>
     </dsContext>
     <dialogMode height="600"

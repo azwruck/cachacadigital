@@ -9,7 +9,9 @@
                   view="_minimal">
             <property name="quantidade"/>
             <property name="insumo"
-                      view="_minimal"/>
+                      view="_minimal">
+                <property name="quantidade"/>
+            </property>
         </property>
     </view>
     <view class="com.wwsistemas.cachacadigital.entity.Producao"
@@ -19,6 +21,17 @@
                   view="_minimal">
             <property name="idCategoria"
                       view="_minimal"/>
+            <property name="insumoProduto"
+                      view="_minimal">
+                <property name="quantidade"/>
+                <property name="produto"
+                          view="_minimal"/>
+                <property name="insumo"
+                          view="_minimal">
+                    <property name="quantidade"/>
+                </property>
+            </property>
+            <property name="quantidade"/>
         </property>
     </view>
     <view class="com.wwsistemas.cachacadigital.entity.Venda"
@@ -64,6 +77,8 @@
           extends="_local"
           name="insumo_produto_view">
         <property name="insumo"
-                  view="_minimal"/>
+                  view="_minimal">
+            <property name="quantidade"/>
+        </property>
     </view>
 </views>

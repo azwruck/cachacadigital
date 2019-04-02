@@ -33,16 +33,16 @@ public class ProducaoListener implements BeforeInsertEntityListener<Producao>, B
     }
 
 
-    private void calculaEstoque(Producao pd, Produto p, EntityManager entity){
-        if (p == null)
+    private void calculaEstoque(Producao producao, Produto produto, EntityManager entity){
+        if (produto == null)
             return;
-        if(p.getQuantidade() == null){
-        	p.setQuantidade(0);
+        if(produto.getQuantidade() == null){
+        	produto.setQuantidade(0);
         }
         
-        Integer estoque = pd.getQuant() + p.getQuantidade();
+        Integer estoque = producao.getQuant() + produto.getQuantidade();
         
-        Produto pro = entity.merge(p);
+        Produto pro = entity.merge(produto);
         
         pro.setQuantidade(estoque);
     }

@@ -17,7 +17,7 @@ import com.haulmont.chile.core.annotations.MetaProperty;
 import com.haulmont.chile.core.annotations.NamePattern;
 import com.haulmont.cuba.core.entity.annotation.Listeners;
 
-@Listeners("cachaca_ProducaoListener")
+@Listeners({"cachaca_ProducaoListener", "cachaca_ProducaoInsumoListener"})
 @NamePattern(" %s|lote")
 @Table(name = "CACHACA_PRODUCAO")
 @Entity(name = "cachaca$Producao")

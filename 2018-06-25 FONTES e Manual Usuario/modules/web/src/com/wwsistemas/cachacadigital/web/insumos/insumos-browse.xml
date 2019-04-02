@@ -7,10 +7,10 @@
         messagesPack="com.wwsistemas.cachacadigital.web.insumos">
     <dsContext>
         <groupDatasource id="insumosesDs"
-                         class="com.wwsistemas.cachacadigital.entity.Insumos"
+                         class="com.wwsistemas.cachacadigital.entity.Insumo"
                          view="_local">
             <query>
-                <![CDATA[select e from cachaca$Insumos e]]>
+                <![CDATA[select e from cachaca$Insumo e]]>
             </query>
         </groupDatasource>
     </dsContext>

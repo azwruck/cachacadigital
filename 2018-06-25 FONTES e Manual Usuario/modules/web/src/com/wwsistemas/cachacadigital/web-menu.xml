@@ -7,7 +7,7 @@
           openType="NEW_TAB"
           screen="cachaca$Produto.browse"/>
     <item insertBefore="administration"
-          screen="cachaca$Insumos.browse"/>
+          screen="cachaca$Insumo.browse"/>
     <item insertBefore="administration"
           screen="cachaca$Insumo_produto.browse"/>
     <item insertBefore="administration"

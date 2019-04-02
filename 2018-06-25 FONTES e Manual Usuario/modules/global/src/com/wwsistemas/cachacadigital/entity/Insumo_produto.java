@@ -33,7 +33,16 @@ public class Insumo_produto extends BaseIntegerIdEntity implements HasUuid {
     @NotNull
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "INSUMO_ID")
-    protected Insumos insumo;
+    protected Insumo insumo;
+
+    public Insumo getInsumo() {
+        return insumo;
+    }
+
+    public void setInsumo(Insumo insumo) {
+        this.insumo = insumo;
+    }
+
 
     public void setQuantidade(Integer quantidade) {
         this.quantidade = quantidade;
@@ -43,14 +52,6 @@ public class Insumo_produto extends BaseIntegerIdEntity implements HasUuid {
         return quantidade;
     }
 
-
-    public void setInsumo(Insumos insumo) {
-        this.insumo = insumo;
-    }
-
-    public Insumos getInsumo() {
-        return insumo;
-    }
 
 
     public void setProduto(Produto produto) {
