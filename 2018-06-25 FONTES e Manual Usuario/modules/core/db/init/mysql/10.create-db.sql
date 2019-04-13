@@ -1,7 +1,6 @@
 -- begin CACHACA_CATEGORIA
 create table CACHACA_CATEGORIA (
     ID integer,
-    UUID varchar(32),
     --
     NOME varchar(64) not null,
     --
@@ -21,17 +20,7 @@ create table CACHACA_PRODUTO (
     primary key (ID)
 )^
 -- end CACHACA_PRODUTO
--- begin CACHACA_ESTADO
-create table CACHACA_ESTADO (
-    ID integer,
-    UUID varchar(32),
-    --
-    NOME varchar(64) not null,
-    SIGLA varchar(2) not null,
-    --
-    primary key (ID)
-)^
--- end CACHACA_ESTADO
+
 -- begin CACHACA_CLIENTE
 create table CACHACA_CLIENTE (
     ID integer,
@@ -44,7 +33,6 @@ create table CACHACA_CLIENTE (
     ENDERECO varchar(255) not null,
     CIDADE varchar(128) not null,
     CEP varchar(16) not null,
-    ID_ESTADO_ID integer,
     --
     primary key (ID)
 )^
@@ -112,3 +100,14 @@ create table CACHACA_INSUMO (
     primary key (ID)
 )^
 -- end CACHACA_INSUMO
+-- begin CACHACA_BARRICA
+create table CACHACA_BARRICA (
+    ID integer,
+    --
+    CAPACIDADE double precision not null,
+    PRODUTO_ID integer,
+    DATA_ENTRADA date,
+    --
+    primary key (ID)
+)^
+-- end CACHACA_BARRICA

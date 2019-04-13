@@ -13,23 +13,23 @@ public class Produto_vendaListener
 
 	@Override
 	public void onBeforeInsert(Produto_venda entity, EntityManager entityManager) {
-		try{
+//		try{
 		recalculaEstoque(entity, entity.getIdProduto(), entityManager);
-		} catch(IllegalArgumentException e){
-			System.out.println(e.getMessage());
-		}
+//		} catch(IllegalArgumentException e){
+//			System.out.println(e.getMessage());
+//		}
 	}
 
 	@Override
 	public void onBeforeUpdate(Produto_venda entity, EntityManager entityManager) {
-		try{
+//		try{
 		recalculaEstoque(entity, entity.getIdProduto(), entityManager);
-		} catch(IllegalArgumentException e){
-			System.out.println(e.getMessage());
-		}
+//		} catch(IllegalArgumentException e){
+//			throw new IllegalArgumentException(getMessage("Estoque insuficiente!"));
+//		}
 	}
 
-	private void recalculaEstoque(Produto_venda produto_venda, Produto produto, EntityManager entity) {
+	private void recalculaEstoque(Produto_venda produto_venda, Produto produto, EntityManager entity) throws IllegalArgumentException {
 
 			if (produto_venda.getQuantidade() > produto.getQuantidade()) {
 				throw new IllegalArgumentException("Saldo insuficiente");

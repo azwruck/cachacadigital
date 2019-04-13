@@ -5,12 +5,12 @@
                       transaction-type="RESOURCE_LOCAL">
         <class>com.wwsistemas.cachacadigital.entity.Categoria</class>
         <class>com.wwsistemas.cachacadigital.entity.Produto</class>
-        <class>com.wwsistemas.cachacadigital.entity.Estado</class>
         <class>com.wwsistemas.cachacadigital.entity.Cliente</class>
         <class>com.wwsistemas.cachacadigital.entity.Venda</class>
         <class>com.wwsistemas.cachacadigital.entity.Produto_venda</class>
         <class>com.wwsistemas.cachacadigital.entity.Producao</class>
         <class>com.wwsistemas.cachacadigital.entity.Insumo</class>
         <class>com.wwsistemas.cachacadigital.entity.Insumo_produto</class>
+        <class>com.wwsistemas.cachacadigital.entity.Barrica</class>
     </persistence-unit>
 </persistence>

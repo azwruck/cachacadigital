@@ -22,7 +22,7 @@ public class ProducaoInsumoListener implements BeforeInsertEntityListener<Produc
 
     @Override
     public void onBeforeUpdate(Producao entity, EntityManager entityManager) {
-
+    	calculaInsumo(entity, entity.getProduto().getInsumoProduto(), entityManager);
     }
 
     
