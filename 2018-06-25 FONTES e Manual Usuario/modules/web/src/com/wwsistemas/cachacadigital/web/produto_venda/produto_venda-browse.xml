@@ -32,7 +32,7 @@
                 <action id="remove"/>
             </actions>
             <columns>
-                <column id="idProduto"/>
+                <column id="produto"/>
                 <column id="quantidade"/>
             </columns>
             <rows datasource="produto_vendasDs"/>

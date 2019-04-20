@@ -12,14 +12,7 @@
                     <label id="welcomeLabel"
                            align="MIDDLE_CENTER"/>
                 </hbox>
-                <grid id="loginFormLayout">
-                    <rows>
-                        <row id="submitRow">
-                            <button id="loginButton"
-                                    caption="msg://loginWindow.submit"/>
-                        </row>
-                    </rows>
-                </grid>
+                <vbox id="loginForm"/>
             </vbox>
         </vbox>
     </layout>

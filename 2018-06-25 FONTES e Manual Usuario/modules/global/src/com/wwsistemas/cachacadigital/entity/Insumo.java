@@ -15,43 +15,42 @@ import javax.persistence.OneToMany;
 @NamePattern("%s|nome")
 @Table(name = "CACHACA_INSUMO")
 @Entity(name = "cachaca$Insumo")
-public class Insumo extends BaseIntegerIdEntity implements HasUuid {
+public class Insumo extends BaseIntegerIdEntity {
     private static final long serialVersionUID = 3451459289325836937L;
-
-    @Column(name = "UUID")
-    protected UUID uuid;
 
     @Composition
     @OneToMany(mappedBy = "insumo")
-    protected List<Insumo_produto> insumoProduto;
+    protected List<Insumo_produto> insumo_produto;
 
     @NotNull
-    @Column(name = "QUANTIDADE", nullable = false)
-    protected Integer quantidade;
+    @Column(name = "ESTOQUE", nullable = false)
+    protected Integer estoque;
 
-    @Column(name = "QUANT_PRODUCAO")
-    protected Integer quantProducao;
+    @Column(name = "QUANTIDADE")
+    protected Integer quantidade;
 
     @NotNull
     @Column(name = "NOME", nullable = false, length = 64)
     protected String nome;
 
-    public void setInsumoProduto(List<Insumo_produto> insumoProduto) {
-        this.insumoProduto = insumoProduto;
+    public void setInsumo_produto(List<Insumo_produto> insumo_produto) {
+        this.insumo_produto = insumo_produto;
     }
 
-    public List<Insumo_produto> getInsumoProduto() {
-        return insumoProduto;
+    public List<Insumo_produto> getInsumo_produto() {
+        return insumo_produto;
     }
 
 
-    public void setQuantProducao(Integer quantProducao) {
-        this.quantProducao = quantProducao;
+    public void setEstoque(Integer estoque) {
+        this.estoque = estoque;
     }
 
-    public Integer getQuantProducao() {
-        return quantProducao;
+    public Integer getEstoque() {
+        return estoque;
     }
+
+
 
 
     public void setQuantidade(Integer quantidade) {
@@ -62,14 +61,6 @@ public class Insumo extends BaseIntegerIdEntity implements HasUuid {
         return quantidade;
     }
 
-
-    public void setUuid(UUID uuid) {
-        this.uuid = uuid;
-    }
-
-    public UUID getUuid() {
-        return uuid;
-    }
 
     public void setNome(String nome) {
         this.nome = nome;

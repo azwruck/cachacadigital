@@ -14,7 +14,7 @@ public class Produto_vendaListener
 	@Override
 	public void onBeforeInsert(Produto_venda entity, EntityManager entityManager) {
 //		try{
-		recalculaEstoque(entity, entity.getIdProduto(), entityManager);
+		recalculaEstoque(entity, entity.getProduto(), entityManager);
 //		} catch(IllegalArgumentException e){
 //			System.out.println(e.getMessage());
 //		}
@@ -23,7 +23,7 @@ public class Produto_vendaListener
 	@Override
 	public void onBeforeUpdate(Produto_venda entity, EntityManager entityManager) {
 //		try{
-		recalculaEstoque(entity, entity.getIdProduto(), entityManager);
+		recalculaEstoque(entity, entity.getProduto(), entityManager);
 //		} catch(IllegalArgumentException e){
 //			throw new IllegalArgumentException(getMessage("Estoque insuficiente!"));
 //		}

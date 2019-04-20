@@ -35,10 +35,10 @@
                 <column id="id"
                         caption="Código"/>
                 <column id="produto"/>
-                <column id="produto.idCategoria.nome"
+                <column id="produto.categoria.nome"
                         caption="Categoria"/>
                 <column id="lote"/>
-                <column id="quant"
+                <column id="quantidade"
                         caption="Quantidade"/>
                 <column id="data_producao"
                         caption="Data Produção"/>

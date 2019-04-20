@@ -36,9 +36,9 @@
             </actions>
             <columns>
                 <column id="id"/>
-                <column id="idCliente"/>
+                <column id="cliente"/>
                 <column id="total">
-                <aggregation type="SUM"/>
+                    <aggregation type="SUM"/>
                 </column>
                 <column id="data_venda"/>
             </columns>

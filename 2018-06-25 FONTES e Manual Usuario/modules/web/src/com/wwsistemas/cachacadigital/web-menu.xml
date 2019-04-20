@@ -23,4 +23,6 @@
           screen="cachaca$Venda.edit"/>
     <item insertBefore="administration"
           screen="cachaca$Venda.browse3"/>
+    <item insertBefore="administration"
+          screen="cachaca$Barrica.browse"/>
 </menu-config>

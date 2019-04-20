@@ -22,23 +22,20 @@ import java.util.List;
 import javax.persistence.OneToMany;
 import java.util.Collection;
 
-@NamePattern("%s %s|idCliente,data_venda")
+@NamePattern("%s %s|cliente,data_venda")
 @Table(name = "CACHACA_VENDA")
 @Entity(name = "cachaca$Venda")
-public class Venda extends BaseIntegerIdEntity implements HasUuid {
+public class Venda extends BaseIntegerIdEntity {
     private static final long serialVersionUID = -3576490073138102830L;
-
-    @Column(name = "UUID")
-    protected UUID uuid;
 
     @Composition
     @OneToMany(mappedBy = "venda")
-    protected List<Produto_venda> idProdutoVenda;
+    protected List<Produto_venda> produto_venda;
 
     @NotNull
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "ID_CLIENTE_ID")
-    protected Cliente idCliente;
+    @JoinColumn(name = "CLIENTE_ID")
+    protected Cliente cliente;
 
     @Temporal(TemporalType.DATE)
     @NotNull
@@ -50,28 +47,39 @@ public class Venda extends BaseIntegerIdEntity implements HasUuid {
     
 
 
-    public List<Produto_venda> getIdProdutoVenda() {
-        return idProdutoVenda;
-    }
-
-    public void setIdProdutoVenda(List<Produto_venda> idProdutoVenda) {
-        this.idProdutoVenda = idProdutoVenda;
-    }
-
 
 
     @Transient
-    @MetaProperty(related = "idProdutoVenda")
+    @MetaProperty(related = "produto_venda")
     protected Double total2;
     
+    public void setProduto_venda(List<Produto_venda> produto_venda) {
+        this.produto_venda = produto_venda;
+    }
+
+    public List<Produto_venda> getProduto_venda() {
+        return produto_venda;
+    }
+
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+
+
     public Double getTotal2() {
     	
     	total2 = 0.0;
     	
-    	if(idProdutoVenda == null){
+    	if(produto_venda == null){
     		return total2;
     	} else 
-        for (Produto_venda pv: idProdutoVenda) {
+        for (Produto_venda pv: produto_venda) {
         	total2 += pv.getCusto();
         }
     	
@@ -79,22 +87,6 @@ public class Venda extends BaseIntegerIdEntity implements HasUuid {
         return total2;
     }
 
-    public void setIdCliente(Cliente idCliente) {
-        this.idCliente = idCliente;
-    }
-
-    public Cliente getIdCliente() {
-        return idCliente;
-    }
-
-
-    public void setUuid(UUID uuid) {
-        this.uuid = uuid;
-    }
-
-    public UUID getUuid() {
-        return uuid;
-    }
 
     public void setData_venda(Date data_venda) {
         this.data_venda = data_venda;

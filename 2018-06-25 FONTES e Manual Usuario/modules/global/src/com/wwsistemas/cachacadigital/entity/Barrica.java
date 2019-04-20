@@ -24,13 +24,35 @@ public class Barrica extends BaseIntegerIdEntity {
     protected Double capacidade;
 
 
+    @Column(name = "MADEIRA")
+    protected String madeira;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "PRODUTO_ID")
     protected Produto produto;
 
+
     @Temporal(TemporalType.DATE)
     @Column(name = "DATA_ENTRADA")
     protected Date data_entrada;
+
+    public void setData_entrada(Date data_entrada) {
+        this.data_entrada = data_entrada;
+    }
+
+    public Date getData_entrada() {
+        return data_entrada;
+    }
+
+
+    public void setMadeira(String madeira) {
+        this.madeira = madeira;
+    }
+
+    public String getMadeira() {
+        return madeira;
+    }
+
 
     public void setProduto(Produto produto) {
         this.produto = produto;
@@ -40,14 +62,6 @@ public class Barrica extends BaseIntegerIdEntity {
         return produto;
     }
 
-
-    public void setData_entrada(Date data_entrada) {
-        this.data_entrada = data_entrada;
-    }
-
-    public Date getData_entrada() {
-        return data_entrada;
-    }
 
 
     public void setCapacidade(Double capacidade) {

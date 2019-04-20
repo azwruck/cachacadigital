@@ -16,26 +16,26 @@ public class ProducaoInsumoListener implements BeforeInsertEntityListener<Produc
 
     @Override
     public void onBeforeInsert(Producao entity, EntityManager entityManager) {
-    	calculaInsumo(entity, entity.getProduto().getInsumoProduto(), entityManager);
+    	calculaInsumo(entity, entity.getProduto().getInsumo_produto(), entityManager);
     }
 
 
     @Override
     public void onBeforeUpdate(Producao entity, EntityManager entityManager) {
-    	calculaInsumo(entity, entity.getProduto().getInsumoProduto(), entityManager);
+    	calculaInsumo(entity, entity.getProduto().getInsumo_produto(), entityManager);
     }
 
     
     private void calculaInsumo(Producao producao, List<Insumo_produto> list, EntityManager entity){
     	
     	for (Insumo_produto ip: list){
-    	Integer quantidade = producao.getQuant() * ip.getQuantidade();
+    	Integer quantidade = producao.getQuantidade() * ip.getQuantidade();
     	
-    	quantidade = ip.getInsumo().getQuantidade() - quantidade;
+    	quantidade = ip.getInsumo().getEstoque() - quantidade;
     	
     	Insumo ins = entity.merge(ip.getInsumo());
     	
-    	ins.setQuantidade(quantidade);
+    	ins.setEstoque(quantidade);
     	}
     }
 

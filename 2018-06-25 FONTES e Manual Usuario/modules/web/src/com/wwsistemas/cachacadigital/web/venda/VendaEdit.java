@@ -12,26 +12,26 @@ import com.haulmont.cuba.gui.components.WindowDelegate;
 
 public class VendaEdit extends AbstractEditor<Venda> {
 
-	Venda v = new Venda();
-	
-	@Override
-	protected void postValidate(ValidationErrors errors) {
-		List<Produto_venda> lista;
-		lista = v.getIdProdutoVenda();
-		for (Produto_venda pv: lista){
-	    if (pv == null ) {
-            errors.add("A venda precisa conter produtos!");
-            }
-		}
-		for (Produto_venda pv: lista){
-			if(pv.getQuantidade() > pv.getIdProduto().getQuantidade()){
-				errors.add("Estoque insuficiente!");
-				break;
-			}
-		}
-
-		showValidationErrors(errors);
-	}
+//	Venda v = new Venda();
+//	
+//	@Override
+//	protected void postValidate(ValidationErrors errors) {
+//		List<Produto_venda> lista;
+//		lista = v.getProduto_venda();
+//		for (Produto_venda pv: lista){
+//	    if (pv == null ) {
+//            errors.add("A venda precisa conter produtos!");
+//            }
+//		}
+//		for (Produto_venda pv: lista){
+//			if(pv.getQuantidade() > pv.getProduto().getQuantidade()){
+//				errors.add("Estoque insuficiente!");
+//				break;
+//			}
+//		}
+//
+//		showValidationErrors(errors);
+//	}
 	
 //	if (Boolean.TRUE.equals(parameter.getRequired())) {
 //	    tokenList.addValidator(new Field.Validator() {

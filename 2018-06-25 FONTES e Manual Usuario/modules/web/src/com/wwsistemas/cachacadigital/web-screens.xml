@@ -39,4 +39,8 @@
             template="com/wwsistemas/cachacadigital/web/insumos/insumos-edit.xml"/>
     <screen id="cachaca$Insumo.browse"
             template="com/wwsistemas/cachacadigital/web/insumos/insumos-browse.xml"/>
+    <screen id="cachaca$Barrica.browse"
+            template="com/wwsistemas/cachacadigital/web/barrica/barrica-browse.xml"/>
+    <screen id="cachaca$Barrica.edit"
+            template="com/wwsistemas/cachacadigital/web/barrica/barrica-edit.xml"/>
 </screen-config>

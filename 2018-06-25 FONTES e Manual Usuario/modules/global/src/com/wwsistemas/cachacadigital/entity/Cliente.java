@@ -15,11 +15,8 @@ import com.haulmont.chile.core.annotations.NamePattern;
 @NamePattern("%s|nome")
 @Table(name = "CACHACA_CLIENTE")
 @Entity(name = "cachaca$Cliente")
-public class Cliente extends BaseIntegerIdEntity implements HasUuid {
+public class Cliente extends BaseIntegerIdEntity {
     private static final long serialVersionUID = 6652258313616578483L;
-
-    @Column(name = "UUID")
-    protected UUID uuid;
 
     @Column(name = "ESTADO2")
     protected String estado2;
@@ -58,14 +55,6 @@ public class Cliente extends BaseIntegerIdEntity implements HasUuid {
 
 
 
-
-    public void setUuid(UUID uuid) {
-        this.uuid = uuid;
-    }
-
-    public UUID getUuid() {
-        return uuid;
-    }
 
     public void setNome(String nome) {
         this.nome = nome;

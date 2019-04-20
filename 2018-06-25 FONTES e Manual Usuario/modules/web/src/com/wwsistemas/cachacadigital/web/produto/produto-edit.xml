@@ -10,7 +10,7 @@
                     class="com.wwsistemas.cachacadigital.entity.Produto"
                     view="produto-com-categoria">
             <collectionDatasource id="insumoProdutoDs"
-                                  property="insumoProduto"/>
+                                  property="insumo_produto"/>
         </datasource>
     </dsContext>
     <dialogMode height="600"
@@ -24,12 +24,12 @@
                        editable="false"
                        property="id"/>
                 <field property="nome"/>
-                <field property="idCategoria"/>
+                <field property="categoria"/>
                 <field caption="Preço"
                        property="preco"/>
             </column>
         </fieldGroup>
-        <table id="insumoProdutoTable"
+        <table id="insumo_produto"
                height="239px"
                width="392px">
             <actions>
@@ -43,12 +43,12 @@
             </columns>
             <rows datasource="insumoProdutoDs"/>
             <buttonsPanel width="296px">
-                <button action="insumoProdutoTable.create"
+                <button action="insumo_produto.create"
                         width="67px"/>
-                <button action="insumoProdutoTable.edit"
+                <button action="insumo_produto.edit"
                         width="56px"/>
                 <button id="removeButton"
-                        action="insumoProdutoTable.remove"
+                        action="insumo_produto.remove"
                         width="80px"/>
             </buttonsPanel>
         </table>

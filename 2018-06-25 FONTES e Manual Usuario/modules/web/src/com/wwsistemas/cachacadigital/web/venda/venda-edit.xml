@@ -10,7 +10,7 @@
                     class="com.wwsistemas.cachacadigital.entity.Venda"
                     view="venda">
             <collectionDatasource id="idProdutoVendaDs"
-                                  property="idProdutoVenda"/>
+                                  property="produto_venda"/>
         </datasource>
     </dsContext>
     <dialogMode height="600"
@@ -21,13 +21,13 @@
                     datasource="vendaDs"
                     height="33px">
             <column width="250px">
-                <field property="idCliente"/>
+                <field property="cliente"/>
             </column>
             <column>
                 <field property="data_venda"/>
             </column>
         </fieldGroup>
-        <table id="idProdutoVendaTable"
+        <table id="produtoVenda"
                height="305px"
                width="659px">
             <actions>
@@ -36,10 +36,10 @@
                 <action id="remove"/>
             </actions>
             <columns>
-                <column id="idProduto"/>
-                <column id="idProduto.idCategoria"/>
+                <column id="produto"/>
+                <column id="produto.categoria"/>
                 <column id="quantidade"/>
-                <column id="idProduto.preco"
+                <column id="produto.preco"
                         caption="Preço"/>
                 <column id="custo"
                         caption="Total"/>
@@ -47,11 +47,11 @@
             <rows datasource="idProdutoVendaDs"/>
             <buttonsPanel>
                 <button id="add"
-                        action="idProdutoVendaTable.create"
+                        action="produtoVenda.create"
                         invoke="onAddClick"/>
                 <button id="edit"
-                        action="idProdutoVendaTable.edit"/>
-                <button action="idProdutoVendaTable.remove"/>
+                        action="produtoVenda.edit"/>
+                <button action="produtoVenda.remove"/>
             </buttonsPanel>
         </table>
         <fieldGroup datasource="vendaDs">

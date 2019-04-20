@@ -21,11 +21,8 @@ import com.haulmont.cuba.core.entity.annotation.Listeners;
 @NamePattern(" %s|lote")
 @Table(name = "CACHACA_PRODUCAO")
 @Entity(name = "cachaca$Producao")
-public class Producao extends BaseIntegerIdEntity implements HasUuid {
+public class Producao extends BaseIntegerIdEntity {
     private static final long serialVersionUID = -8770381696851348428L;
-
-    @Column(name = "UUID")
-    protected UUID uuid;
 
     @NotNull
     @Column(name = "LOTE", nullable = false)
@@ -37,8 +34,8 @@ public class Producao extends BaseIntegerIdEntity implements HasUuid {
     protected Produto produto;
 
     @NotNull
-    @Column(name = "QUANT", nullable = false)
-    protected Integer quant;
+    @Column(name = "QUANTIDADE", nullable = false)
+    protected Integer quantidade;
 
     @Temporal(TemporalType.DATE)
     @NotNull
@@ -47,12 +44,13 @@ public class Producao extends BaseIntegerIdEntity implements HasUuid {
 
     
 
-    public void setQuant(Integer quant) {
-        this.quant = quant;  
+
+    public void setQuantidade(Integer quantidade) {
+        this.quantidade = quantidade;
     }
 
-    public Integer getQuant() {
-        return quant;
+    public Integer getQuantidade() {
+        return quantidade;
     }
 
 
@@ -64,14 +62,6 @@ public class Producao extends BaseIntegerIdEntity implements HasUuid {
         return produto;
     }
 
-
-    public void setUuid(UUID uuid) {
-        this.uuid = uuid;
-    }
-
-    public UUID getUuid() {
-        return uuid;
-    }
 
     public void setLote(Integer lote) {
         this.lote = lote;

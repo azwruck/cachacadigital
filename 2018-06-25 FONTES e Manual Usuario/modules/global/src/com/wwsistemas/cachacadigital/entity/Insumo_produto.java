@@ -16,11 +16,8 @@ import javax.validation.constraints.NotNull;
 @NamePattern("%s|id")
 @Table(name = "CACHACA_INSUMO_PRODUTO")
 @Entity(name = "cachaca$Insumo_produto")
-public class Insumo_produto extends BaseIntegerIdEntity implements HasUuid {
+public class Insumo_produto extends BaseIntegerIdEntity {
     private static final long serialVersionUID = -6595449322415777253L;
-
-    @Column(name = "UUID")
-    protected UUID uuid;
 
     @NotNull
     @Column(name = "QUANTIDADE", nullable = false)
@@ -62,14 +59,6 @@ public class Insumo_produto extends BaseIntegerIdEntity implements HasUuid {
         return produto;
     }
 
-
-    public void setUuid(UUID uuid) {
-        this.uuid = uuid;
-    }
-
-    public UUID getUuid() {
-        return uuid;
-    }
 
 
 }

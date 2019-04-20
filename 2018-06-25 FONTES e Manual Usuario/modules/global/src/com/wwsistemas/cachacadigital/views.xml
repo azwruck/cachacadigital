@@ -3,14 +3,14 @@
     <view class="com.wwsistemas.cachacadigital.entity.Produto"
           extends="_local"
           name="produto-com-categoria">
-        <property name="idCategoria"
+        <property name="categoria"
                   view="_minimal"/>
-        <property name="insumoProduto"
+        <property name="insumo_produto"
                   view="_minimal">
             <property name="quantidade"/>
             <property name="insumo"
                       view="_minimal">
-                <property name="quantidade"/>
+                <property name="estoque"/>
             </property>
         </property>
     </view>
@@ -19,66 +19,72 @@
           name="producao-com-produto">
         <property name="produto"
                   view="_minimal">
-            <property name="idCategoria"
+            <property name="quantidade"/>
+            <property name="categoria"
                       view="_minimal"/>
-            <property name="insumoProduto"
+            <property name="insumo_produto"
                       view="_minimal">
                 <property name="quantidade"/>
                 <property name="produto"
                           view="_minimal"/>
                 <property name="insumo"
                           view="_minimal">
-                    <property name="quantidade"/>
+                    <property name="estoque"/>
                 </property>
             </property>
-            <property name="quantidade"/>
         </property>
     </view>
     <view class="com.wwsistemas.cachacadigital.entity.Venda"
           extends="_local"
           name="venda">
-        <property name="idProdutoVenda"
+        <property name="total2"/>
+        <property name="cliente"
+                  view="_minimal"/>
+        <property name="produto_venda"
                   view="_minimal">
-            <property name="idProduto"
+            <property name="produto"
                       view="_minimal">
                 <property name="preco"/>
-                <property name="idCategoria"
+                <property name="categoria"
                           view="_minimal"/>
             </property>
             <property name="quantidade"/>
         </property>
-        <property name="idCliente"
-                  view="_minimal"/>
-        <property name="total2"/>
     </view>
     <view class="com.wwsistemas.cachacadigital.entity.Produto_venda"
           extends="_local"
           name="produto_venda_view">
-        <property name="idProduto"
-                  view="_minimal">
-            <property name="preco"/>
-            <property name="idCategoria"
-                      view="_minimal"/>
-            <property name="quantidade"/>
-        </property>
         <property name="venda"
                   view="_minimal">
-            <property name="idProdutoVenda"
+            <property name="produto_venda"
                       view="_minimal">
-                <property name="idProduto"
+                <property name="produto"
                           view="_minimal">
                     <property name="preco"/>
                 </property>
             </property>
         </property>
         <property name="custo"/>
+        <property name="produto"
+                  view="_minimal">
+            <property name="preco"/>
+            <property name="categoria"
+                      view="_minimal"/>
+            <property name="quantidade"/>
+        </property>
     </view>
     <view class="com.wwsistemas.cachacadigital.entity.Insumo_produto"
           extends="_local"
           name="insumo_produto_view">
         <property name="insumo"
                   view="_minimal">
-            <property name="quantidade"/>
+            <property name="estoque"/>
         </property>
+    </view>
+    <view class="com.wwsistemas.cachacadigital.entity.Barrica"
+          extends="_local"
+          name="barrica-com-produto">
+        <property name="produto"
+                  view="_minimal"/>
     </view>
 </views>

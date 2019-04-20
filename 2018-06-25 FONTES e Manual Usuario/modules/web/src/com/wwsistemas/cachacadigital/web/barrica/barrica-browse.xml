@@ -1,30 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
         caption="msg://browseCaption"
-        class="com.wwsistemas.cachacadigital.web.venda.VendaBrowse"
-        focusComponent="vendasTable"
-        lookupComponent="vendasTable"
-        messagesPack="com.wwsistemas.cachacadigital.web.venda">
+        class="com.wwsistemas.cachacadigital.web.barrica.BarricaBrowse"
+        focusComponent="barricasTable"
+        lookupComponent="barricasTable"
+        messagesPack="com.wwsistemas.cachacadigital.web.barrica">
     <dsContext>
-        <groupDatasource id="vendasDs"
-                         class="com.wwsistemas.cachacadigital.entity.Venda"
-                         view="venda">
+        <groupDatasource id="barricasDs"
+                         class="com.wwsistemas.cachacadigital.entity.Barrica"
+                         view="barrica-com-produto">
             <query>
-                <![CDATA[select e from cachaca$Venda e]]>
+                <![CDATA[select e from cachaca$Barrica e]]>
             </query>
         </groupDatasource>
     </dsContext>
     <dialogMode height="600"
                 width="800"/>
-    <layout expand="vendasTable"
+    <layout expand="barricasTable"
             spacing="true">
         <filter id="filter"
-                applyTo="vendasTable"
-                datasource="vendasDs">
+                applyTo="barricasTable"
+                datasource="barricasDs">
             <properties include=".*"/>
         </filter>
-        <groupTable id="vendasTable"
-                    multiselect="true"
+        <groupTable id="barricasTable"
                     width="100%">
             <actions>
                 <action id="create"/>
@@ -33,20 +32,21 @@
             </actions>
             <columns>
                 <column id="id"/>
-                <column id="cliente"/>
-                <column id="total"/>
-                <column id="data_venda"/>
+                <column id="madeira"/>
+                <column id="capacidade"/>
+                <column id="data_entrada"/>
+                <column id="produto"/>
             </columns>
-            <rows datasource="vendasDs"/>
+            <rows datasource="barricasDs"/>
             <rowsCount/>
             <buttonsPanel id="buttonsPanel"
                           alwaysVisible="true">
                 <button id="createBtn"
-                        action="vendasTable.create"/>
+                        action="barricasTable.create"/>
                 <button id="editBtn"
-                        action="vendasTable.edit"/>
+                        action="barricasTable.edit"/>
                 <button id="removeBtn"
-                        action="vendasTable.remove"/>
+                        action="barricasTable.remove"/>
             </buttonsPanel>
         </groupTable>
     </layout>

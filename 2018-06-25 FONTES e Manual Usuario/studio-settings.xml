@@ -6,4 +6,10 @@
     </functionalitySettings>
     <screenDesigner>
     </screenDesigner>
+    <dbScripts>
+        <excludes>
+            <mysql>
+            </mysql>
+        </excludes>
+    </dbScripts>
 </studio>

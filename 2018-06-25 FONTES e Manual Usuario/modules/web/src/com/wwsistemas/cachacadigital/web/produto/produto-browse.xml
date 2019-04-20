@@ -35,7 +35,7 @@
                 <column id="id"
                         caption="Código"/>
                 <column id="nome"/>
-                <column id="idCategoria"/>
+                <column id="categoria"/>
                 <column id="preco"/>
                 <column id="quantidade"
                         caption="Estoque"/>

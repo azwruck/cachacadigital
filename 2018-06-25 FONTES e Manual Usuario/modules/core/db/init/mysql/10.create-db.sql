@@ -7,20 +7,17 @@ create table CACHACA_CATEGORIA (
     primary key (ID)
 )^
 -- end CACHACA_CATEGORIA
--- begin CACHACA_PRODUTO
-create table CACHACA_PRODUTO (
+-- begin CACHACA_BARRICA
+create table CACHACA_BARRICA (
     ID integer,
-    UUID varchar(32),
     --
-    NOME varchar(255) not null,
-    ID_CATEGORIA_ID integer not null,
-    PRECO double precision not null,
-    QUANTIDADE integer,
+    CAPACIDADE double precision not null,
+    PRODUTO_ID integer,
+    DATA_ENTRADA date,
     --
     primary key (ID)
 )^
--- end CACHACA_PRODUTO
-
+-- end CACHACA_BARRICA
 -- begin CACHACA_CLIENTE
 create table CACHACA_CLIENTE (
     ID integer,
@@ -37,31 +34,30 @@ create table CACHACA_CLIENTE (
     primary key (ID)
 )^
 -- end CACHACA_CLIENTE
--- begin CACHACA_VENDA
-create table CACHACA_VENDA (
+-- begin CACHACA_INSUMO
+create table CACHACA_INSUMO (
     ID integer,
     UUID varchar(32),
     --
-    ID_CLIENTE_ID integer not null,
-    DATA_VENDA date not null,
-    TOTAL double precision,
-    --
-    primary key (ID)
-)^
--- end CACHACA_VENDA
--- begin CACHACA_PRODUTO_VENDA
-create table CACHACA_PRODUTO_VENDA (
-    ID integer,
-    UUID varchar(32),
-    --
-    ID_PRODUTO_ID integer not null,
     QUANTIDADE integer not null,
-    TOTAL double precision,
-    VENDA_ID integer not null,
+    QUANT_PRODUCAO integer,
+    NOME varchar(64) not null,
     --
     primary key (ID)
 )^
--- end CACHACA_PRODUTO_VENDA
+-- end CACHACA_INSUMO
+-- begin CACHACA_INSUMO_PRODUTO
+create table CACHACA_INSUMO_PRODUTO (
+    ID integer,
+    UUID varchar(32),
+    --
+    QUANTIDADE integer not null,
+    PRODUTO_ID integer,
+    INSUMO_ID integer not null,
+    --
+    primary key (ID)
+)^
+-- end CACHACA_INSUMO_PRODUTO
 -- begin CACHACA_PRODUCAO
 create table CACHACA_PRODUCAO (
     ID integer,
@@ -75,39 +71,42 @@ create table CACHACA_PRODUCAO (
     primary key (ID)
 )^
 -- end CACHACA_PRODUCAO
-
--- begin CACHACA_INSUMO_PRODUTO
-create table CACHACA_INSUMO_PRODUTO (
+-- begin CACHACA_PRODUTO
+create table CACHACA_PRODUTO (
+    ID integer,
+    UPDATE_TS datetime,
+    UPDATED_BY varchar(50),
+    --
+    NOME varchar(255) not null,
+    CATEGORIA_ID integer not null,
+    PRECO double precision not null,
+    QUANTIDADE integer,
+    --
+    primary key (ID)
+)^
+-- end CACHACA_PRODUTO
+-- begin CACHACA_PRODUTO_VENDA
+create table CACHACA_PRODUTO_VENDA (
     ID integer,
     UUID varchar(32),
     --
+    ID_PRODUTO_ID integer not null,
     QUANTIDADE integer not null,
-    PRODUTO_ID integer,
-    INSUMO_ID integer not null,
+    TOTAL double precision,
+    VENDA_ID integer not null,
     --
     primary key (ID)
 )^
--- end CACHACA_INSUMO_PRODUTO
--- begin CACHACA_INSUMO
-create table CACHACA_INSUMO (
+-- end CACHACA_PRODUTO_VENDA
+-- begin CACHACA_VENDA
+create table CACHACA_VENDA (
     ID integer,
     UUID varchar(32),
     --
-    QUANTIDADE integer not null,
-    QUANT_PRODUCAO integer,
-    NOME varchar(64) not null,
+    ID_CLIENTE_ID integer not null,
+    DATA_VENDA date not null,
+    TOTAL double precision,
     --
     primary key (ID)
 )^
--- end CACHACA_INSUMO
--- begin CACHACA_BARRICA
-create table CACHACA_BARRICA (
-    ID integer,
-    --
-    CAPACIDADE double precision not null,
-    PRODUTO_ID integer,
-    DATA_ENTRADA date,
-    --
-    primary key (ID)
-)^
--- end CACHACA_BARRICA
+-- end CACHACA_VENDA

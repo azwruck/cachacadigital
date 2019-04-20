@@ -21,7 +21,7 @@
                        property="id"/>
                 <field property="produto"/>
                 <field property="lote"/>
-                <field property="quant"/>
+                <field property="quantidade"/>
             </column>
             <column>
                 <field caption="Data Produção"

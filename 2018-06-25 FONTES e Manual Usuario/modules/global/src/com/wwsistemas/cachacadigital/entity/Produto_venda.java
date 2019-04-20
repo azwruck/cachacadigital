@@ -16,18 +16,15 @@ import com.wwsistemas.cachacadigital.entity.Produto;
 import com.haulmont.cuba.core.entity.annotation.Listeners;
 
 @Listeners("cachaca_Produto_vendaListener")
-@NamePattern("%s |idProduto")
+@NamePattern("%s |produto")
 @Table(name = "CACHACA_PRODUTO_VENDA")
 @Entity(name = "cachaca$Produto_venda")
-public class Produto_venda extends BaseIntegerIdEntity implements HasUuid {
+public class Produto_venda extends BaseIntegerIdEntity {
     private static final long serialVersionUID = 5661285715040323399L;
-    @Column(name = "UUID")
-    protected UUID uuid;
-
     @NotNull
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "ID_PRODUTO_ID")
-    protected Produto idProduto;
+    @JoinColumn(name = "PRODUTO_ID")
+    protected Produto produto;
 
     @NotNull
     @Column(name = "QUANTIDADE", nullable = false)
@@ -40,9 +37,18 @@ public class Produto_venda extends BaseIntegerIdEntity implements HasUuid {
     @JoinColumn(name = "VENDA_ID")
     protected Venda venda;
     
-    @MetaProperty(related = {"idProduto", "quantidade"})
+    public void setProduto(Produto produto) {
+        this.produto = produto;
+    }
+
+    public Produto getProduto() {
+        return produto;
+    }
+
+
+    @MetaProperty(related = {"produto", "quantidade"})
     public Double getCusto() {
-    	Double custo = getQuantidade() * idProduto.getPreco();
+    	Double custo = getQuantidade() * produto.getPreco();
     	setTotal(custo);
         return custo;
     }
@@ -65,23 +71,7 @@ public class Produto_venda extends BaseIntegerIdEntity implements HasUuid {
     }
 
 
-    public void setIdProduto(Produto idProduto) {
-        this.idProduto = idProduto;
-    }
 
-    public Produto getIdProduto() {
-        return idProduto;
-    }
-
-
-
-    public void setUuid(UUID uuid) {
-        this.uuid = uuid;
-    }
-
-    public UUID getUuid() {
-        return uuid;
-    }
 
     public void setQuantidade(Integer quantidade) {
         this.quantidade = quantidade;

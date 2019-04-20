@@ -14,19 +14,18 @@ import com.haulmont.chile.core.annotations.NamePattern;
 import com.haulmont.chile.core.annotations.Composition;
 import java.util.List;
 import javax.persistence.OneToMany;
+import java.util.Date;
+import com.haulmont.cuba.core.entity.Updatable;
 
 @NamePattern("%s|nome")
 @Table(name = "CACHACA_PRODUTO")
 @Entity(name = "cachaca$Produto")
-public class Produto extends BaseIntegerIdEntity implements HasUuid {
+public class Produto extends BaseIntegerIdEntity implements Updatable {
     private static final long serialVersionUID = -2385608680144950017L;
-
-    @Column(name = "UUID")
-    protected UUID uuid;
 
     @Composition
     @OneToMany(mappedBy = "produto")
-    protected List<Insumo_produto> insumoProduto;
+    protected List<Insumo_produto> insumo_produto;
 
     @NotNull
     @Column(name = "NOME", nullable = false)
@@ -34,8 +33,8 @@ public class Produto extends BaseIntegerIdEntity implements HasUuid {
 
     @NotNull
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "ID_CATEGORIA_ID")
-    protected Categoria idCategoria;
+    @JoinColumn(name = "CATEGORIA_ID")
+    protected Categoria categoria;
 
     @NotNull
     @Column(name = "PRECO", nullable = false)
@@ -44,31 +43,53 @@ public class Produto extends BaseIntegerIdEntity implements HasUuid {
     @Column(name = "QUANTIDADE")
     protected Integer quantidade;
 
-    public void setInsumoProduto(List<Insumo_produto> insumoProduto) {
-        this.insumoProduto = insumoProduto;
+
+    @Column(name = "UPDATE_TS")
+    protected Date updateTs;
+
+    @Column(name = "UPDATED_BY", length = 50)
+    protected String updatedBy;
+
+    @Override
+    public void setUpdateTs(Date updateTs) {
+        this.updateTs = updateTs;
     }
 
-    public List<Insumo_produto> getInsumoProduto() {
-        return insumoProduto;
+    @Override
+    public Date getUpdateTs() {
+        return updateTs;
+    }
+
+    @Override
+    public void setUpdatedBy(String updatedBy) {
+        this.updatedBy = updatedBy;
+    }
+
+    @Override
+    public String getUpdatedBy() {
+        return updatedBy;
     }
 
 
-    public void setIdCategoria(Categoria idCategoria) {
-        this.idCategoria = idCategoria;
+    public void setInsumo_produto(List<Insumo_produto> insumo_produto) {
+        this.insumo_produto = insumo_produto;
     }
 
-    public Categoria getIdCategoria() {
-        return idCategoria;
+    public List<Insumo_produto> getInsumo_produto() {
+        return insumo_produto;
     }
 
 
-    public void setUuid(UUID uuid) {
-        this.uuid = uuid;
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
     }
 
-    public UUID getUuid() {
-        return uuid;
+    public Categoria getCategoria() {
+        return categoria;
     }
+
+
+
 
     public void setNome(String nome) {
         this.nome = nome;
