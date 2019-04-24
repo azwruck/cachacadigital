@@ -6,23 +6,33 @@ import javax.persistence.Column;
 import javax.validation.constraints.NotNull;
 import com.haulmont.cuba.core.entity.BaseIntegerIdEntity;
 import com.haulmont.chile.core.annotations.NamePattern;
+
+import java.time.LocalDate;
+import java.time.Period;
+import java.util.Calendar;
 import java.util.Date;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import com.haulmont.chile.core.annotations.MetaProperty;
+import javax.persistence.Transient;
 
 @NamePattern("%s|id")
 @Table(name = "CACHACA_BARRICA")
 @Entity(name = "cachaca$Barrica")
 public class Barrica extends BaseIntegerIdEntity {
     private static final long serialVersionUID = -5134373288386287168L;
-
+    
+    
     @NotNull
     @Column(name = "CAPACIDADE", nullable = false)
     protected Double capacidade;
 
+
+    @Column(name = "QUANTIDADE")
+    protected Integer quantidade;
 
     @Column(name = "MADEIRA")
     protected String madeira;
@@ -31,10 +41,38 @@ public class Barrica extends BaseIntegerIdEntity {
     @JoinColumn(name = "PRODUTO_ID")
     protected Produto produto;
 
-
+    
     @Temporal(TemporalType.DATE)
     @Column(name = "DATA_ENTRADA")
     protected Date data_entrada;
+
+    @Transient
+    @MetaProperty(related = "data_entrada")
+    protected String tempo_armazenado;
+
+    public String getTempo_armazenado() {
+    	
+        LocalDate l = LocalDate.now();
+        
+        LocalDate n = LocalDate.of(data_entrada.getYear(), data_entrada.getMonth()+1, data_entrada.getDate());
+
+        Period pe = Period.between(n, l);
+        
+        
+        tempo_armazenado = pe.getMonths()+ "meses"+ pe.getDays()+"dias";
+        return tempo_armazenado;
+    }
+    
+
+
+    public void setQuantidade(Integer quantidade) {
+        this.quantidade = quantidade;
+    }
+
+    public Integer getQuantidade() {
+        return quantidade;
+    }
+    
 
     public void setData_entrada(Date data_entrada) {
         this.data_entrada = data_entrada;

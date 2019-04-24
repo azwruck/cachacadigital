@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
         caption="msg://editorCaption"
-        class="com.wwsistemas.cachacadigital.web.barrica.BarricaEdit"
+        class="com.wwsistemas.cachacadigital.web.barrica.BarricaEdit2"
         datasource="barricaDs"
         focusComponent="fieldGroup"
         messagesPack="com.wwsistemas.cachacadigital.web.barrica">
     <dsContext>
         <datasource id="barricaDs"
                     class="com.wwsistemas.cachacadigital.entity.Barrica"
-                    view="barrica-com-produto"/>
+                    view="_local"/>
     </dsContext>
     <dialogMode height="600"
                 width="800"/>
@@ -19,11 +19,11 @@
             <column width="250px">
                 <field property="capacidade"/>
                 <field property="madeira"/>
-                <field property="data_entrada"/>
-                <field property="produto"/>
-                <field editable="false"
-                       property="tempo_armazenado"/>
+                <field property="quantidade"/>
             </column>
+        </fieldGroup>
+        <fieldGroup id="fieldgroup_1">
+            <field property="Quantidade"/>
         </fieldGroup>
         <frame id="windowActions"
                screen="editWindowActions"/>

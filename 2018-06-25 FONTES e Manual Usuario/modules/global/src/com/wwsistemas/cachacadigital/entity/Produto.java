@@ -20,7 +20,7 @@ import com.haulmont.cuba.core.entity.Updatable;
 @NamePattern("%s|nome")
 @Table(name = "CACHACA_PRODUTO")
 @Entity(name = "cachaca$Produto")
-public class Produto extends BaseIntegerIdEntity implements Updatable {
+public class Produto extends BaseIntegerIdEntity {
     private static final long serialVersionUID = -2385608680144950017L;
 
     @Composition
@@ -43,32 +43,6 @@ public class Produto extends BaseIntegerIdEntity implements Updatable {
     @Column(name = "QUANTIDADE")
     protected Integer quantidade;
 
-
-    @Column(name = "UPDATE_TS")
-    protected Date updateTs;
-
-    @Column(name = "UPDATED_BY", length = 50)
-    protected String updatedBy;
-
-    @Override
-    public void setUpdateTs(Date updateTs) {
-        this.updateTs = updateTs;
-    }
-
-    @Override
-    public Date getUpdateTs() {
-        return updateTs;
-    }
-
-    @Override
-    public void setUpdatedBy(String updatedBy) {
-        this.updatedBy = updatedBy;
-    }
-
-    @Override
-    public String getUpdatedBy() {
-        return updatedBy;
-    }
 
 
     public void setInsumo_produto(List<Insumo_produto> insumo_produto) {

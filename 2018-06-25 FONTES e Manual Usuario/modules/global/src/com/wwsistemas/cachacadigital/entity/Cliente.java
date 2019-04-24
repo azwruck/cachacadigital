@@ -11,6 +11,7 @@ import javax.validation.constraints.NotNull;
 import com.haulmont.cuba.core.entity.BaseIntegerIdEntity;
 import com.haulmont.cuba.core.entity.HasUuid;
 import com.haulmont.chile.core.annotations.NamePattern;
+import org.hibernate.validator.constraints.Email;
 
 @NamePattern("%s|nome")
 @Table(name = "CACHACA_CLIENTE")
@@ -25,6 +26,7 @@ public class Cliente extends BaseIntegerIdEntity {
     @Column(name = "NOME", nullable = false, length = 128)
     protected String nome;
 
+    @Email(message = "Email inválido!")
     @Column(name = "EMAIL", length = 128)
     protected String email;
 

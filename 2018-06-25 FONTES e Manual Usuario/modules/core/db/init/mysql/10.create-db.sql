@@ -12,6 +12,8 @@ create table CACHACA_BARRICA (
     ID integer,
     --
     CAPACIDADE double precision not null,
+    QUANTIDADE integer,
+    MADEIRA varchar(255),
     PRODUTO_ID integer,
     DATA_ENTRADA date,
     --
@@ -74,8 +76,6 @@ create table CACHACA_PRODUCAO (
 -- begin CACHACA_PRODUTO
 create table CACHACA_PRODUTO (
     ID integer,
-    UPDATE_TS datetime,
-    UPDATED_BY varchar(50),
     --
     NOME varchar(255) not null,
     CATEGORIA_ID integer not null,

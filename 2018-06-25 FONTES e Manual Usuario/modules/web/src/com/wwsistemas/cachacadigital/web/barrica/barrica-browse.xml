@@ -36,6 +36,7 @@
                 <column id="capacidade"/>
                 <column id="data_entrada"/>
                 <column id="produto"/>
+                <column id="tempo_armazenado"/>
             </columns>
             <rows datasource="barricasDs"/>
             <rowsCount/>
