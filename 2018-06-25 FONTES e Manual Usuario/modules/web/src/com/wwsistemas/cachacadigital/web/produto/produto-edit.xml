@@ -44,11 +44,14 @@
             <rows datasource="insumoProdutoDs"/>
             <buttonsPanel width="296px">
                 <button action="insumo_produto.create"
+                        caption="mainMsg://cadastros.Adicionar"
                         width="67px"/>
                 <button action="insumo_produto.edit"
+                        caption="mainMsg://cadastros.Editar"
                         width="56px"/>
                 <button id="removeButton"
                         action="insumo_produto.remove"
+                        caption="mainMsg://cadastros.Excluir"
                         width="80px"/>
             </buttonsPanel>
         </table>

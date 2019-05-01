@@ -43,11 +43,14 @@
             <buttonsPanel id="buttonsPanel"
                           alwaysVisible="true">
                 <button id="createBtn"
-                        action="barricasTable.create"/>
+                        action="barricasTable.create"
+                        caption="mainMsg://cadastros.Adicionar"/>
                 <button id="editBtn"
-                        action="barricasTable.edit"/>
+                        action="barricasTable.edit"
+                        caption="mainMsg://cadastros.Editar"/>
                 <button id="removeBtn"
-                        action="barricasTable.remove"/>
+                        action="barricasTable.remove"
+                        caption="mainMsg://cadastros.Excluir"/>
             </buttonsPanel>
         </groupTable>
     </layout>

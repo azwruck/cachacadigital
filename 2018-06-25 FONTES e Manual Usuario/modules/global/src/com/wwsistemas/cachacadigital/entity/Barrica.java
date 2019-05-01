@@ -9,6 +9,7 @@ import com.haulmont.chile.core.annotations.NamePattern;
 
 import java.time.LocalDate;
 import java.time.Period;
+import java.time.ZoneId;
 import java.util.Calendar;
 import java.util.Date;
 import javax.persistence.Temporal;
@@ -52,14 +53,22 @@ public class Barrica extends BaseIntegerIdEntity {
 
     public String getTempo_armazenado() {
     	
-        LocalDate l = LocalDate.now();
+        LocalDate hoje = LocalDate.now();
         
-        LocalDate n = LocalDate.of(data_entrada.getYear(), data_entrada.getMonth()+1, data_entrada.getDate());
+        LocalDate l = data_entrada.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+        
+        LocalDate data_armazenada = LocalDate.now();
+        
+        if(data_entrada == null){
+        	data_armazenada = LocalDate.now(); 
+        } else{
+        	data_armazenada = LocalDate.of(l.getYear(), l.getMonth(), l.getDayOfMonth());
+        }
 
-        Period pe = Period.between(n, l);
+        Period periodo = Period.between(data_armazenada, hoje);
         
         
-        tempo_armazenado = pe.getMonths()+ "meses"+ pe.getDays()+"dias";
+        tempo_armazenado = periodo.getYears() + " anos,"+ periodo.getMonths()+ " meses, "+ periodo.getDays()+"dias";
         return tempo_armazenado;
     }
     

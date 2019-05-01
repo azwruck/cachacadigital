@@ -21,8 +21,6 @@
                 <field property="madeira"/>
                 <field property="data_entrada"/>
                 <field property="produto"/>
-                <field editable="false"
-                       property="tempo_armazenado"/>
             </column>
         </fieldGroup>
         <frame id="windowActions"

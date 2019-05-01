@@ -48,10 +48,13 @@
             <buttonsPanel>
                 <button id="add"
                         action="produtoVenda.create"
+                        caption="mainMsg://cadastros.Adicionar"
                         invoke="onAddClick"/>
                 <button id="edit"
-                        action="produtoVenda.edit"/>
-                <button action="produtoVenda.remove"/>
+                        action="produtoVenda.edit"
+                        caption="mainMsg://cadastros.Editar"/>
+                <button action="produtoVenda.remove"
+                        caption="mainMsg://cadastros.Excluir"/>
             </buttonsPanel>
         </table>
         <fieldGroup datasource="vendaDs">

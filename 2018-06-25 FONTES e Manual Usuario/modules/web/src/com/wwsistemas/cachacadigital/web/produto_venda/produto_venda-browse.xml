@@ -40,11 +40,14 @@
             <buttonsPanel id="buttonsPanel"
                           alwaysVisible="true">
                 <button id="createBtn"
-                        action="produto_vendasTable.create"/>
+                        action="produto_vendasTable.create"
+                        caption="mainMsg://cadastros.Adicionar"/>
                 <button id="editBtn"
-                        action="produto_vendasTable.edit"/>
+                        action="produto_vendasTable.edit"
+                        caption="mainMsg://cadastros.Editar"/>
                 <button id="removeBtn"
-                        action="produto_vendasTable.remove"/>
+                        action="produto_vendasTable.remove"
+                        caption="mainMsg://cadastros.Excluir"/>
             </buttonsPanel>
         </groupTable>
     </layout>
