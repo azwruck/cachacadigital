@@ -8,7 +8,7 @@ import com.haulmont.cuba.gui.components.ValidationException;
 import com.wwsistemas.cachacadigital.entity.Insumo_produto;
 import com.wwsistemas.cachacadigital.entity.Produto_venda;
 import com.wwsistemas.cachacadigital.entity.Venda;
-import com.haulmont.cuba.gui.components.WindowDelegate;
+//import com.haulmont.cuba.gui.components.WindowDelegate;
 
 public class VendaEdit extends AbstractEditor<Venda> {
 

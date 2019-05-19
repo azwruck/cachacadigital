@@ -13,14 +13,14 @@ public class ExtAppMainWindow extends AbstractMainWindow {
     private FtsField ftsField;
 
     @Inject
-    private Embedded logoImage;
+//    private Embedded logoImage;
 
     @Override
     public void init(Map<String, Object> params) {
         super.init(params);
 
-        initLayoutAnalyzerContextMenu(logoImage);
-        initLogoImage(logoImage);
+//        initLayoutAnalyzerContextMenu(logoImage);
+//        initLogoImage(logoImage);
         initFtsField(ftsField);
     }
 }

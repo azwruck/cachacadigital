@@ -1,0 +1,1 @@
+alter table CACHACA_BARRICA change column TEMPO_ARMAZENADO TEMPO_ARMAZENADO__U41679 varchar(255)^

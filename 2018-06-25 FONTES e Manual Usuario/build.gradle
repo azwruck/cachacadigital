@@ -1,6 +1,6 @@
 
 buildscript {
-    ext.cubaVersion = '6.8.17'
+    ext.cubaVersion = '7.0.5'
     repositories {
         
         maven {
@@ -42,6 +42,7 @@ cuba {
 
 dependencies {
     appComponent("com.haulmont.cuba:cuba-global:$cubaVersion")
+    appComponent("com.haulmont.reports:reports-global:$cubaVersion")
 
 }
 
@@ -68,9 +69,15 @@ apply(plugin: 'cuba')
 }
 
 configure(globalModule) {
-    task enhance(type: CubaEnhancing)
-
-    
+    dependencies {
+        if (!JavaVersion.current().isJava8()) {
+            runtime('javax.xml.bind:jaxb-api:2.3.1')
+            runtime('org.glassfish.jaxb:jaxb-runtime:2.3.1')
+        }
+    }
+    entitiesEnhancing {
+        main { enabled = true }
+    } 
 }
 
 configure(coreModule) {
@@ -82,7 +89,7 @@ configure(coreModule) {
 
     dependencies {
         compile(globalModule)
-        provided(servletApi)
+        compileOnly(servletApi)
         jdbc(mysql)
         testRuntime(mysql)
 
@@ -142,7 +149,7 @@ configure(webModule) {
     }
 
     dependencies {
-        provided(servletApi)
+        compileOnly(servletApi)
         compile(guiModule)
 
     }
@@ -206,8 +213,5 @@ task restart(dependsOn: ['stop', ":${modulePrefix}-core:deploy", ":${modulePrefi
     }
 }
 
-task wrapper(type: Wrapper) {
-    gradleVersion = '4.3.1'
-}
 
 apply from: 'extra.gradle'
