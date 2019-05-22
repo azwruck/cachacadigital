@@ -26,6 +26,11 @@
               <option name="name" value="reports-global" />
               <option name="version" value="7.0.5" />
             </DependencyModelState>
+            <DependencyModelState>
+              <option name="group" value="com.haulmont.charts" />
+              <option name="name" value="charts-global" />
+              <option name="version" value="7.0.5" />
+            </DependencyModelState>
           </list>
         </option>
         <option name="artifactGroup" value="com.wwsistemas.cachacadigital" />

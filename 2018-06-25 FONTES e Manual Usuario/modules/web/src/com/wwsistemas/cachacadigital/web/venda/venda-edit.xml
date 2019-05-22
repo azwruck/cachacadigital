@@ -24,7 +24,7 @@
                 <field property="cliente"/>
             </column>
             <column>
-                <field property="data_venda"/>
+                <field property="data_venda" caption="Data da Venda"/>
             </column>
         </fieldGroup>
         <table id="produtoVenda"

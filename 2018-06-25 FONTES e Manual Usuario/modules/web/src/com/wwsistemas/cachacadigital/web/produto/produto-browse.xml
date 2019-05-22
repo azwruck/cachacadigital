@@ -32,13 +32,11 @@
                 <action id="remove"/>
             </actions>
             <columns>
-                <column id="id"
-                        caption="Código"/>
+                <column id="id" caption="Código"/>
                 <column id="nome"/>
                 <column id="categoria"/>
-                <column id="preco"/>
-                <column id="quantidade"
-                        caption="Estoque"/>
+                <column id="preco" caption="Preço"/>
+                <column id="quantidade" caption="Estoque"/>
             </columns>
             <rows datasource="produtoesDs"/>
             <rowsCount/>

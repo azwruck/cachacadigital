@@ -16,16 +16,13 @@
         <fieldGroup id="fieldGroup"
                     datasource="producaoDs">
             <column width="250px">
-                <field caption="Código"
-                       editable="false"
-                       property="id"/>
+                <field property="id" caption="Código" editable="false"/>
                 <field property="produto"/>
                 <field property="lote"/>
                 <field property="quantidade"/>
             </column>
             <column>
-                <field caption="Data Produção"
-                       property="data_producao"/>
+                <field property="data_producao" caption="Data da Produção"/>
             </column>
         </fieldGroup>
         <frame screen="editWindowActions"/>

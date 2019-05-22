@@ -17,7 +17,7 @@
         <fieldGroup id="fieldGroup"
                     datasource="insumo_produtoDs">
             <column width="250px">
-                <field property="insumo"/>
+                <field property="insumo" caption="Código"/>
                 <field property="quantidade"/>
             </column>
         </fieldGroup>

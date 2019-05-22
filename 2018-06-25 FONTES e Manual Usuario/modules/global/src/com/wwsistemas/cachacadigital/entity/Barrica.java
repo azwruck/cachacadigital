@@ -1,39 +1,29 @@
 package com.wwsistemas.cachacadigital.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.Column;
-import javax.validation.constraints.NotNull;
-import com.haulmont.cuba.core.entity.BaseIntegerIdEntity;
 import com.haulmont.chile.core.annotations.NamePattern;
+import com.haulmont.cuba.core.entity.BaseIntegerIdEntity;
 
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
 import java.time.Period;
 import java.time.ZoneId;
-import java.util.Calendar;
 import java.util.Date;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
-import javax.persistence.FetchType;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import com.haulmont.chile.core.annotations.MetaProperty;
-import javax.persistence.Transient;
 
 @NamePattern("%s|id")
 @Table(name = "CACHACA_BARRICA")
 @Entity(name = "cachaca$Barrica")
 public class Barrica extends BaseIntegerIdEntity {
     private static final long serialVersionUID = -5134373288386287168L;
-    
-    
+
+
     @NotNull
     @Column(name = "CAPACIDADE", nullable = false)
     protected Double capacidade;
 
 
     @Column(name = "QUANTIDADE")
-    protected Integer quantidade;
+    protected Double quantidade;
 
     @Column(name = "MADEIRA")
     protected String madeira;
@@ -42,46 +32,67 @@ public class Barrica extends BaseIntegerIdEntity {
     @JoinColumn(name = "PRODUTO_ID")
     protected Produto produto;
 
-    
+
     @Temporal(TemporalType.DATE)
     @Column(name = "DATA_ENTRADA")
     protected Date data_entrada;
 
-    @Transient
-    @MetaProperty(related = "data_entrada")
+    @Column(name = "TEMPO_ARMAZENADO")
     protected String tempo_armazenado;
 
-    public String getTempo_armazenado() {
-    	
-        LocalDate hoje = LocalDate.now();
-        
-        LocalDate l = data_entrada.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
-        
-        LocalDate data_armazenada = LocalDate.now();
-        
-        if(data_entrada == null){
-        	data_armazenada = LocalDate.now(); 
-        } else{
-        	data_armazenada = LocalDate.of(l.getYear(), l.getMonth(), l.getDayOfMonth());
-        }
-
-        Period periodo = Period.between(data_armazenada, hoje);
-        
-        
-        tempo_armazenado = periodo.getYears() + " anos,"+ periodo.getMonths()+ " meses, "+ periodo.getDays()+"dias";
-        return tempo_armazenado;
-    }
-    
-
-
-    public void setQuantidade(Integer quantidade) {
+    public void setQuantidade(Double quantidade) {
         this.quantidade = quantidade;
     }
 
-    public Integer getQuantidade() {
+    public Double getQuantidade() {
         return quantidade;
     }
-    
+
+    public void setTempo_armazenado(String tempo_armazenado) {
+        this.tempo_armazenado = tempo_armazenado;
+    }
+
+    public String getTempo_armazenado() {
+
+        LocalDate hoje = LocalDate.now();
+
+        LocalDate entrada;
+        LocalDate data_armazenada = LocalDate.now();
+//
+        if (data_entrada == null) {
+            data_entrada = Date.from(data_armazenada.atStartOfDay(ZoneId.systemDefault()).toInstant());
+            entrada = LocalDate.of(data_entrada.getYear() + 1900, data_entrada.getMonth() + 1, data_entrada.getDate());
+        } else {
+//            LocalDate l = data_entrada.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+//            data_armazenada = LocalDate.of(l.getYear(), l.getMonth(), l.getDayOfMonth());
+            entrada = LocalDate.of(data_entrada.getYear() + 1900, data_entrada.getMonth() + 1, data_entrada.getDate());
+        }
+
+        Period periodo = Period.between(entrada, hoje);
+
+        tempo_armazenado = periodo.getYears() + " anos, " + periodo.getMonths() + " meses, " + periodo.getDays() + "dias";
+
+        return tempo_armazenado;
+    	
+//        LocalDate hoje = LocalDate.now();
+//
+//        LocalDate l = data_entrada.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+//
+//        LocalDate data_armazenada = LocalDate.now();
+//
+//        if(data_entrada == null){
+//        	data_armazenada = LocalDate.now();
+//        } else{
+//        	data_armazenada = LocalDate.of(l.getYear(), l.getMonth(), l.getDayOfMonth());
+//        }
+//
+//        Period periodo = Period.between(data_armazenada, hoje);
+//
+//
+//        tempo_armazenado = periodo.getYears() + " anos,"+ periodo.getMonths()+ " meses, "+ periodo.getDays()+"dias";
+//        return tempo_armazenado;
+    }
+
 
     public void setData_entrada(Date data_entrada) {
         this.data_entrada = data_entrada;

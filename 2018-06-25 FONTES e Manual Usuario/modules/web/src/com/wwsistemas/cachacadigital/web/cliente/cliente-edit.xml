@@ -19,15 +19,13 @@
             <column width="250px">
                 <field property="nome"/>
                 <field property="telefone"/>
-                <field property="endereco"/>
+                <field property="endereco" caption="Endereço"/>
                 <field property="cidade"/>
-                <field caption="Estado"
-                       property="estado2"/>
+                <field property="estado2" caption="Estado"/>
             </column>
             <column>
                 <field property="email"/>
-                <field caption="CEP"
-                       property="cep"/>
+                <field property="cep" caption="CEP"/>
             </column>
         </fieldGroup>
         <frame id="windowActions"

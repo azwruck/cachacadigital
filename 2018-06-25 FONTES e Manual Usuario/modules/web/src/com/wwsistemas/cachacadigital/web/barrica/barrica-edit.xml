@@ -19,7 +19,7 @@
             <column width="250px">
                 <field property="capacidade"/>
                 <field property="madeira"/>
-                <field property="data_entrada"/>
+                <field property="data_entrada" caption="Data de Entrada"/>
                 <field property="produto"/>
             </column>
         </fieldGroup>

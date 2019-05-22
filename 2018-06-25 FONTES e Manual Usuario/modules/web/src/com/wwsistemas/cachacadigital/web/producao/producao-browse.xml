@@ -32,16 +32,12 @@
                 <action id="remove"/>
             </actions>
             <columns>
-                <column id="id"
-                        caption="Código"/>
+                <column id="id" caption="Código"/>
                 <column id="produto"/>
-                <column id="produto.categoria.nome"
-                        caption="Categoria"/>
+                <column id="produto.categoria.nome" caption="Categoria"/>
                 <column id="lote"/>
-                <column id="quantidade"
-                        caption="Quantidade"/>
-                <column id="data_producao"
-                        caption="Data Produção"/>
+                <column id="quantidade" caption="Quantidade"/>
+                <column id="data_producao" caption="Data da Produção"/>
             </columns>
             <rows datasource="producaosDs"/>
             <rowsCount/>
