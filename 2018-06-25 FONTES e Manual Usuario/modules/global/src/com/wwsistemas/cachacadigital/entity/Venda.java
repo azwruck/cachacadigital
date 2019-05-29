@@ -73,18 +73,18 @@ public class Venda extends BaseIntegerIdEntity {
 
 
     public Double getTotal2() {
-    	
+
     	total2 = 0.0;
-    	
-    	if(produto_venda == null){
-    		return total2;
-    	} else 
-        for (Produto_venda pv: produto_venda) {
-        	total2 += pv.getCusto();
-        }
-    	
-    	setTotal(total2);
-        return total2;
+
+    	if(produto_venda != null){
+            for (Produto_venda pv: produto_venda) {
+                total2 += pv.getTotal();
+            }
+            setTotal(total2);
+            return total2;
+    	} else
+            setTotal(total2);
+            return total2;
     }
 
 

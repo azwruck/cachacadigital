@@ -22,8 +22,8 @@ public class Barrica extends BaseIntegerIdEntity {
     protected Double capacidade;
 
 
-    @Column(name = "QUANTIDADE")
-    protected Double quantidade;
+    @Column(name = "STATUS")
+    protected String status;
 
     @Column(name = "MADEIRA")
     protected String madeira;
@@ -40,13 +40,14 @@ public class Barrica extends BaseIntegerIdEntity {
     @Column(name = "TEMPO_ARMAZENADO")
     protected String tempo_armazenado;
 
-    public void setQuantidade(Double quantidade) {
-        this.quantidade = quantidade;
+    public void setStatus(String status) {
+        this.status = status;
     }
 
-    public Double getQuantidade() {
-        return quantidade;
+    public String getStatus() {
+        return status;
     }
+
 
     public void setTempo_armazenado(String tempo_armazenado) {
         this.tempo_armazenado = tempo_armazenado;
@@ -113,7 +114,9 @@ public class Barrica extends BaseIntegerIdEntity {
 
 
     public void setProduto(Produto produto) {
+
         this.produto = produto;
+        setStatus("Utilizado");
     }
 
     public Produto getProduto() {
@@ -123,7 +126,9 @@ public class Barrica extends BaseIntegerIdEntity {
 
 
     public void setCapacidade(Double capacidade) {
+
         this.capacidade = capacidade;
+        setStatus("Disponível");
     }
 
     public Double getCapacidade() {

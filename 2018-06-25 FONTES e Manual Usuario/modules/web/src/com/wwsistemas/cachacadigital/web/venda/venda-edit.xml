@@ -39,10 +39,8 @@
                 <column id="produto"/>
                 <column id="produto.categoria"/>
                 <column id="quantidade"/>
-                <column id="produto.preco"
-                        caption="Preço"/>
-                <column id="custo"
-                        caption="Total"/>
+                <column id="produto.preco" caption="Preço"/>
+                <column id="custo" caption="Total"/>
             </columns>
             <rows datasource="idProdutoVendaDs"/>
             <buttonsPanel>
@@ -57,11 +55,9 @@
                         caption="mainMsg://cadastros.Excluir"/>
             </buttonsPanel>
         </table>
-        <fieldGroup datasource="vendaDs">
+        <fieldGroup datasource="vendaDs" editable="false">
             <column width="250px">
-                <field caption="Total"
-                       editable="false"
-                       property="total2"/>
+                <field property="total2" caption="Total" editable="false"/>
             </column>
         </fieldGroup>
         <frame id="windowActions"

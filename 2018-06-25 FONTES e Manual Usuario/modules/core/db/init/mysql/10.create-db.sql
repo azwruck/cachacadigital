@@ -12,10 +12,11 @@ create table CACHACA_BARRICA (
     ID integer,
     --
     CAPACIDADE double precision not null,
-    QUANTIDADE integer,
+    STATUS varchar(255),
     MADEIRA varchar(255),
     PRODUTO_ID integer,
     DATA_ENTRADA date,
+    TEMPO_ARMAZENADO varchar(255),
     --
     primary key (ID)
 )^
@@ -110,3 +111,13 @@ create table CACHACA_VENDA (
     primary key (ID)
 )^
 -- end CACHACA_VENDA
+-- begin CACHACA_CAPACIDADE_BARRICA
+create table CACHACA_CAPACIDADE_BARRICA (
+    ID integer,
+    --
+    CAPACIDADE double precision,
+    QUANTIDADE_USADA double precision,
+    --
+    primary key (ID)
+)^
+-- end CACHACA_CAPACIDADE_BARRICA

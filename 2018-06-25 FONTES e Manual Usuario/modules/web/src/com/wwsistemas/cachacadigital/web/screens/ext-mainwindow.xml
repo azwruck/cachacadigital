@@ -2,7 +2,20 @@
 <window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
         caption="mainMsg://application.caption"
         class="com.wwsistemas.cachacadigital.web.screens.ExtAppMainWindow"
-        xmlns:main="http://schemas.haulmont.com/cuba/mainwindow.xsd">
+        xmlns:main="http://schemas.haulmont.com/cuba/mainwindow.xsd"
+        xmlns:chart="http://schemas.haulmont.com/charts/charts.xsd">
+    <dsContext>
+        <valueCollectionDatasource id="teste">
+            <query><![CDATA[select b.status, sum(b.capacidade)
+from cachaca$Barrica b
+group by b.status]]></query>
+            <properties idProperty="status">
+                <property name="status" datatype="string"/>
+                <property name="sum" datatype="long"/>
+            </properties>
+        </valueCollectionDatasource>
+        <valueCollectionDatasource id="teste2"/>
+    </dsContext>
     <layout responsive="true"
             stylename="c-sidemenu-responsive">
         <hbox id="horizontalWrap"
@@ -64,6 +77,23 @@
                            height="100%">
                 <main:initialLayout margin="true"
                                     spacing="true">
+                    <chart:pieChart height="100%"
+                                    width="100%"
+                                    valueField="sum"
+                                    titleField="status"
+                                    startEffect="ELASTIC"
+                                    startDuration="2"
+                                    labelRadius="15"
+                                    innerRadius="60%"
+                                    depth3D="10"
+                                    angle="15"
+                                    balloonText="[[title]]&lt;br&gt;&lt;span style='font-size:14px'&lt;b&gt;[[value]]&lt;/b&gt; ([[percents]]%)&lt;/span&gt;"
+                                    datasource="teste">
+                        <chart:titles>
+                            <chart:title text="Capacidade utilizada" size="16"/>
+                        </chart:titles>
+                        <chart:export enabled="true"/>
+                    </chart:pieChart>
                     <label id="welcomeLabel"
                            align="MIDDLE_CENTER"
                            stylename="c-welcome-text"

@@ -22,6 +22,6 @@
             </column>
         </fieldGroup>
         <frame id="windowActions"
-               screen="editWindowActions"/>
+               screen="editWindowActions" height="277px"/>
     </layout>
 </window>

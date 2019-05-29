@@ -13,6 +13,7 @@
                 <![CDATA[select e from cachaca$Barrica e]]>
             </query>
         </groupDatasource>
+        <valueGroupDatasource/>
     </dsContext>
     <dialogMode height="600"
                 width="800"/>
@@ -20,11 +21,11 @@
             spacing="true">
         <filter id="filter"
                 applyTo="barricasTable"
-                datasource="barricasDs">
+                datasource="barricasDs" responsive="true">
             <properties include=".*"/>
         </filter>
         <groupTable id="barricasTable"
-                    width="100%">
+                    width="100%" responsive="true">
             <actions>
                 <action id="create"/>
                 <action id="edit"/>
@@ -41,16 +42,16 @@
             <rows datasource="barricasDs"/>
             <rowsCount/>
             <buttonsPanel id="buttonsPanel"
-                          alwaysVisible="true">
+                          alwaysVisible="true" responsive="true">
                 <button id="createBtn"
                         action="barricasTable.create"
-                        caption="mainMsg://cadastros.Adicionar"/>
+                        caption="mainMsg://cadastros.Adicionar" responsive="true"/>
                 <button id="editBtn"
                         action="barricasTable.edit"
-                        caption="mainMsg://cadastros.Editar"/>
+                        caption="mainMsg://cadastros.Editar" responsive="true"/>
                 <button id="removeBtn"
                         action="barricasTable.remove"
-                        caption="mainMsg://cadastros.Excluir"/>
+                        caption="mainMsg://cadastros.Excluir" responsive="true"/>
             </buttonsPanel>
         </groupTable>
     </layout>

@@ -84,7 +84,7 @@ public class Producao extends BaseIntegerIdEntity {
 //    public Integer getEstoque() {
 //     
 //    	Integer estoque = getQuant();
-//    	produto.setQuantidade(getQuant());  
+//    	produto.setQuantidade(getQuant());
 //    	return estoque;
 //    }
 }

@@ -15,15 +15,15 @@
     <layout expand="windowActions"
             spacing="true">
         <fieldGroup id="fieldGroup"
-                    datasource="barricaDs">
+                    datasource="barricaDs" responsive="true">
             <column width="250px">
                 <field property="capacidade"/>
                 <field property="madeira"/>
-                <field property="data_entrada" caption="Data de Entrada"/>
                 <field property="produto"/>
+                <field property="data_entrada"/>
             </column>
         </fieldGroup>
         <frame id="windowActions"
-               screen="editWindowActions"/>
+               screen="editWindowActions" responsive="true"/>
     </layout>
 </window>

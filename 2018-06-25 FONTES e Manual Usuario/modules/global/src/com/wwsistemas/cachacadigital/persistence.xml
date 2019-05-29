@@ -12,5 +12,6 @@
         <class>com.wwsistemas.cachacadigital.entity.Insumo</class>
         <class>com.wwsistemas.cachacadigital.entity.Insumo_produto</class>
         <class>com.wwsistemas.cachacadigital.entity.Barrica</class>
+        <class>com.wwsistemas.cachacadigital.entity.Capacidade_barrica</class>
     </persistence-unit>
 </persistence>

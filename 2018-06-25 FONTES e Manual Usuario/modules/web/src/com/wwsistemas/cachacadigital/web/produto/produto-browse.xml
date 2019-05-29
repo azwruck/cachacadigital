@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
         caption="msg://browseCaption"
+        xmlns:swr="http://strangeway.org/xsd/responsive/sw-responsive.xsd"
         class="com.wwsistemas.cachacadigital.web.produto.ProdutoBrowse"
         focusComponent="produtoesTable"
         lookupComponent="produtoesTable"
@@ -53,5 +54,5 @@
                         caption="mainMsg://cadastros.Excluir"/>
             </buttonsPanel>
         </groupTable>
-    </layout>
-</window>
+</layout>
+        </window>
