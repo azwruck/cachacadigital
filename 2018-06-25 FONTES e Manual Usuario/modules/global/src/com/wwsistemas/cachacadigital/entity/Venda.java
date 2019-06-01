@@ -44,14 +44,7 @@ public class Venda extends BaseIntegerIdEntity {
 
     @Column(name = "TOTAL")
     protected Double total;
-    
 
-
-
-
-    @Transient
-    @MetaProperty(related = "produto_venda")
-    protected Double total2;
     
     public void setProduto_venda(List<Produto_venda> produto_venda) {
         this.produto_venda = produto_venda;
@@ -71,19 +64,23 @@ public class Venda extends BaseIntegerIdEntity {
     }
 
 
-
+    @Transient
+    @MetaProperty(related = "produto_venda")
+    protected Double total2;
     public Double getTotal2() {
 
     	total2 = 0.0;
 
     	if(produto_venda != null){
             for (Produto_venda pv: produto_venda) {
-                total2 += pv.getTotal();
+                total2 += pv.getCusto();
             }
+            System.out.println("teste incluindo = "+total2);
             setTotal(total2);
             return total2;
     	} else
             setTotal(total2);
+        System.out.println("passou com o pv nulo = "+total2);
             return total2;
     }
 

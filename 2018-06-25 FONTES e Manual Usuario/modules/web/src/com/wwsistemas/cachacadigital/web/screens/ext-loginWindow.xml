@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
         class="com.wwsistemas.cachacadigital.web.screens.ExtAppLoginWindow"
-        extends="/com/haulmont/cuba/web/app/loginwindow/loginwindow.xml"
-        messagesPack="com.wwsistemas.cachacadigital.web.screens">
-    <dialogMode height="600"
-                width="800"/>
+        messagesPack="com.wwsistemas.cachacadigital.web.screens"
+        xmlns:ext="http://schemas.haulmont.com/cuba/window-ext.xsd"
+        extends="/com/haulmont/cuba/web/app/loginwindow/loginwindow.xml">
+    <dialogMode height="600" width="800"/>
     <layout>
         <vbox id="loginWrapper">
             <vbox id="loginMainBox">
                 <hbox id="loginTitleBox">
-                    <label id="welcomeLabel"
-                           align="MIDDLE_CENTER"/>
+                    <image id="logoImage">
+                        <file path="C:\Users\andre\studio-projects\cachacadigital\2018-06-25 FONTES e Manual Usuario\barrica2.png"/>
+                    </image>
+                    <image id="imagemLogin" ext:index="1">
+                        <file path="C:\Users\andre\studio-projects\cachacadigital\2018-06-25 FONTES e Manual Usuario\barrica2.png"/>
+                    </image>
+                    <label id="welcomeLabel" align="MIDDLE_CENTER"/>
                 </hbox>
-                <vbox id="loginForm"/>
             </vbox>
         </vbox>
     </layout>

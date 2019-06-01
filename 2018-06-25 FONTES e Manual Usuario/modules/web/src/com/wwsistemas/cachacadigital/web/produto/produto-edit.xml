@@ -42,17 +42,14 @@
                 <column id="quantidade"/>
             </columns>
             <rows datasource="insumoProdutoDs"/>
-            <buttonsPanel width="296px">
+            <buttonsPanel>
                 <button action="insumo_produto.create"
-                        caption="mainMsg://cadastros.Adicionar"
-                        width="89px"/>
+                        caption="mainMsg://cadastros.Adicionar"/>
                 <button action="insumo_produto.edit"
-                        caption="mainMsg://cadastros.Editar"
-                        width="69px"/>
+                        caption="mainMsg://cadastros.Editar"/>
                 <button id="removeButton"
                         action="insumo_produto.remove"
-                        caption="mainMsg://cadastros.Excluir"
-                        width="80px"/>
+                        caption="mainMsg://cadastros.Excluir"/>
             </buttonsPanel>
         </table>
         <frame id="windowActions"

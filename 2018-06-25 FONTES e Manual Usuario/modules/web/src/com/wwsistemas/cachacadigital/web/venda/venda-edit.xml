@@ -46,8 +46,7 @@
             <buttonsPanel>
                 <button id="add"
                         action="produtoVenda.create"
-                        caption="mainMsg://cadastros.Adicionar"
-                        invoke="onAddClick"/>
+                        caption="mainMsg://cadastros.Adicionar"/>
                 <button id="edit"
                         action="produtoVenda.edit"
                         caption="mainMsg://cadastros.Editar"/>
@@ -55,9 +54,9 @@
                         caption="mainMsg://cadastros.Excluir"/>
             </buttonsPanel>
         </table>
-        <fieldGroup datasource="vendaDs" editable="false">
+        <fieldGroup datasource="vendaDs">
             <column width="250px">
-                <field property="total2" caption="Total" editable="false"/>
+                <field property="total2" editable="false" datasource="vendaDs"/>
             </column>
         </fieldGroup>
         <frame id="windowActions"
