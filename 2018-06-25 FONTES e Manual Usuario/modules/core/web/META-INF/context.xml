@@ -7,10 +7,19 @@
               name="jdbc/CubaDS"
               password="pw2000aw1997"
               type="javax.sql.DataSource"
-              url="jdbc:mysql://localhost/cachaca?useSSL=false&amp;allowMultiQueries=true"
+              url="jdbc:mysql://localhost/cachaca?useSSL=false&amp;allowMultiQueries=true&amp;serverTimezone=UTC"
               username="root"/>
     <!-- Switch off session serialization -->
     <Manager pathname=""/>
+    <!--<Resource driverClassName="org.hsqldb.jdbc.JDBCDriver"
+          maxIdle="2"
+          maxTotal="20"
+          maxWaitMillis="5000"
+          name="jdbc/CubaDS"
+          password=""
+          type="javax.sql.DataSource"
+          url="jdbc:hsqldb:hsql://localhost/cachaca"
+          username="sa"/>-->
     <!--<Resource driverClassName="org.hsqldb.jdbc.JDBCDriver"
           maxIdle="2"
           maxTotal="20"

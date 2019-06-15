@@ -2,18 +2,46 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c23be054-d247-434b-9810-f8bf5df9efe4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/modules/web/themes/halo/com.wwsistemas.cachacadigital/app-component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/web/themes/halo/com.wwsistemas.cachacadigital/halo-ext-defaults.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/web/themes/halo/com.wwsistemas.cachacadigital/halo-ext.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/web/themes/halo/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/web/themes/halo/styles.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/core/db/update/mysql/19/190605-1-createBarricaProduto.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/core/db/update/mysql/19/190605-2-createBarricaProduto.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/core/db/update/mysql/19/190605-2-updateCliente.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/core/db/update/mysql/19/190605-2-updateCliente01.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/core/db/update/mysql/19/190609-2-updateBarrica.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/global/src/com/wwsistemas/cachacadigital/entity/Barrica_produto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/barrica_produto/Barrica_produtoBrowse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/barrica_produto/Barrica_produtoEdit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/barrica_produto/barrica_produto-browse.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/barrica_produto/barrica_produto-edit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/barrica_produto/messages.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/barrica_produto/messages_pt_BR.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/cuba-project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cuba-project.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/core/db/init/mysql/10.create-db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/modules/core/db/init/mysql/10.create-db.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/core/db/init/mysql/20.create-db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/modules/core/db/init/mysql/20.create-db.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/core/web/META-INF/context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/modules/core/web/META-INF/context.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/core/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/modules/core/web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/global/src/com/wwsistemas/cachacadigital/entity/Barrica.java" beforeDir="false" afterPath="$PROJECT_DIR$/modules/global/src/com/wwsistemas/cachacadigital/entity/Barrica.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/global/src/com/wwsistemas/cachacadigital/entity/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/modules/global/src/com/wwsistemas/cachacadigital/entity/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/global/src/com/wwsistemas/cachacadigital/entity/Producao.java" beforeDir="false" afterPath="$PROJECT_DIR$/modules/global/src/com/wwsistemas/cachacadigital/entity/Producao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/global/src/com/wwsistemas/cachacadigital/entity/Venda.java" beforeDir="false" afterPath="$PROJECT_DIR$/modules/global/src/com/wwsistemas/cachacadigital/entity/Venda.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/global/src/com/wwsistemas/cachacadigital/entity/messages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/modules/global/src/com/wwsistemas/cachacadigital/entity/messages.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/global/src/com/wwsistemas/cachacadigital/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/modules/global/src/com/wwsistemas/cachacadigital/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/global/src/com/wwsistemas/cachacadigital/views.xml" beforeDir="false" afterPath="$PROJECT_DIR$/modules/global/src/com/wwsistemas/cachacadigital/views.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/web/src/com/haulmont/reports/gui/messages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/modules/web/src/com/haulmont/reports/gui/messages.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web-app.properties" beforeDir="false" afterPath="$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web-app.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web-menu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web-menu.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web-screens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web-screens.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/barrica/barrica-browse.xml" beforeDir="false" afterPath="$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/barrica/barrica-browse.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/barrica/barrica-edit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/barrica/barrica-edit.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/categoria/categoria-browse.xml" beforeDir="false" afterPath="$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/categoria/categoria-browse.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/insumo_produto/insumo_produto-edit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/insumo_produto/insumo_produto-edit.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/messages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/messages.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/produto/produto-edit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/produto/produto-edit.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/messages_pt_BR.properties" beforeDir="false" afterPath="$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/messages_pt_BR.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/screens/ext-loginWindow.xml" beforeDir="false" afterPath="$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/screens/ext-loginWindow.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/screens/ext-mainwindow.xml" beforeDir="false" afterPath="$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/screens/ext-mainwindow.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/venda/venda-edit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/venda/venda-edit.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/web/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/modules/web/web/WEB-INF/web.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -43,37 +71,109 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/barrica/barrica-browse.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="453">
+              <caret line="45" column="32" selection-start-line="45" selection-start-column="32" selection-end-line="45" selection-end-column="32" />
+              <folding>
+                <element signature="e#1845#1876#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+          <provider editor-type-id="cuba_designer_properties" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/barrica/barrica-edit.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
+            </state>
+          </provider>
+          <provider editor-type-id="cuba_designer_properties" />
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/screens/ext-mainwindow.xml">
-          <provider editor-type-id="cuba_designer_properties" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="53" column="38" selection-start-line="53" selection-start-column="38" selection-end-line="53" selection-end-column="38" />
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="287">
+              <caret line="90" column="38" selection-start-line="90" selection-start-column="38" selection-end-line="90" selection-end-column="38" />
               <folding>
-                <element signature="e#2256#2289#0" expanded="true" />
+                <element signature="e#2633#2666#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="cuba_designer_properties" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.haulmont.cuba/cuba-gui/7.0.5/163881279b135059077552ae38c4fab1285ede05/cuba-gui-7.0.5.jar!/com/haulmont/cuba/gui/screen/layout.xsd">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="8">
+              <caret line="923" column="8" selection-start-line="923" selection-start-column="8" selection-end-line="923" selection-end-column="8" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/screens/ExtAppMainWindow.java">
+        <entry file="file://$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web-screens.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="22" column="2" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="2" />
+            <state relative-caret-position="-510" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web-menu.xml">
+          <provider editor-type-id="cuba_view_config" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/messages.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
+            </state>
+          </provider>
+          <provider editor-type-id="ResourceBundle" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/global/src/com/wwsistemas/cachacadigital/entity/Venda.java">
+          <provider editor-type-id="cuba_entity_properties" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="901">
+              <caret line="81" column="25" selection-start-line="81" selection-start-column="25" selection-end-line="81" selection-end-column="25" />
+            </state>
+          </provider>
+          <provider editor-type-id="cuba_entity_ddl" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/global/src/com/wwsistemas/cachacadigital/entity/Barrica.java">
+          <provider editor-type-id="cuba_entity_properties" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="884">
+              <caret line="72" column="31" selection-start-line="72" selection-start-column="31" selection-end-line="72" selection-end-column="31" />
+            </state>
+          </provider>
+          <provider editor-type-id="cuba_entity_ddl" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modules/global/src/com/wwsistemas/cachacadigital/entity/Produto_venda.java">
-          <provider editor-type-id="cuba_entity_ddl" />
           <provider editor-type-id="cuba_entity_properties" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="48" column="51" selection-start-line="48" selection-start-column="51" selection-end-line="48" selection-end-column="51" />
+            <state relative-caret-position="136">
+              <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
             </state>
           </provider>
+          <provider editor-type-id="cuba_entity_ddl" />
         </entry>
       </file>
     </leaf>
@@ -88,6 +188,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>getStatus</find>
+      <find>insumo_produto</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -99,34 +200,40 @@
         <option value="$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/screens/ExtAppMainWindow.java" />
         <option value="$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/cliente/cliente-edit.xml" />
         <option value="$PROJECT_DIR$/modules/global/src/com/wwsistemas/cachacadigital/entity/Capacidade_barrica.java" />
-        <option value="$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web-menu.xml" />
         <option value="$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/categoria/categoria-edit.xml" />
         <option value="$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/barrica/barrica-edit-2.xml" />
-        <option value="$PROJECT_DIR$/modules/global/src/com/wwsistemas/cachacadigital/entity/Barrica.java" />
-        <option value="$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/barrica/barrica-edit.xml" />
-        <option value="$PROJECT_DIR$/modules/global/src/com/wwsistemas/cachacadigital/views.xml" />
-        <option value="$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/screens/ext-mainwindow.xml" />
         <option value="$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/barrica/BarricaBrowse.java" />
-        <option value="$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/barrica/barrica-browse.xml" />
         <option value="$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/produto/produto-browse.xml" />
         <option value="$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/producao/producao-browse.xml" />
         <option value="$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/produto_venda/produto_venda-browse.xml" />
         <option value="$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/produto_venda/produto_venda-edit.xml" />
         <option value="$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/insumo_produto/insumo_produto-browse.xml" />
-        <option value="$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/insumo_produto/insumo_produto-edit.xml" />
         <option value="$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/producao/producao-edit.xml" />
         <option value="$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/produto_venda/Produto_vendaEdit.java" />
-        <option value="$PROJECT_DIR$/modules/global/src/com/wwsistemas/cachacadigital/entity/Produto_venda.java" />
-        <option value="$PROJECT_DIR$/modules/global/src/com/wwsistemas/cachacadigital/entity/Producao.java" />
         <option value="$PROJECT_DIR$/modules/core/src/com/wwsistemas/cachacadigital/listener/ProducaoListener.java" />
         <option value="$PROJECT_DIR$/modules/global/src/com/wwsistemas/cachacadigital/entity/messages.properties" />
         <option value="$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/produto/produto-edit.xml" />
-        <option value="$PROJECT_DIR$/modules/global/src/com/wwsistemas/cachacadigital/entity/Venda.java" />
-        <option value="$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/venda/venda-edit.xml" />
         <option value="$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/venda/VendaEdit.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/screens/ext-loginWindow.xml" />
+        <option value="$PROJECT_DIR$/modules/global/src/com/wwsistemas/cachacadigital/entity/Producao.java" />
+        <option value="$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/categoria/categoria-browse.xml" />
+        <option value="$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web-menu.xml" />
+        <option value="$PROJECT_DIR$/modules/web/themes/halo/styles.scss" />
+        <option value="$PROJECT_DIR$/modules/global/src/com/wwsistemas/cachacadigital/entity/Barrica_produto.java" />
+        <option value="$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/insumo_produto/insumo_produto-edit.xml" />
+        <option value="$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/barrica_produto/barrica_produto-edit.xml" />
+        <option value="$PROJECT_DIR$/modules/global/src/com/wwsistemas/cachacadigital/entity/Cliente.java" />
+        <option value="$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web-app.properties" />
+        <option value="$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/venda/venda-edit.xml" />
+        <option value="$PROJECT_DIR$/modules/global/src/com/wwsistemas/cachacadigital/entity/Produto_venda.java" />
+        <option value="$PROJECT_DIR$/modules/global/src/com/wwsistemas/cachacadigital/views.xml" />
+        <option value="$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/barrica/barrica-edit.xml" />
+        <option value="$PROJECT_DIR$/modules/global/src/com/wwsistemas/cachacadigital/entity/Barrica.java" />
+        <option value="$PROJECT_DIR$/modules/global/src/com/wwsistemas/cachacadigital/entity/Venda.java" />
         <option value="$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/messages.properties" />
+        <option value="$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/barrica/barrica-browse.xml" />
+        <option value="$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/screens/ext-mainwindow.xml" />
       </list>
     </option>
   </component>
@@ -137,7 +244,7 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="697" />
@@ -149,20 +256,15 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane" />
       <pane id="cubaProjectView">
         <subPane>
           <expand>
             <path>
               <item name="cachacadigital" type="3e3ce59f:CubaViewProjectNode" />
               <item name="Project" type="10fe70ea:ProjectSection" />
-            </path>
-            <path>
-              <item name="cachacadigital" type="3e3ce59f:CubaViewProjectNode" />
-              <item name="Project" type="10fe70ea:ProjectSection" />
-              <item name="Build Script" type="81d5621e:BuildScriptSection" />
             </path>
             <path>
               <item name="cachacadigital" type="3e3ce59f:CubaViewProjectNode" />
@@ -178,10 +280,6 @@
               <item name="Data Model" type="9e413f45:DataModelSection" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cachacadigital" type="3e3ce59f:CubaViewProjectNode" />
-              <item name="Middleware" type="b326c000:MiddlewareSection" />
             </path>
             <path>
               <item name="cachacadigital" type="3e3ce59f:CubaViewProjectNode" />
@@ -209,31 +307,6 @@
               <item name="Screens" type="c003e550:ScreensSection" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="screens" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cachacadigital" type="3e3ce59f:CubaViewProjectNode" />
-              <item name="Generic UI" type="75975f5b:GenericUiSection" />
-              <item name="Themes" type="1f14c595:ThemesSection" />
-            </path>
-            <path>
-              <item name="cachacadigital" type="3e3ce59f:CubaViewProjectNode" />
-              <item name="Generic UI" type="75975f5b:GenericUiSection" />
-              <item name="Themes" type="1f14c595:ThemesSection" />
-              <item name="halo" type="c7cbdd24:ThemeSection" />
-            </path>
-            <path>
-              <item name="cachacadigital" type="3e3ce59f:CubaViewProjectNode" />
-              <item name="Generic UI" type="75975f5b:GenericUiSection" />
-              <item name="Themes" type="1f14c595:ThemesSection" />
-              <item name="halo" type="c7cbdd24:ThemeSection" />
-              <item name="branding" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cachacadigital" type="3e3ce59f:CubaViewProjectNode" />
-              <item name="Generic UI" type="75975f5b:GenericUiSection" />
-              <item name="Themes" type="1f14c595:ThemesSection" />
-              <item name="halo" type="c7cbdd24:ThemeSection" />
-              <item name="com.wwsistemas.cachacadigital" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cachacadigital" type="3e3ce59f:CubaViewProjectNode" />
@@ -294,24 +367,32 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25567323" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23146747" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4969743" weight="0.2405892" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49319214" weight="0.16530278" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3289689" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5030257" side_tool="true" weight="0.22258593" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3289689" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.15711948" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.198036" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50680786" side_tool="true" weight="0.2913257" />
       <window_info anchor="bottom" id="Build" order="10" weight="0.3289689" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -322,129 +403,28 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/modules/core/db/init/mysql/20.create-db.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/screens/ExtAppLoginWindow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/screens/messages.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/barrica/barrica-edit-2.xml">
+    <entry file="file://$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/categoria/categoria-browse.xml">
       <provider selected="true" editor-type-id="text-editor" />
       <provider editor-type-id="cuba_designer_properties" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/barrica/BarricaEdit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/modules/web/themes/halo/com.wwsistemas.cachacadigital/halo-ext-defaults.scss">
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="cuba_theme_variables" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/global/src/com/wwsistemas/cachacadigital/entity/Capacidade_barrica.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-      <provider editor-type-id="cuba_entity_properties" />
-      <provider editor-type-id="cuba_entity_ddl" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/core/db/update/mysql/19/190527-2-updateBarrica.sql">
+    <entry file="file://$PROJECT_DIR$/modules/web/themes/halo/com.wwsistemas.cachacadigital/halo-ext.scss">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/core/db/update/mysql/19/190527-2-updateBarrica_DropScript.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/global/src/com/wwsistemas/cachacadigital/entity/Barrica.java">
+    <entry file="file://$PROJECT_DIR$/modules/web/themes/halo/styles.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1751">
-          <caret line="127" column="50" selection-start-line="127" selection-start-column="50" selection-end-line="127" selection-end-column="50" />
-        </state>
-      </provider>
-      <provider editor-type-id="cuba_entity_properties" />
-      <provider editor-type-id="cuba_entity_ddl" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/global/src/com/wwsistemas/cachacadigital/entity/Insumo_produto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-      <provider editor-type-id="cuba_entity_properties" />
-      <provider editor-type-id="cuba_entity_ddl" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/core/src/com/wwsistemas/cachacadigital/listener/ProducaoInsumoListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-131">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        <state relative-caret-position="153">
+          <caret line="9" column="50" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/barrica/barrica-edit.xml">
-      <provider editor-type-id="text-editor" />
-      <provider selected="true" editor-type-id="cuba_designer_properties" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/barrica/BarricaBrowse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="51" selection-start-line="4" selection-start-column="51" selection-end-line="4" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/barrica/barrica-browse.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="47" column="32" lean-forward="true" selection-start-line="47" selection-start-column="32" selection-end-line="47" selection-end-column="32" />
-          <folding>
-            <element signature="e#2001#2032#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="cuba_designer_properties" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/produto_venda/messages.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/global/src/com/wwsistemas/cachacadigital/views.xml">
-      <provider editor-type-id="cuba_view_config" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="901">
-          <caret line="53" column="4" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/global/src/com/wwsistemas/cachacadigital/entity/Produto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-238">
-          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-        </state>
-      </provider>
-      <provider editor-type-id="cuba_entity_properties" />
-      <provider editor-type-id="cuba_entity_ddl" />
+    <entry file="file://$PROJECT_DIR$/modules/web/themes/halo/favicon.ico">
+      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/insumo_produto/insumo_produto-browse.xml">
-      <provider editor-type-id="text-editor" />
-      <provider selected="true" editor-type-id="cuba_designer_properties" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/insumos/insumos-browse.xml">
-      <provider editor-type-id="text-editor" />
-      <provider selected="true" editor-type-id="cuba_designer_properties" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/insumos/insumos-edit.xml">
       <provider editor-type-id="text-editor" />
       <provider selected="true" editor-type-id="cuba_designer_properties" />
     </entry>
@@ -452,193 +432,296 @@
       <provider editor-type-id="text-editor" />
       <provider selected="true" editor-type-id="cuba_designer_properties" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/produto_venda/produto_venda-browse.xml">
+    <entry file="file://$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/barrica_produto/Barrica_produtoBrowse.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/barrica_produto/Barrica_produtoEdit.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/core/db/update/mysql/19/190605-2-updateCliente.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/core/db/update/mysql/19/190605-2-createBarricaProduto.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/barrica_produto/barrica_produto-browse.xml">
       <provider editor-type-id="text-editor" />
       <provider selected="true" editor-type-id="cuba_designer_properties" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/produto_venda/produto_venda-edit.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="cuba_designer_properties" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/producao/producao-browse.xml">
+    <entry file="file://$PROJECT_DIR$/modules/core/db/update/mysql/19/190605-1-createBarricaProduto.sql">
       <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="cuba_designer_properties" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/producao/producao-edit.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="cuba_designer_properties" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/venda/venda-browse.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="cuba_designer_properties" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/produto/produto-browse.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="55" column="21" selection-start-line="55" selection-start-column="21" selection-end-line="55" selection-end-column="21" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="cuba_designer_properties" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/produto/produto-edit.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="47" column="29" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
-        </state>
-      </provider>
-      <provider editor-type-id="cuba_designer_properties" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/produto_venda/Produto_vendaEdit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="12" column="64" selection-start-line="12" selection-start-column="64" selection-end-line="12" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/global/src/com/wwsistemas/cachacadigital/entity/Producao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="86" column="29" selection-start-line="86" selection-start-column="29" selection-end-line="86" selection-end-column="29" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/modules/global/src/com/wwsistemas/cachacadigital/entity/Cliente.java">
       <provider editor-type-id="cuba_entity_properties" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
       <provider editor-type-id="cuba_entity_ddl" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/core/src/com/wwsistemas/cachacadigital/listener/ProducaoListener.java">
+    <entry file="file://$PROJECT_DIR$/modules/global/src/com/wwsistemas/cachacadigital/entity/Produto.java">
+      <provider editor-type-id="cuba_entity_properties" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="53" column="79" selection-start-line="53" selection-start-column="79" selection-end-line="53" selection-end-column="79" />
+        <state relative-caret-position="119">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        </state>
+      </provider>
+      <provider editor-type-id="cuba_entity_ddl" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/global/src/com/wwsistemas/cachacadigital/entity/Insumo_produto.java">
+      <provider editor-type-id="cuba_entity_properties" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+      <provider editor-type-id="cuba_entity_ddl" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/global/src/com/wwsistemas/cachacadigital/entity/Producao.java">
+      <provider editor-type-id="cuba_entity_properties" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="cuba_entity_ddl" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/produto/produto-edit.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="cuba_designer_properties" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/core/src/com/wwsistemas/cachacadigital/app.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-153" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/messages_pt_BR.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="ResourceBundle" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/core/src/com/haulmont/cuba/core/messages.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/core/db/init/mysql/01.dashboard-create-db.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-928" />
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.haulmont.cuba/cuba-web/7.0.5/5c44aac77a991de61f3f7c217c991f0a2deee68e/cuba-web-7.0.5.jar!/com/haulmont/cuba/web/app/loginwindow/AppLoginWindow.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="854">
+          <caret line="78" column="1" selection-start-line="78" selection-start-column="1" selection-end-line="78" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/global/src/com/wwsistemas/cachacadigital/entity/messages.properties">
+    <entry file="file://$PROJECT_DIR$/modules/core/db/init/mysql/30.create-db.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/core/db/init/mysql/20.create-db.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="61" column="25" selection-start-line="61" selection-start-column="25" selection-end-line="61" selection-end-column="25" />
+        <state relative-caret-position="-135" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/core/db/init/mysql/10.create-db.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1243" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web-app.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="46" column="42" selection-start-line="46" selection-start-column="42" selection-end-line="46" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/screens/venda-browse3.xml">
+    <entry file="file://$PROJECT_DIR$/modules/global/src/com/haulmont/cuba/messages.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/global/src/com/wwsistemas/cachacadigital/entity/Barrica_produto.java">
+      <provider editor-type-id="cuba_entity_properties" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+      <provider editor-type-id="cuba_entity_ddl" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/barrica_produto/barrica_produto-edit.xml">
+      <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="cuba_designer_properties" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/screens/ext-loginWindow.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="cuba_designer_properties" />
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.haulmont.cuba/cuba-gui/7.0.5/3286a94eaba0452b383c9069f619fd8d8af694a9/cuba-gui-7.0.5-sources.jar!/com/haulmont/cuba/gui/components/AbstractMainWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.haulmont.cuba/cuba-gui/7.0.5/3286a94eaba0452b383c9069f619fd8d8af694a9/cuba-gui-7.0.5-sources.jar!/com/haulmont/cuba/gui/screen/EditorScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="38" column="7" lean-forward="true" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/venda/venda-browse.xml">
       <provider editor-type-id="text-editor" />
       <provider selected="true" editor-type-id="cuba_designer_properties" />
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/core/src/com/wwsistemas/cachacadigital/listener/Produto_vendaListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-52">
+        <state relative-caret-position="17">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
+    <entry file="file://$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/venda/VendaBrowse.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/global/src/com/wwsistemas/cachacadigital/views.xml">
+      <provider editor-type-id="cuba_view_config" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="88" column="19" lean-forward="true" selection-start-line="88" selection-start-column="19" selection-end-line="88" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/screens/ExtAppMainWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="10" column="44" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.haulmont.cuba/cuba-gui/7.0.5/3286a94eaba0452b383c9069f619fd8d8af694a9/cuba-gui-7.0.5-sources.jar!/com/haulmont/cuba/gui/components/AbstractEditor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="82" column="46" selection-start-line="82" selection-start-column="46" selection-end-line="82" selection-end-column="46" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/venda/venda-edit.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1003">
-          <caret line="59" column="21" selection-start-line="59" selection-start-column="21" selection-end-line="59" selection-end-column="21" />
+        <state relative-caret-position="17">
+          <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
         </state>
       </provider>
       <provider editor-type-id="cuba_designer_properties" />
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/venda/VendaEdit.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/venda/VendaBrowse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/global/src/com/wwsistemas/cachacadigital/entity/Venda.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="73" column="4" selection-start-line="73" selection-start-column="4" selection-end-line="73" selection-end-column="4" />
-        </state>
-      </provider>
-      <provider editor-type-id="cuba_entity_properties" />
-      <provider editor-type-id="cuba_entity_ddl" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/messages.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-      <provider editor-type-id="ResourceBundle" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/screens/ext-loginWindow.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-        </state>
-      </provider>
-      <provider editor-type-id="cuba_designer_properties" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/global/src/com/wwsistemas/cachacadigital/entity/Produto_venda.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="48" column="51" selection-start-line="48" selection-start-column="51" selection-end-line="48" selection-end-column="51" />
-        </state>
-      </provider>
-      <provider editor-type-id="cuba_entity_properties" />
-      <provider editor-type-id="cuba_entity_ddl" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/screens/ExtAppMainWindow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="22" column="2" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/web/themes/halo/favicon.ico">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/web/themes/halo/styles.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="50" lean-forward="true" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/web/themes/halo/com.wwsistemas.cachacadigital/halo-ext-defaults.scss">
-      <provider editor-type-id="cuba_theme_variables" />
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/web/themes/halo/com.wwsistemas.cachacadigital/halo-ext.scss">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/web/themes/halo/com.wwsistemas.cachacadigital/app-component.scss">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/web/themes/halo/branding/menu.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/web/themes/halo/branding/login.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/screens/ext-mainwindow.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="53" column="38" selection-start-line="53" selection-start-column="38" selection-end-line="53" selection-end-column="38" />
+        <state relative-caret-position="204">
+          <caret line="12" column="40" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
           <folding>
-            <element signature="e#2256#2289#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/barrica/barrica-browse.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="453">
+          <caret line="45" column="32" selection-start-line="45" selection-start-column="32" selection-end-line="45" selection-end-column="32" />
+          <folding>
+            <element signature="e#1845#1876#0" expanded="true" />
           </folding>
         </state>
       </provider>
       <provider editor-type-id="cuba_designer_properties" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/barrica/barrica-edit.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
+        </state>
+      </provider>
+      <provider editor-type-id="cuba_designer_properties" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/messages.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
+        </state>
+      </provider>
+      <provider editor-type-id="ResourceBundle" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/global/src/com/wwsistemas/cachacadigital/entity/Venda.java">
+      <provider editor-type-id="cuba_entity_properties" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="901">
+          <caret line="81" column="25" selection-start-line="81" selection-start-column="25" selection-end-line="81" selection-end-column="25" />
+        </state>
+      </provider>
+      <provider editor-type-id="cuba_entity_ddl" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/global/src/com/wwsistemas/cachacadigital/entity/Barrica.java">
+      <provider editor-type-id="cuba_entity_properties" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="72" column="31" selection-start-line="72" selection-start-column="31" selection-end-line="72" selection-end-column="31" />
+        </state>
+      </provider>
+      <provider editor-type-id="cuba_entity_ddl" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/global/src/com/wwsistemas/cachacadigital/entity/Produto_venda.java">
+      <provider editor-type-id="cuba_entity_properties" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+      <provider editor-type-id="cuba_entity_ddl" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web-screens.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-510" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web-menu.xml">
+      <provider editor-type-id="cuba_view_config" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.haulmont.cuba/cuba-gui/7.0.5/163881279b135059077552ae38c4fab1285ede05/cuba-gui-7.0.5.jar!/com/haulmont/cuba/gui/screen/layout.xsd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8">
+          <caret line="923" column="8" selection-start-line="923" selection-start-column="8" selection-end-line="923" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/web/src/com/wwsistemas/cachacadigital/web/screens/ext-mainwindow.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="90" column="38" selection-start-line="90" selection-start-column="38" selection-end-line="90" selection-end-column="38" />
+          <folding>
+            <element signature="e#2633#2666#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="cuba_designer_properties" />
     </entry>
   </component>
   <component name="masterDetails">

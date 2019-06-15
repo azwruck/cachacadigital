@@ -9,9 +9,8 @@
         <groupDatasource id="categoriasDs"
                          class="com.wwsistemas.cachacadigital.entity.Categoria"
                          view="_local">
-            <query>
-                <![CDATA[select e from cachaca$Categoria e]]>
-            </query>
+            <query><![CDATA[select e from cachaca$Categoria e
+order by e.nome]]></query>
         </groupDatasource>
     </dsContext>
     <dialogMode height="600"

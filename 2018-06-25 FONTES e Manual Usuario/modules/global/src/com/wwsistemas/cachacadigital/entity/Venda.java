@@ -71,17 +71,17 @@ public class Venda extends BaseIntegerIdEntity {
 
     	total2 = 0.0;
 
-    	if(produto_venda != null){
-            for (Produto_venda pv: produto_venda) {
-                total2 += pv.getCusto();
-            }
-            System.out.println("teste incluindo = "+total2);
-            setTotal(total2);
-            return total2;
+        	if(produto_venda == null){
+                setTotal(total2);
+                System.out.println("passou com o pv nulo = "+total2);
+                return total2;
     	} else
-            setTotal(total2);
-        System.out.println("passou com o pv nulo = "+total2);
-            return total2;
+                for (Produto_venda pv: produto_venda) {
+                    total2 += pv.getCusto();
+                }
+        setTotal(total2);
+        System.out.println("teste incluindo = "+total2);
+        return total2;
     }
 
 

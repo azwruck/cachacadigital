@@ -1,17 +1,14 @@
 package com.wwsistemas.cachacadigital.entity;
 
+import com.haulmont.chile.core.annotations.NamePattern;
+import com.haulmont.cuba.core.entity.BaseIntegerIdEntity;
+import org.hibernate.validator.constraints.Email;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
-import java.util.UUID;
-import javax.persistence.Column;
-import javax.persistence.FetchType;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotNull;
-import com.haulmont.cuba.core.entity.BaseIntegerIdEntity;
-import com.haulmont.cuba.core.entity.HasUuid;
-import com.haulmont.chile.core.annotations.NamePattern;
-import org.hibernate.validator.constraints.Email;
+import javax.validation.constraints.Pattern;
 
 @NamePattern("%s|nome")
 @Table(name = "CACHACA_CLIENTE")
@@ -26,10 +23,11 @@ public class Cliente extends BaseIntegerIdEntity {
     @Column(name = "NOME", nullable = false, length = 128)
     protected String nome;
 
-    @Email(message = "Email inválido!")
+    @Email(message = "Email inválido!", regexp = ".*")
     @Column(name = "EMAIL", length = 128)
     protected String email;
 
+    @Pattern(message = "Telefone inválido!", regexp = "^\\([1-9]{2}\\)(?:[2-8]|9[1-9])[0-9]{3}[0-9]{4}$")
     @Column(name = "TELEFONE", length = 16)
     protected String telefone;
 
@@ -41,8 +39,9 @@ public class Cliente extends BaseIntegerIdEntity {
     @Column(name = "CIDADE", nullable = false, length = 128)
     protected String cidade;
 
+    @Pattern(regexp = "[1-9]")
     @NotNull
-    @Column(name = "CEP", nullable = false, length = 16)
+    @Column(name = "CEP", nullable = false)
     protected String cep;
 
     public EstadoT getEstado2() {

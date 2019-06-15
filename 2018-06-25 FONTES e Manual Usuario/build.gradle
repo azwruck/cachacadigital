@@ -45,10 +45,11 @@ dependencies {
     appComponent("com.haulmont.reports:reports-global:$cubaVersion")
     appComponent("com.haulmont.charts:charts-global:$cubaVersion")
     appComponent("org.strangeway.responsive:sw-responsive-global:1.3.0")
+    appComponent("it.nexbit.cuba.security.forgotpassword:nxsecfp-global:2.2.0")
 
 }
 
-def mysql = 'mysql:mysql-connector-java:5.1.38'
+def mysql = 'mysql:mysql-connector-java:5.1.46'
 
 configure([globalModule, coreModule, guiModule, webModule]) {
     apply(plugin: 'java')
@@ -114,21 +115,21 @@ configure(coreModule) {
     }
 
     task createDb(dependsOn: assembleDbScripts, description: 'Creates local database', type: CubaDbCreation) {
-        connectionParams = '?useSSL=false&allowMultiQueries=true'
         dbms = 'mysql'
         host = 'localhost'
         dbName = 'cachaca'
         dbUser = 'root'
         dbPassword = 'pw2000aw1997'
+        connectionParams = '?useSSL=false&allowMultiQueries=true&serverTimezone=UTC'
     }
 
     task updateDb(dependsOn: assembleDbScripts, description: 'Updates local database', type: CubaDbUpdate) {
-        connectionParams = '?useSSL=false&allowMultiQueries=true'
         dbms = 'mysql'
         host = 'localhost'
         dbName = 'cachaca'
         dbUser = 'root'
         dbPassword = 'pw2000aw1997'
+        connectionParams = '?useSSL=false&allowMultiQueries=true&serverTimezone=UTC'
     }
 }
 

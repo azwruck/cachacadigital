@@ -3,35 +3,27 @@
     <view class="com.wwsistemas.cachacadigital.entity.Produto"
           extends="_local"
           name="produto-com-categoria">
-        <property name="categoria"
-                  view="_minimal"/>
-        <property name="insumo_produto"
-                  view="_minimal">
+        <property name="insumo_produto" view="_minimal">
             <property name="quantidade"/>
-            <property name="insumo"
-                      view="_minimal">
+            <property name="insumo" view="_minimal">
                 <property name="estoque"/>
             </property>
         </property>
+        <property name="categoria" view="_minimal"/>
     </view>
     <view class="com.wwsistemas.cachacadigital.entity.Producao"
           extends="_local"
           name="producao-com-produto">
-        <property name="produto"
-                  view="_minimal">
-            <property name="quantidade"/>
-            <property name="categoria"
-                      view="_minimal"/>
-            <property name="insumo_produto"
-                      view="_minimal">
+        <property name="produto" view="_minimal">
+            <property name="insumo_produto" view="_minimal">
                 <property name="quantidade"/>
-                <property name="produto"
-                          view="_minimal"/>
-                <property name="insumo"
-                          view="_minimal">
+                <property name="produto" view="_minimal"/>
+                <property name="insumo" view="_minimal">
                     <property name="estoque"/>
                 </property>
             </property>
+            <property name="categoria" view="_minimal"/>
+            <property name="quantidade"/>
         </property>
     </view>
     <view class="com.wwsistemas.cachacadigital.entity.Venda"
@@ -84,7 +76,33 @@
     <view class="com.wwsistemas.cachacadigital.entity.Barrica"
           extends="_local"
           name="barrica-com-produto">
-        <property name="produto"
-                  view="_minimal"/>
+        <property name="produto" view="_minimal">
+            <property name="insumo_produto" view="_minimal"/>
+            <property name="categoria" view="_minimal"/>
+            <property name="preco"/>
+            <property name="quantidade"/>
+        </property>
+        <property name="barrica_produto" view="_minimal">
+            <property name="produto" view="_minimal"/>
+            <property name="barrica" view="_minimal"/>
+            <property name="data_entrada"/>
+        </property>
+    </view>
+    <view entity="cachaca_Barrica_produto" name="barrica_produto_view" extends="_local">
+        <property name="produto" view="_minimal">
+            <property name="insumo_produto" view="_minimal"/>
+            <property name="categoria" view="_minimal"/>
+            <property name="preco"/>
+            <property name="quantidade"/>
+        </property>
+        <property name="barrica" view="_minimal">
+            <property name="capacidade"/>
+            <property name="status"/>
+            <property name="madeira"/>
+            <property name="produto" view="_minimal"/>
+            <property name="data_entrada"/>
+            <property name="tempo_armazenado"/>
+            <property name="barrica_produto" view="_minimal"/>
+        </property>
     </view>
 </views>

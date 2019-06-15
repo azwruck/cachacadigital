@@ -1,5 +1,6 @@
 package com.wwsistemas.cachacadigital.entity;
 
+import com.haulmont.chile.core.annotations.Composition;
 import com.haulmont.chile.core.annotations.NamePattern;
 import com.haulmont.cuba.core.entity.BaseIntegerIdEntity;
 
@@ -9,6 +10,7 @@ import java.time.LocalDate;
 import java.time.Period;
 import java.time.ZoneId;
 import java.util.Date;
+import java.util.List;
 
 @NamePattern("%s|id")
 @Table(name = "CACHACA_BARRICA")
@@ -25,7 +27,8 @@ public class Barrica extends BaseIntegerIdEntity {
     @Column(name = "STATUS")
     protected String status;
 
-    @Column(name = "MADEIRA")
+    @NotNull
+    @Column(name = "MADEIRA", nullable = false)
     protected String madeira;
 
     @ManyToOne(fetch = FetchType.LAZY)
@@ -39,6 +42,18 @@ public class Barrica extends BaseIntegerIdEntity {
 
     @Column(name = "TEMPO_ARMAZENADO")
     protected String tempo_armazenado;
+
+    @Composition
+    @OneToMany(mappedBy = "barrica")
+    protected List<Barrica_produto> barrica_produto;
+
+    public List<Barrica_produto> getBarrica_produto() {
+        return barrica_produto;
+    }
+
+    public void setBarrica_produto(List<Barrica_produto> barrica_produto) {
+        this.barrica_produto = barrica_produto;
+    }
 
     public void setStatus(String status) {
         this.status = status;

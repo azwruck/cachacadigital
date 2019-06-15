@@ -45,4 +45,8 @@
             template="com/wwsistemas/cachacadigital/web/barrica/barrica-edit.xml"/>
     <screen id="cachaca$Barrica.edit2"
             template="com/wwsistemas/cachacadigital/web/barrica/barrica-edit-2.xml"/>
+    <screen id="cachaca_Barrica_produto.browse"
+            template="com/wwsistemas/cachacadigital/web/barrica_produto/barrica_produto-browse.xml"/>
+    <screen id="cachaca_Barrica_produto.edit"
+            template="com/wwsistemas/cachacadigital/web/barrica_produto/barrica_produto-edit.xml"/>
 </screen-config>

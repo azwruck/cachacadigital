@@ -34,6 +34,7 @@
                 <action id="create"/>
                 <action id="edit"/>
                 <action id="remove"/>
+                <action id="refresh"/>
             </actions>
             <columns>
                 <column id="produto"/>
@@ -52,11 +53,12 @@
                         caption="mainMsg://cadastros.Editar"/>
                 <button action="produtoVenda.remove"
                         caption="mainMsg://cadastros.Excluir"/>
+                <button action="produtoVenda.refresh"/>
             </buttonsPanel>
         </table>
         <fieldGroup datasource="vendaDs">
             <column width="250px">
-                <field property="total2" editable="false" datasource="vendaDs"/>
+                <field property="total2" caption="Total" editable="false" datasource="vendaDs"/>
             </column>
         </fieldGroup>
         <frame id="windowActions"

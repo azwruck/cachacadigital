@@ -1,21 +1,13 @@
 package com.wwsistemas.cachacadigital.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import java.util.Date;
-import java.util.UUID;
-import javax.persistence.Column;
-import javax.persistence.FetchType;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
-import javax.validation.constraints.NotNull;
-import com.haulmont.cuba.core.entity.BaseIntegerIdEntity;
-import com.haulmont.cuba.core.entity.HasUuid;
-import com.haulmont.chile.core.annotations.MetaProperty;
 import com.haulmont.chile.core.annotations.NamePattern;
+import com.haulmont.chile.core.annotations.NumberFormat;
+import com.haulmont.cuba.core.entity.BaseIntegerIdEntity;
 import com.haulmont.cuba.core.entity.annotation.Listeners;
+
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import java.util.Date;
 
 @Listeners({"cachaca_ProducaoListener", "cachaca_ProducaoInsumoListener"})
 @NamePattern(" %s|lote")
@@ -35,14 +27,13 @@ public class Producao extends BaseIntegerIdEntity {
 
     @NotNull
     @Column(name = "QUANTIDADE", nullable = false)
+    @NumberFormat(pattern = "#", decimalSeparator = ",", groupingSeparator = ".")
     protected Integer quantidade;
 
     @Temporal(TemporalType.DATE)
     @NotNull
     @Column(name = "DATA_PRODUCAO", nullable = false)
     protected Date data_producao;
-
-    
 
 
     public void setQuantidade(Integer quantidade) {

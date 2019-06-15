@@ -13,7 +13,7 @@ create table CACHACA_BARRICA (
     --
     CAPACIDADE double precision not null,
     STATUS varchar(255),
-    MADEIRA varchar(255),
+    MADEIRA varchar(255) not null,
     PRODUTO_ID integer,
     DATA_ENTRADA date,
     TEMPO_ARMAZENADO varchar(255),
@@ -24,7 +24,6 @@ create table CACHACA_BARRICA (
 -- begin CACHACA_CLIENTE
 create table CACHACA_CLIENTE (
     ID integer,
-    UUID varchar(32),
     --
     ESTADO2 varchar(50),
     NOME varchar(128) not null,
@@ -32,7 +31,7 @@ create table CACHACA_CLIENTE (
     TELEFONE varchar(16),
     ENDERECO varchar(255) not null,
     CIDADE varchar(128) not null,
-    CEP varchar(16) not null,
+    CEP varchar(255) not null,
     --
     primary key (ID)
 )^
@@ -121,3 +120,14 @@ create table CACHACA_CAPACIDADE_BARRICA (
     primary key (ID)
 )^
 -- end CACHACA_CAPACIDADE_BARRICA
+-- begin CACHACA_BARRICA_PRODUTO
+create table CACHACA_BARRICA_PRODUTO (
+    ID integer,
+    --
+    PRODUTO_ID integer not null,
+    BARRICA_ID integer,
+    DATA_ENTRADA date not null,
+    --
+    primary key (ID)
+)^
+-- end CACHACA_BARRICA_PRODUTO

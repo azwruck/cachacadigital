@@ -14,7 +14,16 @@ group by b.status]]></query>
                 <property name="sum" datatype="long"/>
             </properties>
         </valueCollectionDatasource>
-        <valueCollectionDatasource id="teste2"/>
+        <valueCollectionDatasource id="teste2">
+            <query><![CDATA[select produto.nome, sum(p.quantidade)
+from cachaca$Produto_venda p
+left join p.produto produto
+group by p.produto.nome]]></query>
+            <properties idProperty="nome">
+                <property name="nome" datatype="string"/>
+                <property name="sum" datatype="long"/>
+            </properties>
+        </valueCollectionDatasource>
     </dsContext>
     <layout responsive="true"
             stylename="c-sidemenu-responsive">
@@ -47,21 +56,24 @@ group by b.status]]></query>
                            value="mainMsg://application.logoLabel"/>
                 </hbox>
                 <cssLayout id="sideMenuWrap"
-                           stylename="c-sidemenu-wrap">
-                    <embedded id="logoImage"
-                              align="MIDDLE_CENTER"
-                              stylename="c-app-icon"
-                              type="IMAGE"/>
+                           stylename="c-sidemenu-wrap"
+                           align="TOP_LEFT">
+                    <image id="logo"
+                           align="BOTTOM_RIGHT" width="260px" height="75px">
+                        <file path="C:\Users\andre\Documents\Faculdade\9 Semestre\TCC II\barrica4.png"/>
+                    </image>
                     <main:userIndicator id="userIndicator"
                                         width="100%"/>
                     <hbox id="mainButtonsBox"
                           stylename="c-main-buttons">
                         <main:newWindowButton id="newWindowButton"
                                               description="mainMsg://newWindowBtnDescription"
-                                              icon="app/images/new-window.png"/>
+                                              icon="app/images/new-window.png"
+                                              caption="mainMsg://novaJanela"/>
                         <main:logoutButton id="logoutButton"
                                            description="mainMsg://logoutBtnDescription"
-                                           icon="app/images/exit.png"/>
+                                           icon="app/images/exit.png"
+                                           caption="mainMsg://sair"/>
                     </hbox>
                     <main:timeZoneIndicator id="timeZoneIndicator"
                                             width="100%"/>
@@ -75,10 +87,11 @@ group by b.status]]></query>
             </cssLayout>
             <main:workArea id="workArea"
                            height="100%">
-                <main:initialLayout margin="true"
-                                    spacing="true">
-                    <chart:pieChart height="100%"
-                                    width="100%"
+                <main:initialLayout
+                        spacing="true" margin="true">
+                    <chart:pieChart
+                            id="capacidade" height="100%"
+                                    width="50%"
                                     valueField="sum"
                                     titleField="status"
                                     startEffect="ELASTIC"
@@ -91,6 +104,25 @@ group by b.status]]></query>
                                     datasource="teste">
                         <chart:titles>
                             <chart:title text="Capacidade utilizada" size="16"/>
+                        </chart:titles>
+                        <chart:export enabled="true"/>
+                    </chart:pieChart>
+                    <chart:pieChart
+                            id="produto"
+                            datasource="teste2"
+                                    height="100%"
+                                    width="50%"
+                                    valueField="sum"
+                                    titleField="nome"
+                                    startEffect="ELASTIC"
+                                    startDuration="2"
+                                    labelRadius="15"
+                                    innerRadius="60%"
+                                    depth3D="10"
+                                    angle="15"
+                                    balloonText="[[title]]&lt;br&gt;&lt;span style='font-size:14px'&lt;b&gt;[[value]]&lt;/b&gt; ([[percents]]%)&lt;/span&gt;">
+                        <chart:titles>
+                            <chart:title text="Produtos mais vendidos" size="16"/>
                         </chart:titles>
                         <chart:export enabled="true"/>
                     </chart:pieChart>

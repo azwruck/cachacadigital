@@ -36,6 +36,11 @@
               <option name="name" value="sw-responsive-global" />
               <option name="version" value="1.3.0" />
             </DependencyModelState>
+            <DependencyModelState>
+              <option name="group" value="it.nexbit.cuba.security.forgotpassword" />
+              <option name="name" value="nxsecfp-global" />
+              <option name="version" value="2.2.0" />
+            </DependencyModelState>
           </list>
         </option>
         <option name="artifactGroup" value="com.wwsistemas.cachacadigital" />
@@ -52,6 +57,7 @@
       <map>
         <entry key="com.haulmont.cuba" value="C:\Users\andre\.gradle\caches\modules-2\files-2.1\com.haulmont.cuba\cuba-core\7.0.5\d576b8d2e704d1a881f9e6005a3c19ec8682af0\cuba-core-7.0.5-db.zip" />
         <entry key="com.haulmont.reports" value="C:\Users\andre\.gradle\caches\modules-2\files-2.1\com.haulmont.reports\reports-core\7.0.5\cf3c678fa7d621b5bd481c3cf299d8cf7e161e1e\reports-core-7.0.5-db.zip" />
+        <entry key="it.nexbit.cuba.security.forgotpassword" value="C:\Users\andre\.gradle\caches\modules-2\files-2.1\it.nexbit.cuba.security.forgotpassword\nxsecfp-core\2.2.0\e9ccce211a9ef356a480328ca8b12d1d2c06bf3c\nxsecfp-core-2.2.0-db.zip" />
       </map>
     </option>
   </component>

@@ -8,7 +8,9 @@
     <dsContext>
         <datasource id="barricaDs"
                     class="com.wwsistemas.cachacadigital.entity.Barrica"
-                    view="barrica-com-produto"/>
+                    view="barrica-com-produto">
+            <collectionDatasource id="barricaProduto" property="barrica_produto"/>
+        </datasource>
     </dsContext>
     <dialogMode height="600"
                 width="800"/>
@@ -19,10 +21,23 @@
             <column width="250px">
                 <field property="capacidade"/>
                 <field property="madeira"/>
-                <field property="produto"/>
-                <field property="data_entrada"/>
             </column>
         </fieldGroup>
+        <table id="barrica_produto" height="179px" width="349px">
+            <columns>
+                <column id="produto"/>
+                <column id="data_entrada"/>
+            </columns>
+            <buttonsPanel>
+                <button id="button" action="barrica_produto.create"/>
+                <button action="barrica_produto.remove"/>
+            </buttonsPanel>
+            <rows datasource="barricaProduto"/>
+            <actions>
+                <action id="create" caption="mainMsg://barrica.Adicionar"/>
+                <action id="remove" caption="mainMsg://barrica.Remover"/>
+            </actions>
+        </table>
         <frame id="windowActions"
                screen="editWindowActions" responsive="true"/>
     </layout>

@@ -35,8 +35,6 @@
                 <column id="id" caption="Código"/>
                 <column id="madeira"/>
                 <column id="capacidade"/>
-                <column id="data_entrada" caption="Data de Entrada"/>
-                <column id="produto"/>
                 <column id="tempo_armazenado" caption="Tempo Armazenado"/>
             </columns>
             <rows datasource="barricasDs"/>

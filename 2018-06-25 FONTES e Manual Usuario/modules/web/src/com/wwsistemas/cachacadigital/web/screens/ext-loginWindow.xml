@@ -12,9 +12,6 @@
                     <image id="logoImage">
                         <file path="C:\Users\andre\studio-projects\cachacadigital\2018-06-25 FONTES e Manual Usuario\barrica2.png"/>
                     </image>
-                    <image id="imagemLogin" ext:index="1">
-                        <file path="C:\Users\andre\studio-projects\cachacadigital\2018-06-25 FONTES e Manual Usuario\barrica2.png"/>
-                    </image>
                     <label id="welcomeLabel" align="MIDDLE_CENTER"/>
                 </hbox>
             </vbox>
