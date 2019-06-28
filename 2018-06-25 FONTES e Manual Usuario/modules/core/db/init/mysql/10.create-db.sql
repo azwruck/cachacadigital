@@ -25,10 +25,11 @@ create table CACHACA_BARRICA (
 create table CACHACA_CLIENTE (
     ID integer,
     --
-    ESTADO2 varchar(50),
+    ESTADO2 varchar(50) not null,
     NOME varchar(128) not null,
     EMAIL varchar(128),
     TELEFONE varchar(16),
+    CELULAR varchar(16),
     ENDERECO varchar(255) not null,
     CIDADE varchar(128) not null,
     CEP varchar(255) not null,

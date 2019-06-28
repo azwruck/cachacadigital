@@ -43,7 +43,7 @@ public class ProducaoListener implements BeforeInsertEntityListener<Producao>, B
         Integer estoque = producao.getQuantidade() + produto.getQuantidade();
         
         Produto pro = entity.merge(produto);
-        
+
         pro.setQuantidade(estoque);
     }
 

@@ -15,7 +15,7 @@ import com.haulmont.chile.core.annotations.NamePattern;
 import com.wwsistemas.cachacadigital.entity.Produto;
 import com.haulmont.cuba.core.entity.annotation.Listeners;
 
-@Listeners("cachaca_Produto_vendaListener")
+@Listeners({"cachaca_Produto_vendaListener", "cachaca_VendaListener"})
 @NamePattern("%s |produto")
 @Table(name = "CACHACA_PRODUTO_VENDA")
 @Entity(name = "cachaca$Produto_venda")

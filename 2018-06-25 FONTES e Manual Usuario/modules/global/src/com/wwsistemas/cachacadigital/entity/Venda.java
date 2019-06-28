@@ -17,6 +17,7 @@ import com.haulmont.cuba.core.entity.HasUuid;
 import com.haulmont.chile.core.annotations.NamePattern;
 import com.haulmont.chile.core.annotations.Composition;
 import com.haulmont.chile.core.annotations.MetaProperty;
+import com.haulmont.cuba.core.entity.annotation.Listeners;
 
 import java.util.List;
 import javax.persistence.OneToMany;
@@ -71,12 +72,17 @@ public class Venda extends BaseIntegerIdEntity {
 
     	total2 = 0.0;
 
-        	if(produto_venda == null){
-                setTotal(total2);
+        	if(produto_venda == null) {
+//                setTotal(total2);
                 System.out.println("passou com o pv nulo = "+total2);
                 return total2;
-    	} else
+            }
+//    	} else
                 for (Produto_venda pv: produto_venda) {
+                    if(produto_venda == null){
+                        System.out.println("teste nulo = "+total2);
+                        return total2;
+                    } else
                     total2 += pv.getCusto();
                 }
         setTotal(total2);

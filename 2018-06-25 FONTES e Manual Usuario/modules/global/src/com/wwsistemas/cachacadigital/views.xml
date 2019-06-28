@@ -84,7 +84,6 @@
         </property>
         <property name="barrica_produto" view="_minimal">
             <property name="produto" view="_minimal"/>
-            <property name="barrica" view="_minimal"/>
             <property name="data_entrada"/>
         </property>
     </view>

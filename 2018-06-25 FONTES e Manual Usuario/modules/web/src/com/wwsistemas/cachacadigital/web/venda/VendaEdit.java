@@ -2,15 +2,20 @@ package com.wwsistemas.cachacadigital.web.venda;
 
 import java.util.List;
 
+import com.haulmont.cuba.core.entity.Entity;
 import com.haulmont.cuba.gui.components.AbstractEditor;
+import com.haulmont.cuba.gui.components.Component;
 import com.haulmont.cuba.gui.components.ValidationErrors;
 import com.haulmont.cuba.gui.components.ValidationException;
+import com.haulmont.cuba.gui.data.Datasource;
 import com.wwsistemas.cachacadigital.entity.Insumo_produto;
 import com.wwsistemas.cachacadigital.entity.Produto_venda;
 import com.wwsistemas.cachacadigital.entity.Venda;
+
 //import com.haulmont.cuba.gui.components.WindowDelegate;
 
 public class VendaEdit extends AbstractEditor<Venda> {
+
 
 //	Venda v = new Venda();
 //	
@@ -55,8 +60,10 @@ public class VendaEdit extends AbstractEditor<Venda> {
 	
 //	public void onSaveBtnClick() {
 //		try {
+//            Venda venda = new Venda();
 //			validate();
 //			commit();
+//
 //			close(COMMIT_ACTION_ID);
 //		} catch (Exception e) {
 //			ValidationErrors ve = new ValidationErrors();

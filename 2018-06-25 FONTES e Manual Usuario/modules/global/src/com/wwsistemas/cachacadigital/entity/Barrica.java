@@ -52,7 +52,9 @@ public class Barrica extends BaseIntegerIdEntity {
     }
 
     public void setBarrica_produto(List<Barrica_produto> barrica_produto) {
+
         this.barrica_produto = barrica_produto;
+        setStatus("Utilizado");
     }
 
     public void setStatus(String status) {
@@ -74,21 +76,34 @@ public class Barrica extends BaseIntegerIdEntity {
 
         LocalDate entrada;
         LocalDate data_armazenada = LocalDate.now();
-//
-        if (data_entrada == null) {
-            data_entrada = Date.from(data_armazenada.atStartOfDay(ZoneId.systemDefault()).toInstant());
-            entrada = LocalDate.of(data_entrada.getYear() + 1900, data_entrada.getMonth() + 1, data_entrada.getDate());
-        } else {
-//            LocalDate l = data_entrada.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
-//            data_armazenada = LocalDate.of(l.getYear(), l.getMonth(), l.getDayOfMonth());
-            entrada = LocalDate.of(data_entrada.getYear() + 1900, data_entrada.getMonth() + 1, data_entrada.getDate());
+
+        for (Barrica_produto bp: barrica_produto) {
+            if (bp.data_entrada == null) {
+                bp.data_entrada = Date.from(data_armazenada.atStartOfDay(ZoneId.systemDefault()).toInstant());
+                entrada = LocalDate.of(bp.data_entrada.getYear() + 1900, bp.data_entrada.getMonth() + 1, bp.data_entrada.getDate());
+            } else {
+                entrada = LocalDate.of(bp.data_entrada.getYear() + 1900, bp.data_entrada.getMonth() + 1, bp.data_entrada.getDate());
+            }
+
+            Period periodo = Period.between(entrada, hoje);
+
+            tempo_armazenado = periodo.getYears() + " anos, " + periodo.getMonths() + " meses, " + periodo.getDays() + "dias";
+
+            return tempo_armazenado;
         }
 
-        Period periodo = Period.between(entrada, hoje);
-
-        tempo_armazenado = periodo.getYears() + " anos, " + periodo.getMonths() + " meses, " + periodo.getDays() + "dias";
-
-        return tempo_armazenado;
+//        if (data_entrada == null) {
+//            data_entrada = Date.from(data_armazenada.atStartOfDay(ZoneId.systemDefault()).toInstant());
+//            entrada = LocalDate.of(data_entrada.getYear() + 1900, data_entrada.getMonth() + 1, data_entrada.getDate());
+//        } else {
+//            entrada = LocalDate.of(data_entrada.getYear() + 1900, data_entrada.getMonth() + 1, data_entrada.getDate());
+//        }
+//
+//        Period periodo = Period.between(entrada, hoje);
+//
+//        tempo_armazenado = periodo.getYears() + " anos, " + periodo.getMonths() + " meses, " + periodo.getDays() + "dias";
+//
+//        return tempo_armazenado;
     	
 //        LocalDate hoje = LocalDate.now();
 //
@@ -106,7 +121,7 @@ public class Barrica extends BaseIntegerIdEntity {
 //
 //
 //        tempo_armazenado = periodo.getYears() + " anos,"+ periodo.getMonths()+ " meses, "+ periodo.getDays()+"dias";
-//        return tempo_armazenado;
+        return tempo_armazenado;
     }
 
 

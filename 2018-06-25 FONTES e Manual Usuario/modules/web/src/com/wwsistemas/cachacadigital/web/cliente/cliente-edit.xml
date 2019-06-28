@@ -18,14 +18,15 @@
                     datasource="clienteDs">
             <column width="250px">
                 <field property="nome"/>
-                <field property="telefone"/>
+                <field property="telefone" mask="(##) ####-####"/>
+                <field property="celular" mask="(##) #####-####"/>
                 <field property="endereco" caption="Endereço"/>
                 <field property="cidade"/>
                 <field property="estado2" caption="Estado"/>
             </column>
             <column>
                 <field property="email"/>
-                <field property="cep" caption="CEP"/>
+                <field property="cep" caption="CEP" mask="#####-###"/>
             </column>
         </fieldGroup>
         <frame id="windowActions"

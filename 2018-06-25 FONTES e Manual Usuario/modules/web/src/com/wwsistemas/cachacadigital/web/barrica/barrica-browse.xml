@@ -13,7 +13,6 @@
                 <![CDATA[select e from cachaca$Barrica e]]>
             </query>
         </groupDatasource>
-        <valueGroupDatasource/>
     </dsContext>
     <dialogMode height="600"
                 width="800"/>

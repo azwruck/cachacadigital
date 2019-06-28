@@ -2,11 +2,13 @@ package com.wwsistemas.cachacadigital.entity;
 
 import com.haulmont.chile.core.annotations.NamePattern;
 import com.haulmont.cuba.core.entity.BaseIntegerIdEntity;
+import com.haulmont.cuba.core.entity.annotation.Listeners;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.Date;
 
+@Listeners({"cachaca_Barrica_produtoListener","cachaca_Barrica_produtoDeleteListener"})
 @NamePattern("%s|id")
 @Table(name = "CACHACA_BARRICA_PRODUTO")
 @Entity(name = "cachaca_Barrica_produto")

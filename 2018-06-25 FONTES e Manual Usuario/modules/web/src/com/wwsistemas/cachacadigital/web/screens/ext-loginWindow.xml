@@ -14,6 +14,15 @@
                     </image>
                     <label id="welcomeLabel" align="MIDDLE_CENTER"/>
                 </hbox>
+                <vbox id="loginForm">
+                    <cssLayout id="loginCredentials">
+                        <textField id="loginField" inputPrompt="msg://loginWindow.loginPlaceholder"
+                                   caption="msg://loginWindow.loginField"/>
+                        <passwordField id="passwordField" autocomplete="true" htmlName="passwordField"
+                                       inputPrompt="msg://loginWindow.passwordPlaceholder"
+                                       capsLockIndicator="capsLockIndicator" caption="msg://loginWindow.passwordField"/>
+                    </cssLayout>
+                </vbox>
             </vbox>
         </vbox>
     </layout>

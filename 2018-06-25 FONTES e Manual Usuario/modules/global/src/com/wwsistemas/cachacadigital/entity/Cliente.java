@@ -8,7 +8,6 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Pattern;
 
 @NamePattern("%s|nome")
 @Table(name = "CACHACA_CLIENTE")
@@ -16,7 +15,8 @@ import javax.validation.constraints.Pattern;
 public class Cliente extends BaseIntegerIdEntity {
     private static final long serialVersionUID = 6652258313616578483L;
 
-    @Column(name = "ESTADO2")
+    @NotNull
+    @Column(name = "ESTADO2", nullable = false)
     protected String estado2;
 
     @NotNull
@@ -27,9 +27,11 @@ public class Cliente extends BaseIntegerIdEntity {
     @Column(name = "EMAIL", length = 128)
     protected String email;
 
-    @Pattern(message = "Telefone inválido!", regexp = "^\\([1-9]{2}\\)(?:[2-8]|9[1-9])[0-9]{3}[0-9]{4}$")
     @Column(name = "TELEFONE", length = 16)
     protected String telefone;
+
+    @Column(name = "CELULAR", length = 16)
+    protected String celular;
 
     @NotNull
     @Column(name = "ENDERECO", nullable = false)
@@ -39,10 +41,17 @@ public class Cliente extends BaseIntegerIdEntity {
     @Column(name = "CIDADE", nullable = false, length = 128)
     protected String cidade;
 
-    @Pattern(regexp = "[1-9]")
     @NotNull
     @Column(name = "CEP", nullable = false)
     protected String cep;
+
+    public String getCelular() {
+        return celular;
+    }
+
+    public void setCelular(String celular) {
+        this.celular = celular;
+    }
 
     public EstadoT getEstado2() {
         return estado2 == null ? null : EstadoT.fromId(estado2);
