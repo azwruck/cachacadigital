@@ -1,27 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
         caption="msg://editorCaption"
         class="com.wwsistemas.cachacadigital.web.produto_venda.Produto_vendaEdit"
-        datasource="produto_vendaDs"
-        focusComponent="fieldGroup"
+        focusComponent="form"
         messagesPack="com.wwsistemas.cachacadigital.web.produto_venda">
-    <dsContext>
-        <datasource id="produto_vendaDs"
-                    class="com.wwsistemas.cachacadigital.entity.Produto_venda"
-                    view="produto_venda_view"/>
-    </dsContext>
+    <data>
+        <instance id="produto_vendaDc"
+                  class="com.wwsistemas.cachacadigital.entity.Produto_venda"
+                  view="produto_venda_view">
+            <loader/>
+        </instance>
+    </data>
     <dialogMode height="600"
                 width="800"/>
-    <layout expand="windowActions"
-            spacing="true">
-        <fieldGroup id="fieldGroup"
-                    datasource="produto_vendaDs">
+    <layout expand="editActions" spacing="true">
+        <form id="form" dataContainer="produto_vendaDc">
             <column width="250px">
-                <field property="produto"/>
-                <field property="quantidade"/>
+                <pickerField dataContainer="produto_vendaDc" property="produto"/>
+                <textField dataContainer="produto_vendaDc" property="quantidade"/>
             </column>
-        </fieldGroup>
-        <frame id="windowActions"
-               screen="editWindowActions" height="277px"/>
+        </form>
+        <hbox id="editActions" spacing="true">
+            <button action="windowCommitAndClose"/>
+            <button action="windowClose"/>
+        </hbox>
     </layout>
 </window>

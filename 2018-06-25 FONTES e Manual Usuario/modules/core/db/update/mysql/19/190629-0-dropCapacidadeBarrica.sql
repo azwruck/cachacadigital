@@ -1,0 +1,1 @@
+rename table cachaca_capacidade_barrica to CACHACA_CAPACIDADE_BARRICA__U22945 ;

@@ -26,7 +26,7 @@
         <table id="barrica_produto" height="179px" width="349px">
             <columns>
                 <column id="produto"/>
-                <column id="data_entrada"/>
+                <column id="data_entrada" caption="Data de Entrada"/>
             </columns>
             <buttonsPanel>
                 <button id="button" action="barrica_produto.create"/>

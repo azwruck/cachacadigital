@@ -1,53 +1,52 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
         caption="msg://browseCaption"
         class="com.wwsistemas.cachacadigital.web.venda.VendaBrowse"
         focusComponent="vendasTable"
-        lookupComponent="vendasTable"
         messagesPack="com.wwsistemas.cachacadigital.web.venda">
-    <dsContext>
-        <groupDatasource id="vendasDs"
-                         class="com.wwsistemas.cachacadigital.entity.Venda"
-                         view="venda">
-            <query>
-                <![CDATA[select e from cachaca$Venda e]]>
-            </query>
-        </groupDatasource>
-    </dsContext>
+    <data readOnly="true">
+        <collection id="vendasDc"
+                    class="com.wwsistemas.cachacadigital.entity.Venda"
+                    view="_local">
+            <loader id="vendasDl">
+                <query>
+                    <![CDATA[select e from cachaca$Venda e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
     <dialogMode height="600"
                 width="800"/>
     <layout expand="vendasTable"
             spacing="true">
         <filter id="filter"
                 applyTo="vendasTable"
-                datasource="vendasDs">
+                dataLoader="vendasDl">
             <properties include=".*"/>
         </filter>
         <groupTable id="vendasTable"
-                    multiselect="true"
-                    width="100%">
+                    width="100%"
+                    dataContainer="vendasDc">
             <actions>
-                <action id="create"/>
-                <action id="edit"/>
-                <action id="remove"/>
+                <action id="create" type="create"/>
+                <action id="edit" type="edit"/>
+                <action id="remove" type="remove"/>
             </actions>
             <columns>
-                <column id="id"/>
-                <column id="cliente"/>
-                <column id="total"/>
                 <column id="data_venda"/>
+                <column id="total"/>
             </columns>
-            <rows datasource="vendasDs"/>
             <rowsCount/>
             <buttonsPanel id="buttonsPanel"
                           alwaysVisible="true">
-                <button id="createBtn"
-                        action="vendasTable.create"/>
-                <button id="editBtn"
-                        action="vendasTable.edit"/>
-                <button id="removeBtn"
-                        action="vendasTable.remove"/>
+                <button id="createBtn" action="vendasTable.create"/>
+                <button id="editBtn" action="vendasTable.edit"/>
+                <button id="removeBtn" action="vendasTable.remove"/>
             </buttonsPanel>
         </groupTable>
+        <hbox id="lookupActions" spacing="true" visible="false">
+            <button action="lookupSelectAction"/>
+            <button action="lookupCancelAction"/>
+        </hbox>
     </layout>
 </window>

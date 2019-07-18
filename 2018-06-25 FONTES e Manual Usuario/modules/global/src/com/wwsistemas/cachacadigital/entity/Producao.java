@@ -7,6 +7,7 @@ import com.haulmont.cuba.core.entity.annotation.Listeners;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.math.BigDecimal;
 import java.util.Date;
 
 @Listeners({"cachaca_ProducaoListener", "cachaca_ProducaoInsumoListener"})
@@ -28,19 +29,18 @@ public class Producao extends BaseIntegerIdEntity {
     @NotNull
     @Column(name = "QUANTIDADE", nullable = false)
     @NumberFormat(pattern = "#", decimalSeparator = ",", groupingSeparator = ".")
-    protected Integer quantidade;
+    protected java.math.BigDecimal quantidade;
 
     @Temporal(TemporalType.DATE)
     @NotNull
     @Column(name = "DATA_PRODUCAO", nullable = false)
     protected Date data_producao;
 
-
-    public void setQuantidade(Integer quantidade) {
+    public void setQuantidade(BigDecimal quantidade) {
         this.quantidade = quantidade;
     }
 
-    public Integer getQuantidade() {
+    public BigDecimal getQuantidade() {
         return quantidade;
     }
 
@@ -70,12 +70,4 @@ public class Producao extends BaseIntegerIdEntity {
         return data_producao;
     }
 
-
-//    @MetaProperty(related = {"produto", "quant"})
-//    public Integer getEstoque() {
-//     
-//    	Integer estoque = getQuant();
-//    	produto.setQuantidade(getQuant());
-//    	return estoque;
-//    }
 }

@@ -22,6 +22,7 @@
                                        inputPrompt="msg://loginWindow.passwordPlaceholder"
                                        capsLockIndicator="capsLockIndicator" caption="msg://loginWindow.passwordField"/>
                     </cssLayout>
+                    <button id="loginButton" caption="msg://login.Entrar"/>
                 </vbox>
             </vbox>
         </vbox>

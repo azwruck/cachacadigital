@@ -111,16 +111,7 @@ create table CACHACA_VENDA (
     primary key (ID)
 )^
 -- end CACHACA_VENDA
--- begin CACHACA_CAPACIDADE_BARRICA
-create table CACHACA_CAPACIDADE_BARRICA (
-    ID integer,
-    --
-    CAPACIDADE double precision,
-    QUANTIDADE_USADA double precision,
-    --
-    primary key (ID)
-)^
--- end CACHACA_CAPACIDADE_BARRICA
+
 -- begin CACHACA_BARRICA_PRODUTO
 create table CACHACA_BARRICA_PRODUTO (
     ID integer,

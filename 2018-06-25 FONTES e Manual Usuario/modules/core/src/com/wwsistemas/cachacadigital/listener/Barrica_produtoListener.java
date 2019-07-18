@@ -38,7 +38,6 @@ public class Barrica_produtoListener implements
             return;
         } else{
             Barrica bar = entity.merge(barrica);
-            System.out.println("Passou no listener barrica utilizado");
             bar.setStatus("Utilizado");
         }
 

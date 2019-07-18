@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="com.wwsistemas.cachacadigital.web.produto_venda.Produto_venda1Browse"
+        focusComponent="produto_vendasTable"
+        lookupComponent="produto_vendasTable"
+        messagesPack="com.wwsistemas.cachacadigital.web.produto_venda">
+    <dsContext>
+        <groupDatasource id="produto_vendasDs"
+                         class="com.wwsistemas.cachacadigital.entity.Produto_venda"
+                         view="produto_venda_view">
+            <query>
+                <![CDATA[select e from cachaca$Produto_venda e]]>
+            </query>
+        </groupDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="produto_vendasTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="produto_vendasTable"
+                datasource="produto_vendasDs">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="produto_vendasTable"
+                    multiselect="true"
+                    width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+            </actions>
+            <columns>
+                <column id="produto"/>
+                <column id="quantidade"/>
+            </columns>
+            <rows datasource="produto_vendasDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn"
+                        action="produto_vendasTable.create"
+                        caption="mainMsg://cadastros.Adicionar"/>
+                <button id="editBtn"
+                        action="produto_vendasTable.edit"
+                        caption="mainMsg://cadastros.Editar"/>
+                <button id="removeBtn"
+                        action="produto_vendasTable.remove"
+                        caption="mainMsg://cadastros.Excluir"/>
+            </buttonsPanel>
+        </groupTable>
+    </layout>
+</window>

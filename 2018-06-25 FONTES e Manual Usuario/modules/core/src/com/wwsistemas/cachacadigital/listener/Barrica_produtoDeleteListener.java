@@ -22,7 +22,6 @@ public class Barrica_produtoDeleteListener implements
     private void atualizaStatus(Barrica_produto bp, Barrica barrica, EntityManager entity){
 
         Barrica bar = entity.merge(barrica);
-        System.out.println("Passou no listener barrica disponivel");
         bar.setStatus("Disponível");
 
 

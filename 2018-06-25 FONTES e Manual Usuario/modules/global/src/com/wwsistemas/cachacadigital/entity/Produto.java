@@ -1,21 +1,13 @@
 package com.wwsistemas.cachacadigital.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import java.util.UUID;
-import javax.persistence.Column;
-import javax.persistence.FetchType;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.validation.constraints.NotNull;
-import com.haulmont.cuba.core.entity.BaseIntegerIdEntity;
-import com.haulmont.cuba.core.entity.HasUuid;
-import com.haulmont.chile.core.annotations.NamePattern;
 import com.haulmont.chile.core.annotations.Composition;
+import com.haulmont.chile.core.annotations.NamePattern;
+import com.haulmont.cuba.core.entity.BaseIntegerIdEntity;
+
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import java.math.BigDecimal;
 import java.util.List;
-import javax.persistence.OneToMany;
-import java.util.Date;
-import com.haulmont.cuba.core.entity.Updatable;
 
 @NamePattern("%s|nome")
 @Table(name = "CACHACA_PRODUTO")
@@ -38,11 +30,26 @@ public class Produto extends BaseIntegerIdEntity {
 
     @NotNull
     @Column(name = "PRECO", nullable = false)
-    protected Double preco;
+    protected java.math.BigDecimal preco;
 
     @Column(name = "QUANTIDADE")
-    protected Integer quantidade;
+    protected BigDecimal quantidade;
 
+    public void setQuantidade(BigDecimal quantidade) {
+        this.quantidade = quantidade;
+    }
+
+    public BigDecimal getQuantidade() {
+        return quantidade;
+    }
+
+    public void setPreco(BigDecimal preco) {
+        this.preco = preco;
+    }
+
+    public BigDecimal getPreco() {
+        return preco;
+    }
 
 
     public void setInsumo_produto(List<Insumo_produto> insumo_produto) {
@@ -71,22 +78,6 @@ public class Produto extends BaseIntegerIdEntity {
 
     public String getNome() {
         return nome;
-    }
-
-    public void setPreco(Double preco) {
-        this.preco = preco;
-    }
-
-    public Double getPreco() {
-        return preco;
-    }
-
-    public void setQuantidade(Integer quantidade) {
-        this.quantidade = quantidade;
-    }
-
-    public Integer getQuantidade() {
-        return quantidade;
     }
 
 

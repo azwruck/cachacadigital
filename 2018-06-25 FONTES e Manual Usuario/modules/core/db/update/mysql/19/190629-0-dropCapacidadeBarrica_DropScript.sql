@@ -1,0 +1,1 @@
+drop table if exists CACHACA_CAPACIDADE_BARRICA__U22945 cascade ;

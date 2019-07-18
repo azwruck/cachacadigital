@@ -1,27 +1,15 @@
 package com.wwsistemas.cachacadigital.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import java.util.Date;
-import java.util.UUID;
-import javax.persistence.Column;
-import javax.persistence.FetchType;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
-import javax.persistence.Transient;
-import javax.validation.constraints.NotNull;
-import com.haulmont.cuba.core.entity.BaseIntegerIdEntity;
-import com.haulmont.cuba.core.entity.HasUuid;
-import com.haulmont.chile.core.annotations.NamePattern;
 import com.haulmont.chile.core.annotations.Composition;
 import com.haulmont.chile.core.annotations.MetaProperty;
-import com.haulmont.cuba.core.entity.annotation.Listeners;
+import com.haulmont.chile.core.annotations.NamePattern;
+import com.haulmont.cuba.core.entity.BaseIntegerIdEntity;
 
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import java.math.BigDecimal;
+import java.util.Date;
 import java.util.List;
-import javax.persistence.OneToMany;
-import java.util.Collection;
 
 @NamePattern("%s %s|cliente,data_venda")
 @Table(name = "CACHACA_VENDA")
@@ -44,9 +32,9 @@ public class Venda extends BaseIntegerIdEntity {
     protected Date data_venda;
 
     @Column(name = "TOTAL")
-    protected Double total;
+    protected java.math.BigDecimal total;
 
-    
+
     public void setProduto_venda(List<Produto_venda> produto_venda) {
         this.produto_venda = produto_venda;
     }
@@ -68,25 +56,17 @@ public class Venda extends BaseIntegerIdEntity {
     @Transient
     @MetaProperty(related = "produto_venda")
     protected Double total2;
+
+    public void setTotal(BigDecimal total) {
+        this.total = total;
+    }
+
+    public BigDecimal getTotal() {
+        return total;
+    }
+
     public Double getTotal2() {
 
-    	total2 = 0.0;
-
-        	if(produto_venda == null) {
-//                setTotal(total2);
-                System.out.println("passou com o pv nulo = "+total2);
-                return total2;
-            }
-//    	} else
-                for (Produto_venda pv: produto_venda) {
-                    if(produto_venda == null){
-                        System.out.println("teste nulo = "+total2);
-                        return total2;
-                    } else
-                    total2 += pv.getCusto();
-                }
-        setTotal(total2);
-        System.out.println("teste incluindo = "+total2);
         return total2;
     }
 
@@ -97,14 +77,6 @@ public class Venda extends BaseIntegerIdEntity {
 
     public Date getData_venda() {
         return data_venda;
-    }
-
-    public void setTotal(Double total) {
-        this.total = total;
-    }
-
-    public Double getTotal() {
-        return total;
     }
 
 

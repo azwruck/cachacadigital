@@ -7,35 +7,29 @@ import com.wwsistemas.cachacadigital.entity.Produto;
 import com.wwsistemas.cachacadigital.entity.Produto_venda;
 import com.haulmont.cuba.core.listener.BeforeUpdateEntityListener;
 
+import java.math.BigDecimal;
+
 @Component("cachaca_Produto_vendaListener")
 public class Produto_vendaListener
 		implements BeforeInsertEntityListener<Produto_venda>, BeforeUpdateEntityListener<Produto_venda> {
 
 	@Override
 	public void onBeforeInsert(Produto_venda entity, EntityManager entityManager) {
-//		try{
 		recalculaEstoque(entity, entity.getProduto(), entityManager);
-//		} catch(IllegalArgumentException e){
-//			System.out.println(e.getMessage());
-//		}
 	}
 
 	@Override
 	public void onBeforeUpdate(Produto_venda entity, EntityManager entityManager) {
-//		try{
 		recalculaEstoque(entity, entity.getProduto(), entityManager);
-//		} catch(IllegalArgumentException e){
-//			throw new IllegalArgumentException(getMessage("Estoque insuficiente!"));
-//		}
 	}
 
 	private void recalculaEstoque(Produto_venda produto_venda, Produto produto, EntityManager entity) throws IllegalArgumentException {
 
-			if (produto_venda.getQuantidade() > produto.getQuantidade()) {
-				throw new IllegalArgumentException("Saldo insuficiente");
+			if (produto_venda.getQuantidade().compareTo(produto.getQuantidade()) > 0) {
+				throw new IllegalArgumentException("Estoque insuficiente do produto "+ produto.getNome());
 			} else {
 
-			Integer quantidade = (produto.getQuantidade() - produto_venda.getQuantidade());
+			BigDecimal quantidade = (produto.getQuantidade().subtract(produto_venda.getQuantidade()));
 
 			Produto pro = entity.merge(produto);
 

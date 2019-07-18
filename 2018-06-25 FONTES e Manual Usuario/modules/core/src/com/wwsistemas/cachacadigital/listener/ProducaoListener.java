@@ -8,6 +8,8 @@ import com.wwsistemas.cachacadigital.entity.Produto;
 import com.haulmont.cuba.core.listener.BeforeInsertEntityListener;
 import com.haulmont.cuba.core.listener.BeforeUpdateEntityListener;
 import com.haulmont.cuba.core.listener.AfterDeleteEntityListener;
+
+import java.math.BigDecimal;
 import java.sql.Connection;
 import com.haulmont.cuba.core.listener.AfterInsertEntityListener;
 import com.haulmont.cuba.core.listener.AfterUpdateEntityListener;
@@ -33,28 +35,23 @@ public class ProducaoListener implements BeforeInsertEntityListener<Producao>, B
     }
 
 
-    private void calculaEstoque(Producao producao, Produto produto, EntityManager entity){
+    private void calculaEstoque
+            (Producao producao,
+             Produto produto,
+             EntityManager entity){
         if (produto == null)
             return;
         if(produto.getQuantidade() == null){
-        	produto.setQuantidade(0);
+        	produto.setQuantidade(BigDecimal.ZERO);
         }
         
-        Integer estoque = producao.getQuantidade() + produto.getQuantidade();
+        BigDecimal estoque = producao.getQuantidade().add(produto.getQuantidade());
         
         Produto pro = entity.merge(produto);
 
         pro.setQuantidade(estoque);
     }
 
-
-
-//    @Override
-//    public void onBeforeAttach(Producao entity) {
-//    	Integer estoque = entity.getQuant() + entity.getProduto().getQuantidade();
-//    	Producao p = entityManager.merge(entity);
-//    	p.getProduto().setQuantidade(estoque);
-//    }
 
 
 }

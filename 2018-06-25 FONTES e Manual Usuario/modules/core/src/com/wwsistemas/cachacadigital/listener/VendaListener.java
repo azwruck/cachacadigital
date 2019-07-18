@@ -32,34 +32,8 @@ public class VendaListener implements
         calculaTotal(entity, entity.getVenda(), entityManager);
     }
 
-//    @Override
-//    public void onAfterInsert(Venda entity, EntityManager entityManager) {
-//        calculaTotal(entity, entity.getProduto_venda(), entityManager);
-//    }
-//
-//    @Override
-//    public void onAfterUpdate(Venda entity, EntityManager entityManager) {
-//        calculaTotal(entity, entity.getProduto_venda(), entityManager);
-//    }
-//
-//    @Override
-//    public void onBeforeAttach(Venda entity, EntityManager entityManager) {
-//        calculaTotal(entity, entity.getProduto_venda(), entityManager);
-//    }
 
     private void calculaTotal(Produto_venda pv, Venda venda, EntityManager entity) {
-//
-//            Double valor = (pv.getTotal() + venda.getTotal());
-//
-//            System.out.println("Passou no listener");
-//
-//            Venda ve = entity.merge(venda);
-//
-//            System.out.println("fez o merge");
-//
-//            ve.setTotal(valor);
-//
-//            System.out.println("setou o total");
-//
+
     }
 }

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="com.wwsistemas.cachacadigital.web.venda.Venda1Edit"
+        datasource="vendaDs"
+        focusComponent="fieldGroup"
+        messagesPack="com.wwsistemas.cachacadigital.web.venda">
+    <dsContext>
+        <datasource id="vendaDs"
+                    class="com.wwsistemas.cachacadigital.entity.Venda"
+                    view="venda">
+            <collectionDatasource id="idProdutoVendaDs"
+                                  property="produto_venda"/>
+        </datasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="fieldGroup"
+            spacing="true">
+        <fieldGroup id="fieldGroup"
+                    datasource="vendaDs"
+                    height="33px">
+            <column width="250px">
+                <field property="cliente"/>
+            </column>
+            <column>
+                <field property="data_venda" caption="Data da Venda"/>
+            </column>
+        </fieldGroup>
+        <table id="produtoVenda"
+               height="305px"
+               width="659px">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+                <action id="refresh"/>
+            </actions>
+            <columns>
+                <column id="produto"/>
+                <column id="produto.categoria"/>
+                <column id="quantidade"/>
+                <column id="produto.preco" caption="Preço"/>
+                <column id="custo" caption="Total"/>
+            </columns>
+            <rows datasource="idProdutoVendaDs"/>
+            <buttonsPanel>
+                <button id="add"
+                        action="produtoVenda.create"
+                        caption="mainMsg://cadastros.Adicionar"/>
+                <button id="edit"
+                        action="produtoVenda.edit"
+                        caption="mainMsg://cadastros.Editar"/>
+                <button action="produtoVenda.remove"
+                        caption="mainMsg://cadastros.Excluir"/>
+            </buttonsPanel>
+        </table>
+        <fieldGroup datasource="vendaDs">
+            <column width="250px">
+                <field property="total" caption="Total" editable="false" datasource="vendaDs"/>
+            </column>
+        </fieldGroup>
+        <frame id="windowActions"
+               height="37px"
+               screen="editWindowActions"/>
+    </layout>
+</window>

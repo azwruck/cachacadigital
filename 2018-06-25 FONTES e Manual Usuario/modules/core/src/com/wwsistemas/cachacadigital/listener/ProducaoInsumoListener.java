@@ -1,5 +1,6 @@
 package com.wwsistemas.cachacadigital.listener;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 import org.springframework.stereotype.Component;
@@ -29,9 +30,9 @@ public class ProducaoInsumoListener implements BeforeInsertEntityListener<Produc
     private void calculaInsumo(Producao producao, List<Insumo_produto> list, EntityManager entity){
     	
     	for (Insumo_produto ip: list){
-    	Integer quantidade = producao.getQuantidade() * ip.getQuantidade();
+    	BigDecimal quantidade = producao.getQuantidade().multiply(ip.getQuantidade());
     	
-    	quantidade = ip.getInsumo().getEstoque() - quantidade;
+    	quantidade = ip.getInsumo().getEstoque().subtract(quantidade);
     	
     	Insumo ins = entity.merge(ip.getInsumo());
     	

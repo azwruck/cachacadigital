@@ -25,12 +25,6 @@
             template="com/wwsistemas/cachacadigital/web/produto_venda/produto_venda-browse.xml"/>
     <screen id="cachaca$Produto_venda.edit"
             template="com/wwsistemas/cachacadigital/web/produto_venda/produto_venda-edit.xml"/>
-    <screen id="cachaca$Venda.browse"
-            template="com/wwsistemas/cachacadigital/web/venda/venda-browse.xml"/>
-    <screen id="cachaca$Venda.edit"
-            template="com/wwsistemas/cachacadigital/web/venda/venda-edit.xml"/>
-    <screen id="cachaca$Venda.browse3"
-            template="com/wwsistemas/cachacadigital/web/screens/venda-browse3.xml"/>
     <screen id="cachaca$Insumo_produto.browse"
             template="com/wwsistemas/cachacadigital/web/insumo_produto/insumo_produto-browse.xml"/>
     <screen id="cachaca$Insumo_produto.edit"
@@ -49,4 +43,8 @@
             template="com/wwsistemas/cachacadigital/web/barrica_produto/barrica_produto-browse.xml"/>
     <screen id="cachaca_Barrica_produto.edit"
             template="com/wwsistemas/cachacadigital/web/barrica_produto/barrica_produto-edit.xml"/>
+    <screen id="cachaca$Venda.browse"
+            template="com/wwsistemas/cachacadigital/web/venda/venda-browse.xml"/>
+    <screen id="cachaca$Venda.edit"
+            template="com/wwsistemas/cachacadigital/web/venda/venda-edit.xml"/>
 </screen-config>

@@ -5,11 +5,12 @@
         <item screen="cachaca$Cliente.browse"/>
         <item screen="cachaca$Insumo.browse"/>
         <item openType="NEW_TAB" screen="cachaca$Produto.browse"/>
-        <item screen="cachaca_Barrica_produto.browse"/>
     </menu>
     <item insertBefore="administration" screen="cachaca$Producao.browse"/>
-    <item insertBefore="administration" screen="cachaca$Venda.edit"/>
+    <item id="vendaNova" insertBefore="administration" screen="cachaca$Venda.edit"/>
     <item insertBefore="administration" screen="cachaca$Barrica.browse"/>
     <item insertAfter="logWindow" screen="cachaca$Produto_venda.browse"/>
+    <item insertAfter="logWindow" screen="cachaca$Venda.browse"/>
+    <item insertAfter="logWindow" screen="cachaca_Barrica_produto.browse"/>
     <item insertAfter="logWindow" screen="cachaca$Insumo_produto.browse"/>
 </menu-config>

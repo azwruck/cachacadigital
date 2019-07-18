@@ -1,17 +1,11 @@
 package com.wwsistemas.cachacadigital.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import java.util.UUID;
-import javax.persistence.Column;
-import javax.persistence.FetchType;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import com.haulmont.cuba.core.entity.BaseIntegerIdEntity;
-import com.haulmont.cuba.core.entity.HasUuid;
 import com.haulmont.chile.core.annotations.NamePattern;
-import com.haulmont.chile.core.annotations.NumberFormat;
+import com.haulmont.cuba.core.entity.BaseIntegerIdEntity;
+
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.math.BigDecimal;
 
 @NamePattern("%s|id")
 @Table(name = "CACHACA_INSUMO_PRODUTO")
@@ -21,7 +15,7 @@ public class Insumo_produto extends BaseIntegerIdEntity {
 
     @NotNull
     @Column(name = "QUANTIDADE", nullable = false)
-    protected Integer quantidade;
+    protected java.math.BigDecimal quantidade;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "PRODUTO_ID")
@@ -32,6 +26,14 @@ public class Insumo_produto extends BaseIntegerIdEntity {
     @JoinColumn(name = "INSUMO_ID")
     protected Insumo insumo;
 
+    public void setQuantidade(BigDecimal quantidade) {
+        this.quantidade = quantidade;
+    }
+
+    public BigDecimal getQuantidade() {
+        return quantidade;
+    }
+
     public Insumo getInsumo() {
         return insumo;
     }
@@ -39,16 +41,6 @@ public class Insumo_produto extends BaseIntegerIdEntity {
     public void setInsumo(Insumo insumo) {
         this.insumo = insumo;
     }
-
-
-    public void setQuantidade(Integer quantidade) {
-        this.quantidade = quantidade;
-    }
-
-    public Integer getQuantidade() {
-        return quantidade;
-    }
-
 
 
     public void setProduto(Produto produto) {
